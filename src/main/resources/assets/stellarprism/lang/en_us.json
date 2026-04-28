@@ -1,0 +1,13 @@
+{
+  "itemGroup.stellarprism": "Example Mod Tab",
+  "block.stellarprism.example_block": "Example Block",
+  "item.stellarprism.example_item": "Example Item",
+
+  "stellarprism.configuration.title": "Stellar Prism Configs",
+  "stellarprism.configuration.section.stellarprism.common.toml": "Stellar Prism Configs",
+  "stellarprism.configuration.section.stellarprism.common.toml.title": "Stellar Prism Configs",
+  "stellarprism.configuration.items": "Item List",
+  "stellarprism.configuration.logDirtBlock": "Log Dirt Block",
+  "stellarprism.configuration.magicNumberIntroduction": "Magic Number Text",
+  "stellarprism.configuration.magicNumber": "Magic Number"
+}
