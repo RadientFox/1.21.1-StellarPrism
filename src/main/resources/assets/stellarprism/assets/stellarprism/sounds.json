@@ -1,0 +1,14 @@
+{
+  "made_in_heaven": {
+    "sounds": [
+      {
+        "name": "stellarprism:made_in_heaven",
+        "category": "player",
+        "volume": 1.0,
+        "pitch": 1.0,
+        "attenuation_distance": 13
+      }
+    ],
+    "subtitle": "sounds.stellarprism.made_in_heaven"
+  }
+}

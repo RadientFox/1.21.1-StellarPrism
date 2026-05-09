@@ -1,0 +1,862 @@
+{
+
+
+  "stellarprism.join.message": "Hello %1$s, it seems like you have Stellar Prism installed if you have any questions or need the wiki please join the discord",
+
+
+
+
+
+
+  "stellarprism.skill.mode.heartstone.deactive": "Your Damage is no longer being converted",
+
+
+
+  "stellarprism.skill.mode.ruby.burst": "Scarlet Burst",
+  "stellarprism.skill.ruby": "§cRuby",
+  "stellarprism.skill.mode.ruby.aura": "Burning Aura",
+  "stellarprism.skill.mode.ruby.inferno": "Death Inferno",
+  "stellarprism.skill.mode.ruby.eruption": "Black Eruption",
+  "stellarprism.skill.ruby.description": "When one's §cFlames§r of passion burn bright enough they may be blessed with such a heart",
+  "stellarprism.skill.mode.ruby.active": "Your Damage is being converted to §cFlame",
+
+
+
+
+  "stellarprism.skill.mode.spinel.bullet": "Spinel Bullet",
+  "stellarprism.skill.mode.spinel.aura": "Spatial Aura",
+  "stellarprism.skill.mode.spinel.transfer": "Spatial Transfer",
+  "stellarprism.skill.mode.spinel.wall": "Spatial Wall",
+  "stellarprism.skill.spinel": "§dSpinel",
+  "stellarprism.skill.spinel.description": "When vastness of §dSpace§r seems to large for your heavy heart",
+  "stellarprism.skill.mode.spinel.active": "Your Damage is being converted to §dSpace",
+
+
+
+  "stellarprism.skill.onyx": "§0Onyx",
+  "stellarprism.skill.onyx.description": "When the §0Darkness§r that consumes all has reached your heart",
+  "stellarprism.skill.mode.onyx.aura": "Abyssal Strike",
+  "stellarprism.skill.mode.onyx.devour": "Devour",
+  "stellarprism.skill.mode.onyx.storage": "Gem Storage",
+  "stellarprism.skill.mode.onyx.plague": "Black Plague",
+  "stellarprism.skill.mode.onyx.active": "Your Damage is being converted to §0Dark",
+
+  "stellarprism.skill.opal": "§fOpal",
+  "stellarprism.skill.opal.description": "When the §fBlinding Light§r fills your heart to inspire others",
+  "stellarprism.skill.mode.opal.aura": "Chroma Aura",
+  "stellarprism.skill.mode.opal.light": "White Light",
+  "stellarprism.skill.mode.opal.prosperity": "Prosperity",
+  "stellarprism.skill.mode.opal.observation": "Holy Observation",
+
+  "stellarprism.skill.mode.opal.cancel": "Your Prosperity has been removed",
+  "stellarprism.skill.mode.opal.restore": "You have Returned to a point when you where prosperous",
+  "stellarprism.skill.mode.opal.create": "Your Prosperity in this moment has been saved",
+  "stellarprism.skill.mode.opal.death": "You have been reverted to Prosperity from the past to escape death",
+  "stellarprism.skill.mode.opal.active": "Your Damage is being converted to §fLight",
+
+
+
+
+  "stellarprism.skill.sugilite": "§5Sugilite",
+  "stellarprism.skill.sugilite.description": "When §5Poison§r flows through your blood and heart as it is a part of it",
+
+
+  "stellarprism.skill.mode.sugilite.inversion": "§5Poison§r Inversion",
+  "stellarprism.skill.mode.sugilite.drive": "§5Toxic§r Drive",
+  "stellarprism.skill.mode.sugilite.ensnarement": "§5Violet§r Ensnarement",
+  "stellarprism.skill.mode.sugilite.wrath": "§5Venomous Wrath",
+
+  "stellarprism.skill.mode.sugilite.active": "Your Damage is being converted to §5Gravity",
+  "stellarprism.skill.mode.sugilite.active.TOXIC": "Your Damage is being infused with §5Poison",
+
+
+
+
+
+  "stellarprism.skill.jade": "§2Jade",
+  "stellarprism.skill.jade.description": "§2Electricity§r flows through your body as you can feel the §2Wind§r around you",
+
+
+  "stellarprism.skill.mode.jade.winds": "Empowering §2Winds",
+  "stellarprism.skill.mode.jade.berserker": "Chaos Berserker",
+  "stellarprism.skill.mode.jade.burst": "§2Lightning Burst",
+  "stellarprism.skill.mode.jade.active": "Your Damage is being converted to §2Wind",
+
+
+
+
+
+  "stellarprism.skill.aquamarine": "§bAquamarine",
+  "stellarprism.skill.aquamarine.description": "Your Heart is to help others and as gentle as a §bRiver",
+
+  "stellarprism.skill.mode.aquamarine.aura": "§bWater §rAura",
+  "stellarprism.skill.mode.aquamarine.river": "Cleansing §bRiver",
+  "stellarprism.skill.mode.aquamarine.energy": "§bHydro§r Energy",
+  "stellarprism.skill.mode.aquamarine.call": "§bSirens Call",
+  "stellarprism.skill.mode.aquamarine.active": "Your Damage is being converted to §bWater",
+
+  "stellarprism.ep.acquire_fallen.aqua": "%s EP has been acquired from the deceased %s.",
+  "stellarprism.skill.acquire_fallen.aqua": "%s has been acquired from deceased %s.",
+  "stellar.skill.mode.aquamarine.check_point": "The number of Aquamarine Points with %s: %s",
+
+
+  "stellarprism.skill.citrine": "§eCitrine",
+  "stellarprism.skill.citrine.description": "§eMusic§r is engraved in your heart that leads to endless possibilities",
+
+  "stellarprism.skill.mode.citrine.talent": "Musical Talent",
+  "stellarprism.skill.mode.citrine.rock": "Rock",
+  "stellarprism.skill.mode.citrine.metal": "Metal",
+  "stellarprism.skill.mode.citrine.country": "Country",
+  "stellarprism.skill.mode.citrine.rap": "Rap",
+  "stellarprism.skill.mode.citrine.active": "Your Damage is being converted to §eSound",
+
+
+
+  "stellarprism.skill.topaz": "§6Topaz",
+  "stellarprism.skill.topaz.description": "An Unbreakable Heart that is stronger as §6Diamonds§r grants immense strength",
+
+  "stellarprism.skill.mode.topaz.fist": "§6Stone§r Fist",
+  "stellarprism.skill.mode.topaz.blockade": "§6Crystal Blockade",
+  "stellarprism.skill.mode.topaz.destruction": "§6Gem Destruction",
+  "stellarprism.skill.mode.topaz.active": "Your Damage is being converted to §6Earth",
+
+
+
+
+
+  "stellarprism.skill.mode.bright_will.light": "§fBlinding Light",
+  "stellarprism.skill.bright_will": "§fBright Will",
+  "stellarprism.skill.bright_will.description": "§fWhen one has strived to obtain great power for others they will be seen in a great blinding light",
+
+  "stellarprism.skill.mode.dark_will.cube": "§0Dark Abyss",
+  "stellarprism.skill.dark_will": "§0Dark Will",
+  "stellarprism.skill.dark_will.description": "§0When One has lost their self to obtain power at all cost they may be looked down upon",
+
+
+
+  "stellarprism.skill.reality_surge": "Amulet of §4Reality",
+  "stellarprism.skill.reality_surge.description": "You who have inherited the vessal to control §4Reality §rshall bend it to your very will!",
+  "stellarprism.skill.mode.reality_surge.realityfield": "§4Reality §rField",
+  "stellarprism.skill.mode.reality_surge.steal": "Steal",
+  "stellarprsim.skill.steal.fail": "The Foes §6Will §ris far greater than your own",
+
+
+
+  "stellarprism.skill.powerassention": "Amulet of §bPower",
+  "stellarprism.skill.powerassention.description": "Harness the vessel of §bpower§r and awaken something beyond your limits",
+  "stellarprism.skill.mode.power.x5": "§bPower§r Boost X5",
+  "stellarprism.skill.mode.power.x10": "§bPower§r Boost X10",
+
+
+  "stellarprism.skill.time_spiral": "Amulet of §1Time",
+  "stellarprism.skill.time_spiral.description": "The essence of §1time§r flows within you like a spiral making you its new vessel",
+  "stellarprism.skill.mode.time_spiral.timedown": "Slow Down",
+  "stellarprism.skill.mode.time_spiral.timeup": "Speed Up",
+
+
+  "stellarprism.skill.hopes_embrace": "Amulet of §6Hope",
+  "stellarprism.skill.hopes_embrace.description": "Embrace the new vessel of §6Hope§r letting it push you forward to overcome the greatest odds",
+  "stellarprism.skill.mode.hopes_embrace.soul": "§6Hopeful§r Soul",
+  "stellarprism.skill.mode.hopes_embrace.drain": "§6Hope§r Drain",
+
+
+
+  "stellarprism.skill.spatial_flow": "Amulet of §dSpace",
+  "stellarprism.skill.spatial_flow.description": "Harness the flow of §dspace§r as you become its new vessel",
+  "stellarprism.skill.mode.spatial_flow.warp": "§dSpatial§r Warp",
+  "stellarprism.skill.mode.spatial_flow.ray": "§dSpatial§r Ray",
+  "stellarprism.skill.mode.spatial_flow.block": "§dSpatial§r Blockade",
+
+
+
+
+  "stellarprism.skill.worlds_catalyst": "Amulet of §aWorlds",
+  "stellarprism.skill.worlds_catalyst.description": "Dominate the §aworlds§r themselves creation has no limit upon what you can achieve as the catalyst of this vessel",
+  "stellarprism.skill.mode.worlds_catalyst.box": "§aPandora's§r Box",
+  "stellarprism.skill.mode.worlds_catalyst.appraise": "Analytical Appraisal",
+  "stellarprism.skill.worlds_catalyst.acquire": "§aThe worlds bend to your will... thus granting §r%s§a for a little while...",
+  "stellarprism.skill.worlds_catalyst.keep": "§aThe worlds fall to your will... thus presenting §r%s§a for you to keep...",
+
+  "stellarprism.skill.worlds_catalyst.lose": "§aThe worlds reject your will... thus taking §r%s§a from you...",
+
+
+
+  "stellarprism.skill.heart_ultimate_upgrade": "%1$s §fwas §4sacrificed §fto evolve and Empower %2$s into the ability %3$s.",
+  "stellarprism.skill.ultimate_upgrade": "Your Heart %1$s §fwas Empowered §fto evolve into the ability %2$s.",
+
+
+  "stellarprism.skill.upgrade.null":"The requirements for this evolution are not met",
+
+  "stellarprism.skill.star_upgrade": "%1$s§f, %2$s, %3$s, %4$s, %5$s, and %6$s were §4sacrificed §fto evolve into the ability %7$s.",
+
+
+
+  "stellarprism.skill.copy.success":"§6Your §e§lWill§r§6 has forged a new power for you to wield§l %s §r§6is now yours.",
+  "stellarprism.skill.copy.fail":"§6Your §e§lWill§r§6 is not great enough to forge a new power.",
+
+
+
+  "stellarprism.skill.star_of_willpower": "§e§lStar of Willpower",
+  "stellarprism.skill.star_of_willpower.description": "Through Combining the 6 §4s§6h§ba§1t§dt§4e§6r§be§1d§r powers you now shall carry the vessel of a divine §e§lWillPower",
+
+  "stellarprism.skill.mode.star_of_willpower.power" : "§b§lPower§r§l Overload ",
+  "stellarprism.skill.mode.star_of_willpower.reality":"§4§lReality§r§l Dominate",
+  "stellarprism.skill.mode.star_of_willpower.hope": "§6§lHope§r§l Restoration",
+  "stellarprism.skill.mode.star_of_willpower.time":"§1§lTime§r§l Freeze",
+  "stellarprism.skill.mode.star_of_willpower.space": "§d§lSpace§r§l Control",
+  "stellarprism.skill.mode.star_of_willpower.world":"§a§lWorlds§r§l Awakening",
+  "stellarprism.skill.mode.star_of_willpower.cannon": "§e§lStar§r§l Breaker Cannon",
+
+
+
+  "stellarprism.skill.tama": "§cTama: Blood Spirit Kitsune",
+  "stellarprism.skill.tama.description": "One ninth of The Primordial Kitsune said to be the very ambitious, tricky, and dangerous. Making a deal with her is essentially selling you entire life for her bidding",
+
+  "stellarprism.skill.mode.tama.scythe" : "§cVessel: Scythe",
+  "stellarprism.skill.mode.tama.power":"Power of the §dKitsune",
+  "stellarprism.skill.mode.tama.absorption": "§cBlood §rAbsorption",
+  "stellarprism.skill.mode.tama.restoration":"§cBlood §rRestoration",
+
+  "stellarprism.skill.tama.mastery" : "You do not have enough control over Tama to achieve this form ",
+  "stellarprism.skill.tail": "Tail: %s",
+
+
+
+  "stellarprism.skill.skill_bestowal": "Skill Bestowal",
+  "stellarprism.skill.skill_bestowal.description": "A seemingly weak skill with the sole ability to pass itself on..",
+  "stellarprism.skill.skill_bestowal.mode.bestowal": "Bestowal",
+
+
+  "stellarprism.skill.power_accumulation": "Power Accumulation",
+  "stellarprism.skill.power_accumulation.description": "Stockpile power as you grow and release it for a empowered strike",
+  "stellarprism.skill.power_accumulation.mode.output": "Stockpile Output",
+  "stellarprism.skill.power_accumulation.mode.smash": "Smash!!",
+
+
+
+
+  "stellarprism.skill.ofa1st": "Skill Bestowal",
+  "stellarprism.skill.ofa1st.description": "A seemingly weak skill with the sole ability to pass itself on..",
+  "stellarprism.skill.mode.ofa.output": "Bestowal",
+  "stellarprism.skill.mode.ofa.smash": "Bestowal",
+  "stellarprism.skill.mode.ofa.cowling": "Bestowal",
+  "stellarprism.skill.mode.ofa.others": "Bestowal",
+
+
+
+
+
+
+
+
+  "stellarprism.skill.asta": "§0Anti Magic",
+  "stellarprism.skill.asta.description": "Harness the power of the devil in the 5 leaf grimoire and show them your magic is Never Giving Up!",
+  "stellarprism.skill.asta.mode.slasher": "§0Anti Magic: Demon Slasher Sword",
+  "stellarprism.skill.asta.mode.form": "§0Anti Magic: Black Form",
+  "stellarprism.skill.asta.mode.meteor": "§0Anti Magic: Black Meteorite",
+  "stellarprism.skill.asta.mode.hurricane": "§0Anti Magic: Black Hurricane",
+  "stellarprism.skill.asta.mode.union": "§0Anti Magic: Devil Union",
+  "stellarprism.skill.mode.asta.surpass": "Surpass Your Limits. Right Here. Right Now",
+
+
+  "stellarprism.skill.blackform.form":  "My Magic Is Never Giving Up",
+  "stellarprism.skill.blackform.union":  "Lets Go Liebe! Devil Union!",
+  "stellarprism.skill.blackform.return":  "The Anti Magic Returns Into The Grimoire...",
+
+
+
+
+
+  "stellarprism.skill.queenofblood": "Queen of §cBlood",
+  "stellarprism.skill.queenofblood.description": "",
+  "stellarprism.skill.queenofblood.mode.reaper": "§cRosethorn Reaper",
+  "stellarprism.skill.queenofblood.mode.rule": "Queen's Rule",
+  "stellarprism.skill.queenofblood.mode.blood": "Queen's §cBlood",
+
+
+
+
+  "stellarprism.skill.corruption_resitance": "Corruption Resitance",
+  "stellarprism.skill.corruption_resitance.description": "Ignore weak corruption damage or resist the damage of powerful attacks.",
+  "stellarprism.skill.corruption_nullification": "Corruption Nullification",
+  "stellarprism.skill.corruption_nullification.description": "Completely ignore Corruption damage.",
+  "stellarprism.skill.eldritch_resitance": "Eldritch Resitance",
+  "setllarprism.skill.eldritch_resitance.description": "Ignore weak eldritch damage or resist the damage of powerful attacks.",
+  "stellarprism.skill.primordial_resitance": "Primordial Resitance",
+  "stellarprism.skill.primordial_resitance.description": "Ignore weak primordial damage or resist the damage of powerful attacks.",
+  "stellarprism.skill.eldritch_nullification": "Eldritch Nullification",
+  "stellarprism.skill.eldritch_nullification.description": "Completely ignore Eldritch damage.",
+  "stellarprism.skill.primordial_nullification": "Primordial Nullification",
+  "stellarprism.skill.primordial_nullification.description": "Completely ignore Primordial damage.",
+
+
+
+  "stellarprism.skill.heavenlylight": "§6Heavenly §fLight",
+
+  "stellarprism.skill.heavenlylight.description": "You have been chosen by the §6light god§r to be the bearer of the heavenly §6light§r that §6shines§r upon all others",
+  "stellarprism.skill.mode.heavenlylight.devouring": "§6Light§r Devouring",
+  "stellarprism.skill.mode.heavenlylight.breaks": "§6Light§r that Breaks the §bSky§f",
+  "stellarprism.skill.mode.heavenlylight.assimilation": "Unique Assimilation",
+
+
+  "stellarprism.skill.copy.successlight": "The Unique Skill %s has been assimilated with you",
+  "stellarprism.skill.copy.faillight": "You have lost a chance to assimilate a skill however your chances grow",
+  "stellarprism.skill.copy.faillightperm": "You have used all your chances to gain a skill",
+
+
+
+
+
+  "stellarprism.skill.playfulmajin": "§dPlayful Majin",
+
+  "stellarprism.skill.playfulmajin.description": "So, do you want to be candy, cookie, or pudding when §dBuu§r eats you?",
+  "stellarprism.skill.mode.playfulmajin.body": "§dBody Manipulation",
+  "stellarprism.skill.mode.playfulmajin.absorption": "§dAbsorption",
+  "stellarprism.skill.mode.playfulmajin.chocolate": "§dTurn into Chocolate",
+  "stellarprism.skill.mode.playfulmajin.stomach": "§dInside of Buu",
+
+
+
+  "stellarprism.skill.buu_upgrade": "The evil defeats the good releasing the original true form of a majin",
+
+  "stellarprism.skill.chaoticmajin": "§dChaotic Majin",
+
+  "stellarprism.skill.chaoticmajin.description": "The power of a long ago sealed Majin of destruction now harnessed in a form to make as your own",
+  "stellarprism.skill.mode.playfulmajin.kai": "§dKai Kai",
+  "stellarprism.skill.mode.playfulmajin.sleep": "§dSleep",
+  "stellarprism.skill.buu.sleep": "You Rest to restore and buff your power",
+  "stellarprism.skill.buu.sleepover": "You have rested and your power is increased",
+  "stellarprism.skill.buu.sleepblock": "You Feel Restless and can not sleep for a while",
+
+
+
+
+  "stellarprism.skill.life_reaver": "§4Life §0Reaver",
+
+  "stellarprism.skill.life_reaver.description": "Reap the §4life§r from your enemies, and grow stronger from taking their Power",
+  "stellarprism.life_reaver.passive": "This skill has no modes its all passives",
+
+
+  "stellarprism.skill.life_upgrade": "%1$s and %2$s have been Consumed into the skill %3$s",
+
+
+  "stellarprism.skill.life_consumer": "§4Life §0Consumer",
+
+  "stellarprism.skill.life_consumer.description": "Consume enemies powers and sacrifice your own in terms of gaining greater strength",
+  "stellarprism.skill.mode.life_consumer.power": "Power Sacrifice",
+  "stellarprism.skill.mode.life_consumer.energy": "Energy Reload",
+  "stellarprism.life_consumer.max": "You cannot sacrifice anymore of your energy",
+
+
+
+  "stellarprism.skill.life_ritual": "§4Life §0Ritual",
+
+  "stellarprism.skill.life_conlife_ritualsumer.description": "Sacrifice your powers for the aim of a greater one",
+  "stellarprism.skill.mode.life_ritual.sacrifice": "Power Sacrifice",
+  "stellarprism.skill.mode.life_ritual.gain": "Ritualistic Gain",
+
+
+  "stellarprism.skill.dirge": "§8Dirge",
+  "stellarprism.skill.dirge.description": "If you listen closely, you’ll hear yourself speak in someone else’s voice.",
+  "stellarprism.skill.mode.dirge.you": "I Want to Become Just Like You",
+  "stellarprism.skill.mode.dirge.watch": "§6Returner’s Clockwork Watch",
+
+  "stellarprism.skill.mode.dirge.cancel": "§6You let the moment slip away, and time ticks on.",
+  "stellarprism.skill.mode.dirge.restore": "§6The hands of fate turn backward… You return to when the gears first aligned.",
+  "stellarprism.skill.mode.dirge.create": "§6You wind the clock and mark this moment in time.",
+  "stellarprism.skill.mode.dirge.death": "§6As death claims you, the watch clicks—time rewinds itself once more.",
+
+  "stellarprism.skill.mode.dirge.justlikeyou.current_skill": "Skill type Selected: %s",
+
+
+  "stellarprism.skill.prism": "§fPrism",
+  "stellarprism.skill.prism.description": "You have gained the power to split §fradiance§r, itself... The applications are limitless, so how shall you wield it?",
+  "stellarprism.skill.mode.prism.refraction": "Refraction",
+  "stellarprism.skill.mode.prism.prismatic": "§cPrismatic Spray",
+  "stellarprism.skill.mode.prism.condensed": "Condensed Spray",
+
+
+
+  "stellarprism.skill.mode.prism.red": "§cRed",
+  "stellarprism.skill.mode.prism.orange": "§6Orange",
+  "stellarprism.skill.mode.prism.yellow": "§eYellow",
+  "stellarprism.skill.mode.prism.green": "§aGreen",
+  "stellarprism.skill.mode.prism.blue": "§9Blue",
+  "stellarprism.skill.mode.prism.indigo": "§5Indigo",
+  "stellarprism.skill.mode.prism.violet": "§dViolet",
+
+
+
+
+
+
+
+
+
+  "stellarprism.skill.fox_wrath": "Fox's Wrath",
+  "stellarprism.skill.fox_wrath.description": "Fox's Wrath",
+
+  "stellarprism.skill.wheel_of_fortune": "Wheel of Fortune",
+
+  "stellarprism.skill.corruption_drive": "§5Corruption Drive",
+  "stellarprism.skill.corruption_drive.description": "§5The hidden gem within your corrupted heart grows with your desires granting you a tougher form",
+  "stellarprism.skill.corruption_drive.boost": "§5The drive within your heart trembles with your desires",
+  "stellarprism.skill.mode.corruption_drive.boost": "§5Drive Boost",
+
+
+
+  "stellarprism.skill.corruption_lord_haki": "§5Corruption Lord Haki",
+  "stellarprism.skill.corruption_lord_haki.description": "",
+  "stellarprism.skill.mode.corruption_lord_haki.fury": "§5Lords Fury",
+  "stellarprism.skill.mode.corruption_lord_haki.coat": "§5Corruption Coat",
+
+
+  "stellarprism.skill.slime.active": "Your Power Has Risen",
+    "stellarprism.skill.slime.deactivate": "Your Power Returns to Normal",
+
+
+  "stellarprism.skill.star_power": "§7Star Power",
+  "stellarprism.skill.star_power.description": "§7After being chosen by the star itself due to your intense will power. You can awaken its true form as it bestows upon your its Star Power to smite any foe who stands against you",
+  "stellarprism.skill.mode.star_power.power": "Infinite Power",
+  "stellarprism.skill.mode.star_power.sword": "Sword of Star Power",
+
+
+
+  "stellarprism.skill.star_power.not": "§7Your will is not great enough to step into this divine state",
+
+
+  "stellarprism.skill.shinning_goddess": "§eShinning Goddess",
+  "stellarprism.skill.shinning_goddess.description": "§eThrough overcoming sheer adversity and intense training you have undergone a super ultimate evolution and now are like a shining goddess. Reflect any attack thrown at your golden aura",
+  "stellarprism.skill.mode.shinning_goddess.calculation": "§eGoddess Calculation",
+  "stellarprism.skill.mode.shinning_goddess.aura": "§eGoddess Aura",
+
+  "stellarprism.skill.shinning_goddess.not": "You lack the energy needed for your super ultimate power",
+
+
+  "stellarprism.skill.crimson_armor": "§4Crimson Armor",
+  "stellarprism.skill.crimson_armor.description": "Bend §4Reality§r and alter your corruption returning it too its roots of a §4demonic§r power ",
+  "stellarprism.skill.mode.crimson_armor.demonicarmor": "§mDemonic Armor",
+  "stellarprism.skill.req.off": "Your armor has returned within you due to wearing another",
+  "stellarprism.skill.crimson_armor.not_crimson":"Your body cannot harness crimson power",
+
+
+
+
+  "stellarprism.skill.black_crimson_armor": "§0Black §4Crimson Armor",
+  "stellarprism.skill.black_crimson_armor.description": "Enter your ultimate evolution and transcend §4demonic§r power and crimson power for a black coated armor",
+
+
+  "stellarprism.skill.corruption_lord_armor" : "§dCorruption §5Lord",
+  "stellarprism.skill.corruption_lord_armor.description": "§dThrough representing one of the seven §5sins§d your corruption has undergone a awakening into a Corruption §5Lord",
+  "stellarprism.skill.corruption_lord.not_lord": "§dYour body cannot harness the power of your §5Sin",
+
+  "stellarprism.skill.true_corruption_lord_armor": "§5True Corruption Lord",
+  "stellarprism.skill.true_corruption_lord_armor.description": "§5Through representing all of the seven §5sins§d your corruption has undergone a awakening into a True Corruption Lord",
+  "stellarprism.skill.corruption_lord.not_true_lord": "§5Your body cannot harness the power of your Sins",
+
+
+  "stellarprism.skill.corruption_armor": "§dCorruption Armor",
+  "stellarprism.skill.corruption_armor.description": "§dAwaken corruption power within you to forge a armor of your own might"
+,
+  "stellarprism.skill.corruption_armor.not_corruption":"§dYour body cannot harness corruption power",
+
+
+
+  "stellarprism.skill.black_corruption_armor": "§0Black §dCorruption Armor",
+  "stellarprism.skill.black_corruption_armor.description": "§dEnter your ultimate evolution and transcend corruption power for a black coated armor",
+
+
+  "stellarprism.skill.full_corruption_armor": "§dFull Corruption Armor",
+  "stellarprism.skill.full_corruption_armor.description": "§dUnleash a completed corruption armor granting a much more completed defense",
+
+
+
+
+
+  "stellarprism.skill.black_rose_armor": "§0Black §5Rose Armor",
+  "stellarprism.skill.black_rose_armor.description": "§5Evolving into a beautiful Black Rose allows you to awaken a armor fitting for such a rose",
+  "stellarprism.skill.rose_armor.not_rose":"§5Your body cannot harness rose power",
+
+
+
+  "stellarprism.skill.rose_armor.not_corrupt":"You are not a slime forged within corruption thus this power will not respond to you",
+
+
+
+  "stellarprism.skill.ultimate_empress": "§dUltimate Empress",
+  "stellarprism.skill.ultimate_empress.description": "§dBecome the ultimate empress you were always meant to become and make all who come before you bow before your might",
+  "stellarprism.skill.ultimate_empress.empress_aura": "Empress Aura",
+  "stellarprism.skill.ultimate_empress.empress_intimidation": "Empress Intimidation",
+
+
+
+
+  "stellarprism.skill.bio_slime.not_bio":"§aYou are not a bio engineered slime thus this power does not belong to you",
+
+
+
+  "stellarprism.skill.super_slime.description":"§bThrough being given a power from a amulet you can awaken its power for yourself",
+  "stellarprism.skill.super_slime":"§bSuper Slime",
+
+
+
+  "stellarprism.skill.bio_slime.super":"§bYour body cannot harness the amulets power",
+
+
+  "stellarprism.skill.godly_super_slime.description":"§aThrough awakening a power deep within yourself you are able to awaken a power that feels almost godly",
+  "stellarprism.skill.godly_super_slime":"§aGodly Super Slime",
+  "stellarprism.skill.bio_slime.godly_super_slime":"§aYour body cannot bring out your evolved power",
+
+
+
+
+  "stellarprism.skill.godly_super_slime_ultra.description":"§2Through pouring your sorrows and hatred you have forced yourself to evolve into a incomplete evolution, but one that gets the job done regardless of who must die..",
+  "stellarprism.skill.godly_super_slime_ultra":"§2Godly Super Slime §4Ultra",
+  "stellarprism.skill.bio_slime.godly_super_slime_ultra":"§2You dont feel enough §4bloodlust§2 to bother with this power",
+
+
+
+  "stellarprism.skill.super_slime_ultimate.description":"§aThrough mastering your own powers you have undergone a §2Ultimate§a evolution. Now nothing can take you down!",
+  "stellarprism.skill.super_slime_ultimate":"§aSuper Slime §2Ultimate",
+  "stellarprism.skill.bio_slime.super_slime_ultimate":"§aYour body doesn't have the energy to weild your §2ultimate§a form",
+
+
+
+  "item.stellarprism.black_slasher_katana": "Demon Slasher",
+
+  "item.stellarprism.rosethorn_reapert1_scythe": "Rosethorn Reaper(Low)",
+  "item.stellarprism.rosethorn_reapert2_scythe": "Rosethorn Reaper(Mid)",
+  "item.stellarprism.rosethorn_reapert3_scythe": "Rosethorn Reaper(Pure)",
+
+
+  "item.stellarprism.sword_of_starpower": "Sword of StarPower",
+
+  "stellarprism.skill.acquire.amulet": "An amulet has chosen you as its Master converting its strength into %s",
+  "stellarprism.skill.acquire.empty": "You already have every obtainable skill from this book",
+
+  "stellarprism.skill.acquire.heart": "The Gemstone %s has been engraved into you heart",
+
+
+  "stellarprism.skill.placeholder.corruption": "§dThe Powers of Corruption are to strong for any to handle at this time",
+
+  "stellarprism.skill.gambler": "Gambler",
+  "stellarprism.skill.gambler.description": "Is Luck on your side?",
+  "stellarprism.skill.gambler.aquire": "§aCongrats on the 1/250... now granting §r%s§a for a short time.",
+  "stellarprism.skill.gambler.keep": "§6Congrats on the 1/5000... now gifting §r%s§a for you to keep.",
+  "stellarprism.skill.mode.gambler.gamble": "Gamble",
+  "stellarprism.skill.mode.gambler.nothing": "Double or Nothing",
+  "stellarprism.skill.mode.gambler.cooldown": "Cooldown Reset?",
+  "stellarprism.skill.gambler.lose": "Luck is not on your side... now revoking §r%s§a.",
+  "stellarprism.skill.gambler.engraving_grant": "Granted %s to your weapon!",
+  "stellarprism.skill.gambler.engraving_levelup": "Leveled up %s on your weapon!",
+  "stellarprism.skill.gambler.engraving_exists": "Weapon already has %s!",
+  "stellarprism.skill.gambler.engraving_max": "Weapon already has max level %s!",
+  "stellarprism.skill.gambler.no_equipment": "No weapon to enchant!",
+  "stellarprism.skill.gambler.usage": "You have %s cooldown rerolls.",
+  "stellarprism.skill.gambler.cooldown": "Cooldown Reset.",
+
+
+
+  "item.stellarprism.random_amulet": "§8Random §e§lAmulet",
+  "item.stellarprism.random_heartstone": "§8Random §4Heartstone",
+
+  "item.stellarprism.corruption_shard": "Corruption Shard",
+  "item.stellarprism.villainous_spirit": "Villainous Spirit",
+  "item.stellarprism.prism_shard": "Prism Shard",
+  "item.stellarprism.heroes_spirit": "Heroes Spirit",
+  "item.stellarprism.hero_shard": "Hero Shard",
+  "item.stellarprism.chocolate": "Chocolate",
+  "item.stellarprism.monkey_spin": "monke spin",
+
+  "itemGroup.stellar_tab": "Stellar Prism",
+
+
+
+
+
+  "item.stellarprism.world_memory": "§7Memory of ending §aWorlds",
+  "item.stellarprism.reality_memory": "§7Memory of lost §4Reality",
+  "item.stellarprism.power_memory": "§7Memory of forgotten §bPower",
+  "item.stellarprism.hope_memory": "§7Memory of empty §6Hope",
+  "item.stellarprism.time_memory": "§7Memory of broken §1Time",
+  "item.stellarprism.space_memory": "§7Memory of minimal §dSpace",
+
+  "stellarprism.skill.acquire.amulet.worlds": "An amulet has chosen you as its Master converting its strength into Amulet of §aWorlds",
+  "stellarprism.skill.acquire.amulet.reality": "An amulet has chosen you as its Master converting its strength into Amulet of §4Reality ",
+  "stellarprism.skill.acquire.amulet.power": "An amulet has chosen you as its Master converting its strength into Amulet of §bPower",
+  "stellarprism.skill.acquire.amulet.hope": "An amulet has chosen you as its Master converting its strength into Amulet of §6Hope",
+  "stellarprism.skill.acquire.amulet.time": "An amulet has chosen you as its Master converting its strength into Amulet of §1Time ",
+  "stellarprism.skill.acquire.amulet.space": "An amulet has chosen you as its Master converting its strength into Amulet of §dSpace",
+
+
+
+
+  "item.stellarprism.molecular_essence": "§fMolecular Essence of EP",
+  "item.stellarprism.lunar_essence": "§6Lunar Essence of EP",
+  "item.stellarprism.planetary_essence": "§bPlanetary Essence of EP",
+  "item.stellarprism.solar_essence": "§bSolar Essence of EP",
+  "item.stellarprism.galactic_essence": "§aGalactic Essence of EP",
+  "item.stellarprism.universal_essence": "§dUniversal Essence of EP",
+
+  "item.stellarprism.cdrive_item": "§5Corruption §dDrive",
+  "item.stellarprism.monster_potion": "§6Sequence 9 potion: §8Monster",
+  "item.stellarprism.wof_schematic": "§8Wheel of Fortune §fSchematic",
+  "item.stellarprism.silver_petal": "§8Monster characteristic",
+  "item.stellarprism.cold_gray_stone": "§8Robot characteristic",
+  "item.stellarprism.mercury_eyeball": "§8Lucky One characteristic",
+  "item.stellarprism.mercury_heart": "§8Calamity Priest characteristic",
+  "item.stellarprism.golden_stone": "§8Winner characteristic",
+  "item.stellarprism.black_horn": "§8Misfortune Mage characteristic",
+  "item.stellarprism.silver_gelatinous": "§8Chaoswalker characteristic",
+  "item.stellarprism.mercury_horn": "§8Soothsayer characteristic",
+  "item.stellarprism.mercury_ring": "§8Snake of Mercury characteristic",
+  "item.stellarprism.probability_die": "§8Dice of Probability",
+  "item.stellarprism.robot_potion": "§6Sequence 8 potion: §8Robot",
+  "item.stellarprism.lucky_one_potion": "§6Sequence 7 potion: §8Lucky One",
+  "item.stellarprism.calamity_priest_potion": "§6Sequence 6 potion: §8Calamity Priest",
+  "item.stellarprism.winner_potion": "§6Sequence 5 potion: §8Winner",
+  "item.stellarprism.misfortune_mage_potion": "§6Sequence 4 potion: §8Misfortune Mage",
+  "item.stellarprism.chaoswalker_potion": "§6Sequence 3 potion: §8Chaoswalker",
+  "item.stellarprism.soothsayer_potion": "§6Sequence 2 potion: §8Soothsayer",
+  "item.stellarprism.snake_of_mercury_potion": "§6Sequence 1 potion: §8Snake of Mercury",
+  "item.stellarprism.wof_potion": "§6Sequence 0 potion: §8Wheel of Fortune",
+
+  "item.stellarprism.blood_claw": "§cBlood Claw",
+
+
+  "stellarprism.skill.acquire.heart.ruby": "§cThe Gemstone Ruby has artificially been engraved into your heart from enough rubies in your blood",
+  "stellarprism.skill.acquire.heart.severer":"§cAs your blood fills with even more rubies your affinity for it has artificially gained Severer",
+  "stellarprism.skill.acquire.heart.topaz": "§6The Gemstone Topaz has artificially been engraved into your heart from enough topazes in your blood",
+  "stellarprism.skill.acquire.heart.guardian":"§6As your blood fills with even more topazes your affinity for it has artificially gained Guardian",
+  "stellarprism.skill.acquire.heart.citrine": "§eThe Gemstone Citrine has artificially been engraved into your heart from enough citrines in your blood",
+  "stellarprism.skill.acquire.heart.musician":"§eAs your blood fills with even more citrines your affinity for it has artificially gained Musician",
+  "stellarprism.skill.acquire.heart.jade": "§2The Gemstone Jade has artificially been engraved into your heart from enough jades in your blood",
+  "stellarprism.skill.acquire.heart.berzerker":"§2As your blood fills with even more jades your affinity for it has artificially gained Berzerker",
+  "stellarprism.skill.acquire.heart.sugilite": "§5The Gemstone Sugilite has artificially been engraved into your heart from enough sugilites in your blood",
+  "stellarprism.skill.acquire.heart.oppressor":"§5As your blood fills with even more sugilites your affinity for it has artificially gained Oppressor",
+  "stellarprism.skill.acquire.heart.spinel": "§dThe Gemstone Spinel has artificially been engraved into your heart from enough spinels in your blood",
+  "stellarprism.skill.acquire.heart.suppressor":"§dAs your blood fills with even more spinels your affinity for it has artificially gained Suppressor",
+  "stellarprism.skill.acquire.heart.opal": "§fThe Gemstone Opal has artificially been engraved into your heart from enough opals in your blood",
+  "stellarprism.skill.acquire.heart.unyielding":"§fAs your blood fills with even more opals your affinity for it has artificially gained Unyielding",
+  "stellarprism.skill.acquire.heart.onyx": "§0The Gemstone Onyx has artificially been engraved into your heart from enough onyxes in your blood",
+  "stellarprism.skill.acquire.heart.gourmet":"§0As your blood fills with even more onyxes your affinity for it has artificially gained Gourmet",
+  "stellarprism.skill.acquire.heart.aquamarine": "§bThe Gemstone Aquamarine has artificially been engraved into your heart from enough aquamarines in your blood",
+  "stellarprism.skill.acquire.heart.spearhead":"§bAs your blood fills with even more aquamarines your affinity for it has artificially gained Spearhead",
+
+
+  "item.stellarprism.ruby_fragment": "§cRuby §7Fragment",
+  "item.stellarprism.topaz_fragment": "§6Topaz §7Fragment",
+  "item.stellarprism.citrine_fragment": "§eCitrine §7Fragment",
+  "item.stellarprism.jade_fragment": "§2Jade §7Fragment",
+  "item.stellarprism.aquamarine_fragment": "§bAquamarine §7Fragment",
+  "item.stellarprism.sugilite_fragment": "§5Sugilite §7Fragment",
+  "item.stellarprism.spinel_fragment": "§dSpinel §7Fragment",
+  "item.stellarprism.onyx_fragment": "§0Onyx §7Fragment",
+  "item.stellarprism.opal_fragment": "§fOpal §7Fragment",
+
+
+  "item.stellarprism.eldritch_corruption": "§cEldirtch §1Corruption",
+
+
+
+  "block.stellarprism.heart_ruby_ore": "§cRuby §rOre",
+  "block.stellarprism.heart_topaz_ore": "§6Topaz §rOre",
+  "block.stellarprism.heart_citrine_ore": "§eCitrine §rOre",
+  "block.stellarprism.heart_jade_ore": "§2Jade §rOre",
+  "block.stellarprism.heart_aquamarine_ore": "§bAquamarine §rOre",
+  "block.stellarprism.heart_sugilite_ore": "§5Sugilite §rOre",
+  "block.stellarprism.heart_spinel_ore": "§dSpinel §rOre",
+  "block.stellarprism.heart_onyx_ore": "§0Onyx §rOre",
+  "block.stellarprism.heart_opal_ore": "§fOpal §rOre",
+
+
+
+
+
+  "enchantment.stellarprism.tama_engraving": "§4Tama",
+  "enchantment.stellarprism.amber_engraving": "§6Amber",
+  "enchantment.stellarprism.echo_engraving": "§eEcho",
+  "enchantment.stellarprism.zephyr_engraving": "§2Zephyr",
+  "enchantment.stellarprism.sapphire_engraving": "§bSapphire",
+  "enchantment.stellarprism.indigo_engraving": "§5Indigo",
+  "enchantment.stellarprism.astra_engraving": "§dAstra",
+  "enchantment.stellarprism.ebony_engraving": "§0Ebony",
+  "enchantment.stellarprism.rune_engraving": "§fRune",
+
+  "enchantment.stellarprism.starpower_engraving": "§e§lStarPower",
+
+  "stellarprism.enchantment.starpower_engraving.boost": "§e§lThe star shines empowering this divine blades next strike",
+
+  "enchantment.stellarprism.flame_attunement": "§cFlame Attunement",
+  "enchantment.stellarprism.earth_attunement": "§6Earth Attunement",
+  "enchantment.stellarprism.water_attunement": "§bWater Attunement",
+  "enchantment.stellarprism.sound_attunement": "§eSound Attunement",
+  "enchantment.stellarprism.space_attunement": "§dSpace Attunement",
+  "enchantment.stellarprism.wind_attunement": "§2Wind Attunement",
+  "enchantment.stellarprism.dark_attunement": "§0Dark Attunement",
+  "enchantment.stellarprism.light_attunement": "§fLight Attunement",
+  "enchantment.stellarprism.gravity_attunement": "§5Gravity Attunement",
+  "enchantment.stellarprism.lightning_attunement": "§2Lighting Attunement",
+  "enchantment.stellarprism.corrupt_attunment": "§5Corruption Attunement",
+  "enchantment.stellarprism.mist_attunment": "§3Mist Attunement",
+  "enchantment.stellarprism.eldritch_attunment": "§1Eldritch §cAttunement",
+  "enchantment.stellarprism.primordial_attunement": "§cP§6r§ei§2m§bo§dr§5d§fi§0a§7l Attunement",
+
+  "enchantment.stellarprism.lucky_break": "Lucky Break",
+  "enchantment.stellarprism.memory_hunter": "Memory Hunter",
+  "effect.stellarprism.tamaabsorption": "Blood Absorption",
+  "effect.stellarprism.rubyboost": "§cRuby Boost",
+
+
+
+
+
+
+  "stellarprism.race.corrupt_slime_race": "§dCorrupt Slime",
+
+  "stellarprism.race.crimson_armor_race": "§4Crimson Armor ",
+  "stellarprism.race.black_crimson_armor_race": "§0Black §4Crimson Armor",
+
+  "stellarprism.race.crimson_corruption_lord": "§dCorruption §5Lord",
+  "stellarprism.race.corruption_corruption_lord": "§dCorruption §5Lord",
+  "stellarprism.race.rose_corruption_lord": "§dCorruption §5Lord",
+
+
+  "stellarprism.race.corruption_lord.sinreq": "Acquire A §5Sin§r Skill",
+
+  "stellarprism.race.crimson_true_corruption_lord": "§5True Corruption Lord",
+  "stellarprism.race.corruption_true_corruption_lord": "§5True Corruption Lord",
+  "stellarprism.race.rose_true_corruption_lord": "§5True Corruption Lord",
+
+
+  "stellarprism.race.true_corruption_lord.sinreq": "Acquire All §5Sin§r Skills",
+
+
+
+
+  "stellarprism.race.corrupt_armor_race": "§dCorruption Armor",
+  "stellarprism.race.full_corrupt_armor_race": "§dFull Corruption Armor",
+  "stellarprism.race.black_corrupt_armor_race": "§0Black §dCorruption Armor",
+
+
+  "stellarprism.race.succubus_slime_race": "§5Succubus Slime",
+  "stellarprism.race.black_rose_armor_race": "§0Black §5Rose Armor",
+  "stellarprism.race.ultimate_empress": "§dUltimate Empress",
+
+
+
+
+
+
+  "stellarprism.race.crimson_corruption_lord.awaken": "Awaken [%s]",
+  "stellarprism.race.star.awaken": "Awaken [%s]",
+  "stellarprism.evolution_menu.star_req": "Obtain §e§lStar of Willpower §ror Hero Shards",
+  "stellarprism.evolution_menu.spirit_req": "Obtain a Greater Spirit",
+
+
+  "stellarprism.race.artificial_slime_race": "Artificial Slime",
+  "stellarprism.race.artificial_slime_race.notes":  "A creature akin to slimes that were made through artificial means. These bio engineered lifeforms can evolve into more humanoid looking slimes" ,
+
+
+  "stellarprism.race.bio_slime_race": "§aBio Slime",
+  "stellarprism.race.super_slime_race": "§bSuper Slime",
+  "stellarprism.race.godly_super_slime_race": "§aGodly Super Slime",
+  "stellarprism.race.godly_super_slime_ultra_race":"§2Godly Super Slime §4Ultra",
+  "stellarprism.race.super_slime_ultimate_race":"§aSuper Slime §2Ultimate",
+  "stellarprism.race.shinning_goddess_race":"§eShinning Goddess",
+  "stellarprism.race.star_power_race":"§7Star Power",
+
+
+  "stellarprism.race.fox_race": "Fox",
+  "stellarprism.race.fox_race.notes":  "Timid Creatures of the Forest and beyond said to be tricksters however most are not of that description" ,
+
+  "stellarprism.race.elemental_fox": "Random Elemental Fox",
+
+  "stellarprism.race.dark_elemental_fox": "Young §0Dark §rElemental §6Fox",
+  "stellarprism.race.elder_dark_elemental_fox": "§0Elder Dark §rElemental §6Fox",
+  "stellarprism.race.ancient_dark_elemental_fox": "§0Ancient Dark §rElemental §6Fox",
+  "stellarprism.race.dark_elemental_spirit_kitsune": "§0Dark §rElemental §7Spirit §6Kitsune",
+
+  "stellarprism.race.earth_elemental_fox": "Young §6Earth §rElemental §6Fox",
+  "stellarprism.race.elder_earth_elemental_fox": "§6Elder Earth §rElemental §6Fox",
+  "stellarprism.race.ancient_earth_elemental_fox": "§6Ancient Earth §rElemental §6Fox",
+  "stellarprism.race.earth_elemental_spirit_kitsune": "§6Earth §rElemental §7Spirit §6Kitsune",
+
+  "stellarprism.race.flame_elemental_fox": "Young §cFlame §rElemental §6Fox",
+  "stellarprism.race.elder_flame_elemental_fox": "§cElder Flame §rElemental §6Fox",
+  "stellarprism.race.ancient_flame_elemental_fox": "§cAncient Flame §rElemental §6Fox",
+  "stellarprism.race.flame_elemental_spirit_kitsune": "§cFlame §rElemental §7Spirit §6Kitsune",
+
+  "stellarprism.race.gravity_elemental_fox": "Young §5Gravity §rElemental §6Fox",
+  "stellarprism.race.elder_gravity_elemental_fox": "§5Elder Gravity §rElemental §6Fox",
+  "stellarprism.race.ancient_gravity_elemental_fox": "§5Ancient Gravity §rElemental §6Fox",
+  "stellarprism.race.gravity_elemental_spirit_kitsune": "§5Gravity §rElemental §7Spirit §6Kitsune",
+
+  "stellarprism.race.light_elemental_fox": "Young §fLight §rElemental §6Fox",
+  "stellarprism.race.elder_light_elemental_fox": "§fElder Light §rElemental §6Fox",
+  "stellarprism.race.ancient_light_elemental_fox": "§fAncient Light §rElemental §6Fox",
+  "stellarprism.race.light_elemental_spirit_kitsune": "§fLight §rElemental §7Spirit §6Kitsune",
+
+  "stellarprism.race.sound_elemental_fox": "Young §eSound §rElemental §6Fox",
+  "stellarprism.race.elder_sound_elemental_fox": "§eElder Sound §rElemental §6Fox",
+  "stellarprism.race.ancient_sound_elemental_fox": "§eAncient Sound §rElemental §6Fox",
+  "stellarprism.race.sound_elemental_spirit_kitsune": "§eSound §rElemental §7Spirit §6Kitsune",
+
+  "stellarprism.race.space_elemental_fox": "Young §dSpace §rElemental §6Fox",
+  "stellarprism.race.elder_space_elemental_fox": "§dElder Space §rElemental §6Fox",
+  "stellarprism.race.ancient_space_elemental_fox": "§dAncient Space §rElemental §6Fox",
+  "stellarprism.race.space_elemental_spirit_kitsune": "§dSpace §rElemental §7Spirit §6Kitsune",
+
+  "stellarprism.race.water_elemental_fox": "Young §bWater §rElemental §6Fox",
+  "stellarprism.race.elder_water_elemental_fox": "§bElder Water §rElemental §6Fox",
+  "stellarprism.race.ancient_water_elemental_fox": "§bAncient Water §rElemental §6Fox",
+  "stellarprism.race.water_elemental_spirit_kitsune": "§bWater §rElemental §7Spirit §6Kitsune",
+
+  "stellarprism.race.wind_elemental_fox": "Young §2Wind §rElemental §6Fox",
+  "stellarprism.race.elder_wind_elemental_fox": "§2Elder Wind §rElemental §6Fox",
+  "stellarprism.race.ancient_wind_elemental_fox": "§2Ancient Wind §rElemental §6Fox",
+  "stellarprism.race.wind_elemental_spirit_kitsune": "§2Wind §rElemental §7Spirit §6Kitsune",
+
+  "stellarprism.race.martial_fox": "Young §7Martial §6Fox",
+  "stellarprism.race.elder_martial_fox": "§7Elder Martial §6Fox",
+  "stellarprism.race.ancient_martial_fox": "§7Ancient Martial §6Fox",
+  "stellarprism.race.martial_spirit_kitsune": "§7Martial Spirit §6Kitsune",
+  "stellarprism.race.martial.battlewill": "Master Battlewills",
+
+  "stellarprism.race.primordial_fragment_kitsune": "§cP§6r§ei§2m§bo§dr§5d§fi§0a§7l §7Fragment §6Kitsune",
+  "stellarprism.race.primordial_kitsune": "§cP§6r§ei§2m§bo§dr§5d§fi§0a§7l §6Kitsune",
+
+
+
+  "stellarprism.race.nightmare_fox": "§dNightmare §rFox",
+  "stellarprism.race.demon_fox": "§dDemon §rFox",
+  "stellarprism.race.corrupted_fox": "§dCorrupted §rFox",
+  "stellarprism.race.corrupted_kitsune": "§dCorrupted §6Kitsune",
+  "stellarprism.race.corruption_lord_luna": "§dCorruption Lord §rLuna",
+  "stellarprism.race.tcl_luna": "§5True Corruption Lord §rLuna",
+
+
+
+  "stellarprism.race.beyonder_race": "Beyonder",
+  "stellarprism.race.monster_race": "§6Sequence 9: §8Monster",
+  "stellarprism.race.robot_race": "§6Sequence 8: §8Robot",
+  "stellarprism.race.luckyone_race": "§6Sequence 7: §8Lucky One",
+  "stellarprism.race.calamitypriest_race": "§6Sequence 6: §8Calamity Priest",
+  "stellarprism.race.winner_race": "§6Sequence 5: §8Winner",
+  "stellarprism.race.misfortunemage_race": "§6Sequence 4: §8Misfortune Mage",
+  "stellarprism.race.chaoswalker_race": "§6Sequence 3: §8Chaoswalker",
+  "stellarprism.race.soothslayer_race": "§6Sequence 2: §8Soothslayer",
+  "stellarprism.race.snakeofmercury_race": "§6Sequence 1: §8Snake of Mercury",
+  "stellarprism.race.wof_race": "§6Sequence 0: §8Wheel of Fortune",
+
+
+
+
+
+
+
+  "death.attack.stellarprism.corruption": "%1$s was consumed by %2$s's §5corruption",
+  "death.attack.stellarprism.corruption_attack": "%1$s was consumed by %2$s's §5corruption",
+  "death.attack.stellarprism.primordial": "%1$s was atomically riped apart by %2$s's ",
+  "death.attack.stellarprism.eldritch": "%1$s was engulfed by %2$s's eldritch corruption"
+}

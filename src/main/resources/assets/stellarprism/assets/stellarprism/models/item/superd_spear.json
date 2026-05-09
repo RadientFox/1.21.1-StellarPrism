@@ -1,0 +1,84 @@
+{
+  "credit": "Made with Blockbench",
+  "texture_size": [
+    48,
+    48
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [
+        -0.5,
+        -23.5,
+        1.25
+      ]
+    },
+    "thirdperson_lefthand": {
+      "translation": [
+        -0.5,
+        -23.5,
+        1.25
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -10,
+        0,
+        0
+      ],
+      "translation": [
+        8.5,
+        -33,
+        -3.25
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        -10,
+        0,
+        0
+      ],
+      "translation": [
+        8.5,
+        -33,
+        -3.25
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        -90,
+        0
+      ],
+      "translation": [
+        0,
+        -11.5,
+        0.75
+      ],
+      "scale": [
+        1,
+        0.45,
+        0.6
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        -90,
+        0
+      ],
+      "translation": [
+        0,
+        -11.5,
+        0.75
+      ],
+      "scale": [
+        1,
+        0.45,
+        0.6
+      ]
+    }
+  },
+  "textures": {
+    "particle": "stellarprism:item/superd_spear"
+  }
+}

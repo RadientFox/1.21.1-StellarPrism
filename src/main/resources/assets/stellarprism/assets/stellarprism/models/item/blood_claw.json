@@ -1,0 +1,122 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    64,
+    64
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        90,
+        -180,
+        0
+      ],
+      "translation": [
+        -6,
+        -1.5,
+        -4.25
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        90,
+        -180,
+        0
+      ],
+      "translation": [
+        -6,
+        -1.5,
+        -4.25
+      ],
+      "scale": [
+        -1,
+        1,
+        1
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        90,
+        -180,
+        0
+      ],
+      "translation": [
+        -8.75,
+        -0.5,
+        -3
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        90,
+        -180,
+        0
+      ],
+      "translation": [
+        -9,
+        -0.5,
+        -3.25
+      ],
+      "scale": [
+        -1,
+        1,
+        1
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        -130,
+        -31
+      ],
+      "translation": [
+        -4.25,
+        -10,
+        1.75
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "head": {
+      "rotation": [
+        -90,
+        -90,
+        177
+      ],
+      "translation": [
+        -0.75,
+        -23,
+        -21.25
+      ],
+      "scale": [
+        4,
+        4,
+        4
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        -130,
+        -31
+      ],
+      "translation": [
+        -4.25,
+        -10,
+        1.75
+      ],
+      "scale": [
+        1.23,
+        1.5,
+        1.52
+      ]
+    }
+  },
+  "textures": {
+    "particle": "stellarprism:item/blood_claw"
+  }
+}
