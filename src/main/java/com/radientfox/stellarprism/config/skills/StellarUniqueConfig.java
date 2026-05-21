@@ -3,11 +3,15 @@ package com.radientfox.stellarprism.config.skills;
 import io.github.manasmods.manascore.config.api.Comment;
 import io.github.manasmods.manascore.config.api.ManasConfig;
 import io.github.manasmods.manascore.config.api.ManasSubConfig;
-import io.github.manasmods.tensura.config.ability.skill.UniqueSkillConfig;
 
 public class StellarUniqueConfig extends ManasConfig {
 
-    public StellarUniqueConfig.Spinel Spinel = new StellarUniqueConfig.Spinel();
+    public Spinel Spinel = new Spinel();
+    public StellarUniqueConfig.Jade Jade = new StellarUniqueConfig.Jade();
+    public StellarUniqueConfig.AmuletofPower AmuletofPower = new StellarUniqueConfig.AmuletofPower();
+    public StellarUniqueConfig.Prism Prism = new StellarUniqueConfig.Prism();
+    public StellarUniqueConfig.AddandSubtract AddandSubtract = new StellarUniqueConfig.AddandSubtract();
+    public StellarUniqueConfig.VoidPriestess VoidPriestess = new StellarUniqueConfig.VoidPriestess();
 
 
     public StellarUniqueConfig() {
@@ -19,9 +23,9 @@ public class StellarUniqueConfig extends ManasConfig {
 
     public static class Spinel extends ManasSubConfig {
         @Comment("Magicule Acquirement Cost.")
-        public double mpAcquirement = 60000.0;
+        public double mpAcquirement = 60_000.0;
         @Comment("Skill Mastery Points.")
-        public double masteryPoints = 60000.0;
+        public double masteryPoints = 2_500.0;
         @Comment("Enable In Slot Severance Immunity.")
         public boolean severanceImmunity = true;
         @Comment("Damage multiplier with Spatial Domination.")
@@ -55,6 +59,139 @@ public class StellarUniqueConfig extends ManasConfig {
         }
     }
 
+
+
+    public static class Jade extends ManasSubConfig {
+
+        public Jade() {
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static class AmuletofPower extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 100_000.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 2_000.0;
+        @Comment("Passive Damage Multiplier.")
+        public double powerEnhanced = 1.5;
+        @Comment("Passive Damage Multiplier Mastered.")
+        public double powerEnhancedMastered = 3.0;
+        @Comment("Magicule cost for Boost.(Scales with Multiplier)")
+        public double mpBoost = 1_000;
+        @Comment("Boost Damage Multiplier Stage 1.")
+        public double Boost1 = 2.0;
+        @Comment("Boost Damage Multiplier Stage 2.")
+        public double Boost2 = 4.0;
+        @Comment("Boost Damage Multiplier Stage 3.")
+        public double Boost3 = 6.0;
+        @Comment("Boost Damage Multiplier Stage 4.")
+        public double Boost4 = 8.0;
+        @Comment("Boost Damage Multiplier Stage 5.")
+        public double Boost5 = 10.0;
+        @Comment("Boost Damage Duration in ticks.")
+        public double BoostTicks = 3_600.0;
+        @Comment("Magicule cost for Power Shot.")
+        public double mpPowerShot = 5_000;
+        @Comment("Magicule cost for Power Shot on mastery.")
+        public double mpPowerShotMastered = 10_000;
+        @Comment("Mastery Percent for Power Shot.")
+        public double powerShotUnlock = 0.5;
+        @Comment("Cooldown in ticks for Power Shot.")
+        public double powerShotCooldown = 2_400.0;
+        @Comment("Power Shot Damage Multiplier.")
+        public double powerShotMult = 2.0;
+
+
+        public AmuletofPower() {
+        }
+    }
+
+
+
+    public static class Prism extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 77_777.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 7_777;
+
+    public Prism() {
+    }
+    }
+
+
+    public static class AddandSubtract extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 150_000.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 1_234.0;
+        @Comment("Auto Subtraction Damage.")
+        public double autoSubDmg = 25.0;
+        @Comment("Auto Subtraction Damage on Mastery.")
+        public double autoSubDmgMastery = 75.0;
+        @Comment("Add armor points.")
+        public double addArmor = 25.0;
+        @Comment("Add armor points on mastery.")
+        public double addArmorMastery = 50.0;
+        @Comment("Add HP increase.")
+        public double addHP = 0.1;
+        @Comment("Add SHP increase.")
+        public double addSHP = 0.1;
+        @Comment("Auto Add Stat increase increase.")
+        public double addStatincrease = 0.2;
+        @Comment("Subtract Damage.")
+        public double subtractDMG = 100.0;
+        @Comment("Subtract Cooldown.")
+        public double subtractCooldown = 5.0;
+        @Comment("Subtract Damage Mastery.")
+        public double subtractDMGMastery = 250.0;
+        @Comment("Subtract Cooldown Mastery.")
+        public double subtractCooldownMastery = 2.0;
+        @Comment("Negative Addition Damage .")
+        public double negativeAddition = 400.0;
+
+
+    public AddandSubtract() {
+    }
+    }
+
+
+
+    public static class VoidPriestess  extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 150_000.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 1_500.0;
+        @Comment("Void Damage Multiplier for user per subordinate.")
+        public double multiplierSelf = 0.2;
+        @Comment("Void Damage Multiplier for allies per subordinate.")
+        public double multiplierAllies = 0.1;
+        @Comment("Charm MP cost.")
+        public double charmCost = 30_000.0;
+        @Comment("Charm Duration.")
+        public double charmTicks = 12_000.0;
+        @Comment("Charm Cooldown.")
+        public double charmCooldown = 12_000.0;
+
+    public VoidPriestess() {
+    }
+    }
 
 
 

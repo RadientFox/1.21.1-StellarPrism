@@ -52,9 +52,8 @@ public class StellarMessgeUtils {
             else if (playerUUID.equals(StellarPrism.NITE)) {
                 event.getPlayer().sendSystemMessage(Component.translatable("The §dAncient one's§r beckoned for you to §kjoin"));
             } else {
-                Component base = Component.translatable("stellarprism.join.message", new Object[]{playerProfile.getName()});
-                Component link = Component.literal("[ Discord Link ].").withStyle(Style.EMPTY.withColor(ChatFormatting.DARK_PURPLE).withUnderlined(true).withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://discord.gg/GvnwfEU8v3")));
-                event.getPlayer().displayClientMessage(base.copy().append(link), false);
+                event.getPlayer().sendSystemMessage(Component.translatable("stellarprism.join.message", new Object[]{playerProfile.getName()}));
+                event.getPlayer().sendSystemMessage( Component.literal(" [ Discord Link ].").withStyle(Style.EMPTY.withColor(ChatFormatting.DARK_PURPLE).withUnderlined(true).withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://discord.gg/GvnwfEU8v3"))));
             }
 
 

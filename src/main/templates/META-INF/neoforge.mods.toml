@@ -20,16 +20,10 @@ config="${mod_id}.mixins.json"
 #[[accessTransformers]]
 #file="META-INF/accesstransformer.cfg"
 
-[[dependencies.${mod_id}]] #optional
-    # the modid of the dependency
-    modId="neoforge" #mandatory
-    # The type of the dependency. Can be one of "required", "optional", "incompatible" or "discouraged" (case insensitive).
-    # 'required' requires the mod to exist, 'optional' does not
-    # 'incompatible' will prevent the game from loading when the mod exists, and 'discouraged' will show a warning
-    type="required" #mandatory
-    # reason="..."
-    # The version range of the dependency
-    versionRange="[${neo_version},)" #mandatory
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
     ordering="NONE"
     side="BOTH"
 

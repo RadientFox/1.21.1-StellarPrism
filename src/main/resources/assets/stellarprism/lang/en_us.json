@@ -1,6 +1,5 @@
 {
 
-
   "stellarprism.join.message": "Hello %1$s, it seems like you have Stellar Prism installed if you have any questions or need the wiki please join the discord",
 
 
@@ -23,12 +22,13 @@
 
 
 
-  "stellarprism.skill.mode.spinel.bullet": "Spinel Bullet",
+  "stellarprism.skill.spinel_skill": "§dSpinel",
+  "stellarprism.skill.spinel_skill.description": "When vastness of §dSpace§r seems to large for your heavy heart",
+  "stellarprism.skill.mode.spinel.cutter": "Space Cutter",
+  "stellarprism.skill.mode.spinel.storage": "Pocket Storage",
   "stellarprism.skill.mode.spinel.aura": "Spatial Aura",
-  "stellarprism.skill.mode.spinel.transfer": "Spatial Transfer",
-  "stellarprism.skill.mode.spinel.wall": "Spatial Wall",
-  "stellarprism.skill.spinel": "§dSpinel",
-  "stellarprism.skill.spinel.description": "When vastness of §dSpace§r seems to large for your heavy heart",
+
+
   "stellarprism.skill.mode.spinel.active": "Your Damage is being converted to §dSpace",
 
 
