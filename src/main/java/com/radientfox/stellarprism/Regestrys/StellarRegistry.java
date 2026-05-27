@@ -14,7 +14,7 @@ public class StellarRegistry {
         StellarExtras.register(modEventBus);
         StellarUniques.init();
         StellarUltimates.register(modEventBus);
-        StellarEffects.setRegistry(modEventBus);
+        StellarEffects.register(modEventBus);
         StellarItems.register(modEventBus);
       //  StellarToolsandWepons.register(modEventBus);
      //   StellarEntities.register(modEventBus);

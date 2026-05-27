@@ -42,6 +42,8 @@ public class StellarUniqueConfig extends ManasConfig {
         public double dmgSpaceCutter = 75;
         @Comment("Damage for Space Cutter on mastery.")
         public double masterydmgSpaceCutter = 250;
+        @Comment("Cooldown for Space Cutter.")
+        public double spaceCutterCooldown = 5.0;
         @Comment("Aura cost for Pocket Storage.")
         public double apPocketStorage = 1_000;
         @Comment("The number of slots of the Pocket Storage.")
@@ -54,6 +56,8 @@ public class StellarUniqueConfig extends ManasConfig {
         public boolean needsSpirit = true;
         @Comment("Number of battlewills needed for Spatial Aura.")
         public int spaitialBattlewills = 5;
+        @Comment("Cooldown for Spatial Aura.")
+        public double spaceAuraCooldown = 160.0;
 
         public Spinel() {
         }

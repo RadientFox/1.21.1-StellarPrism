@@ -27,7 +27,7 @@
   "stellarprism.skill.mode.spinel.cutter": "Space Cutter",
   "stellarprism.skill.mode.spinel.storage": "Pocket Storage",
   "stellarprism.skill.mode.spinel.aura": "Spatial Aura",
-
+  "stellarprism.skill.mode.spinel.locked": "You do not have the correct master over your skills",
 
   "stellarprism.skill.mode.spinel.active": "Your Damage is being converted to §dSpace",
 
