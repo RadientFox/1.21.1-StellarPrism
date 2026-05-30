@@ -1,5 +1,6 @@
 package com.radientfox.stellarprism.Regestrys.main.skills;
 
+import com.radientfox.stellarprism.ability.Unique.JadeSkill;
 import com.radientfox.stellarprism.ability.Unique.SpinelSkill;
 import dev.architectury.registry.registries.RegistrySupplier;
 import io.github.manasmods.manascore.skill.api.ManasSkill;
@@ -14,7 +15,8 @@ import java.util.function.Supplier;
 
 public class StellarUniques {
 
-    public static final RegistrySupplier<SpinelSkill> SPINEL_SKILL = register("spinel_skill", SpinelSkill::new);
+    public static final RegistrySupplier<SpinelSkill> SPINEL_SKILL = register("spinel_skill", (Supplier<SpinelSkill>) SpinelSkill::new);
+    public static final RegistrySupplier<JadeSkill> JADE_SKILL = register("jade_skill", (Supplier<JadeSkill>) JadeSkill::new);
 
 
     private static <E extends ManasSkill> RegistrySupplier<E> register(String name, Supplier<E> supplier) {

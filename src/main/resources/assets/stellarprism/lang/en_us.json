@@ -73,13 +73,13 @@
 
 
 
-  "stellarprism.skill.jade": "§2Jade",
-  "stellarprism.skill.jade.description": "§2Electricity§r flows through your body as you can feel the §2Wind§r around you",
+  "stellarprism.skill.jade_skill": "§2Jade",
+  "stellarprism.skill.jade_skill.description": "§2Electricity§r flows through your body as you can feel the §2Wind§r around you",
 
 
-  "stellarprism.skill.mode.jade.winds": "Empowering §2Winds",
-  "stellarprism.skill.mode.jade.berserker": "Chaos Berserker",
-  "stellarprism.skill.mode.jade.burst": "§2Lightning Burst",
+  "stellarprism.skill.mode.jade.empower": "Empowering §2Winds",
+  "stellarprism.skill.mode.jade.spiral": "§2Spiral §rWinds",
+  "stellarprism.skill.mode.jade.lock": "§2Come back when you've masted the winds.",
   "stellarprism.skill.mode.jade.active": "Your Damage is being converted to §2Wind",
 
 

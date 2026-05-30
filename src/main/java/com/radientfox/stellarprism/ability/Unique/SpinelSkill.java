@@ -1,6 +1,5 @@
 package com.radientfox.stellarprism.ability.Unique;
 
-import com.github.hvnbael.trnightmare.config.ability.skill.NightmareIntrinsicSkillConfig;
 import com.radientfox.stellarprism.Regestrys.main.StellarEffects;
 import com.radientfox.stellarprism.Regestrys.main.skills.StellarUniques;
 import com.radientfox.stellarprism.compat.SeveranceCompat;

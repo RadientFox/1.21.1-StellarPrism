@@ -69,6 +69,48 @@ public class StellarUniqueConfig extends ManasConfig {
 
         public Jade() {
         }
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 60_000.0;
+        @Comment("Enable Wind Transform obtainment.")
+        public boolean windTransform = true;
+        @Comment("Damage multiplier with Wind Domination.")
+        public double windDom = 2;
+        @Comment("Damage multiplier with Molecular Manipulation.")
+        public double molecManip = 3;
+        @Comment("Damage multiplier with Primordial Domination.")
+        public double primodialDom = 4;
+        @Comment("Mp cost for Spiral Winds.")
+        public double spiralWindMP = 10_000;
+        @Comment("Mp cost for Empowering Winds.")
+        public double empoweringWindMP = 50_000;
+        @Comment("The magic damage of the wind tornado.")
+        public float magicDamage = 50.0F;
+        @Comment("The magic damage of the wind tornado when mastered.")
+        public float magicDamageMastered = 100.0F;
+        @Comment("The wind damage of the wind tornado.")
+        public float windDamage = 200.0F;
+        @Comment("The wind damage of the wind tornado when mastered.")
+        public float windDamageMastered = 250.0F;
+        @Comment("The damage radius of the wind tornado.")
+        public float hitRadius = 3.0F;
+        @Comment("The damage radius of the wind tornado when mastered.")
+        public float hitRadiusMastered = 4.0F;
+        @Comment("The delay in tick of the wind tornado before exploding.")
+        public int burstDelay = 20;
+        @Comment("The pull force multiplier of the wind tornado when mastered.")
+        public float pullForce = 0.3F;
+        @Comment("The number of wind blades that the wind tornado release on explosion when mastered.")
+        public int bladeNumber = 10;
+        @Comment("The magic damage of each wind blade that the wind tornado release on explosion when mastered.")
+        public float bladeDamage = 50.0F;
+        @Comment("Cooldown for Spiral Winds.")
+        public double spiralWindsCooldown = 5.0;
+        @Comment("Cooldown for Empowering Wind.")
+        public double empoweringWindCooldown = 160.0;
+        @Comment("Battlewills needed for second mode.")
+        public int windBattlewills = 5;
+        @Comment("Needs Spirit for Wind Aura.")
+        public boolean needsSpirit = true;
     }
 
 

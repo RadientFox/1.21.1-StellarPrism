@@ -1,6 +1,7 @@
 package com.radientfox.stellarprism.Regestrys.main;
 
 import com.radientfox.stellarprism.effects.SpatialAuraEffect;
+import com.radientfox.stellarprism.effects.WindAuraEffect;
 import dev.architectury.registry.registries.RegistrySupplier;
 import io.github.manasmods.tensura.effect.BurdenEffect;
 import net.minecraft.core.Holder;
@@ -21,6 +22,7 @@ public class StellarEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS;
     private static final Map<RegistrySupplier<MobEffect>, Holder<MobEffect>> HOLDER_CACHE;
     public static final DeferredHolder<MobEffect, MobEffect> SPACEAURA;
+    public static final DeferredHolder<MobEffect, MobEffect> WINDAURA;
 
 
 
@@ -38,6 +40,7 @@ public class StellarEffects {
         MOB_EFFECTS = DeferredRegister.create(Registries.MOB_EFFECT, "stellarprism");
         HOLDER_CACHE = new ConcurrentHashMap();
         SPACEAURA = MOB_EFFECTS.register("space_aura", SpatialAuraEffect::new);
+        WINDAURA = MOB_EFFECTS.register("wind_aura", WindAuraEffect::new);
     }
 }
 
