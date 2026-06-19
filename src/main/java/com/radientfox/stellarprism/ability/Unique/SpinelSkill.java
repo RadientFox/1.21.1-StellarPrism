@@ -1,62 +1,41 @@
 package com.radientfox.stellarprism.ability.Unique;
 
-import com.radientfox.stellarprism.Regestrys.main.StellarEffects;
-import com.radientfox.stellarprism.Regestrys.main.skills.StellarUniques;
-import com.radientfox.stellarprism.compat.SeveranceCompat;
+import com.github.hvnbael.trnightmare.compat.TextAnimatorCompat;
+import com.radientfox.stellarprism.Registry.main.StellarEffects;
 import com.radientfox.stellarprism.config.skills.StellarUniqueConfig;
-import dev.architectury.networking.NetworkManager;
-import dev.architectury.registry.registries.RegistrySupplier;
 import io.github.manasmods.manascore.config.ConfigRegistry;
 import io.github.manasmods.manascore.skill.api.ManasSkill;
 import io.github.manasmods.manascore.skill.api.ManasSkillInstance;
-import io.github.manasmods.manascore.skill.api.SkillAPI;
 import io.github.manasmods.tensura.ability.SkillHelper;
 import io.github.manasmods.tensura.ability.SkillUtils;
 import io.github.manasmods.tensura.ability.magic.Element;
-import io.github.manasmods.tensura.ability.magic.aspectual.space.SpatialStorageMagic;
-import io.github.manasmods.tensura.ability.magic.spiritual.SpiritualMagic;
 import io.github.manasmods.tensura.ability.skill.Skill;
-import io.github.manasmods.tensura.ability.skill.extra.MagicSpaceTransformSkill;
-import io.github.manasmods.tensura.ability.skill.extra.SpatialManipulationSkill;
-import io.github.manasmods.tensura.ability.skill.intrinsic.BeastTransformationSkill;
 import io.github.manasmods.tensura.ability.subclass.ISpatialStorage;
-import io.github.manasmods.tensura.config.ability.magic.AspectualMagicConfig;
-import io.github.manasmods.tensura.config.ability.skill.ExtraSkillConfig;
 import io.github.manasmods.tensura.entity.projectile.TensuraFlyingProjectile;
 import io.github.manasmods.tensura.entity.projectile.magic.SpaceCutProjectile;
-import io.github.manasmods.tensura.menu.SpatialBagMenu;
 import io.github.manasmods.tensura.menu.container.SpatialStorageContainer;
-import io.github.manasmods.tensura.network.s2c.OpenSpatialStorageMenuPayload;
 import io.github.manasmods.tensura.registry.TensuraStats;
 import io.github.manasmods.tensura.registry.attribute.TensuraAttributes;
-import io.github.manasmods.tensura.registry.effect.TensuraMobEffects;
 import io.github.manasmods.tensura.registry.skill.ExtraSkills;
 import io.github.manasmods.tensura.registry.sound.TensuraSoundEvents;
 import io.github.manasmods.tensura.storage.TensuraStorages;
 import io.github.manasmods.tensura.util.AttributeHelper;
-import io.github.manasmods.tensura.util.EnergyHelper;
 import net.minecraft.ChatFormatting;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Iterator;
 
 public class SpinelSkill extends Skill  implements ISpatialStorage {
     private static final StellarUniqueConfig.Spinel CONFIG = ConfigRegistry.getConfig(StellarUniqueConfig.class).Spinel;
@@ -70,6 +49,13 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
         return true;
     }
 
+    public int getMaxMastery() {
+        return (int) CONFIG.masteryPoints;
+    }
+
+    public boolean canBeToggled(ManasSkillInstance instance, LivingEntity living) {
+        return instance.getMastery() >= 0.0;
+    }
 
     public void onLearnSkill(ManasSkillInstance instance, LivingEntity entity) {
         super.onLearnSkill(instance, entity);
@@ -78,6 +64,14 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
                     SkillHelper.learnSkill(entity, (ManasSkill) ExtraSkills.MAGIC_SPACE_TRANSFORM);
 
             }
+        }
+    }
+    public @Nullable MutableComponent getColoredName() {
+        MutableComponent name = this.getName();
+        if (name == null) {
+            return null;
+        } else {
+            return TextAnimatorCompat.useOnClient() ? TextAnimatorCompat.skillAnimatedDisplayName(name, ResourceLocation.fromNamespaceAndPath("stelarprism", "spinel_skill")) : name.withStyle(ChatFormatting.WHITE);
         }
     }
 
@@ -137,8 +131,6 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
             }
         }
 
-
-
     }
 
     public void onToggleOff(ManasSkillInstance instance, LivingEntity entity) {
@@ -163,7 +155,6 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
                 case 0:
                     entity.level().playSound((Player)null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F);
                     entity.swing(InteractionHand.MAIN_HAND, true);
-
                     SpaceCutProjectile blade = new SpaceCutProjectile(entity.level(), entity);
                     blade.setSpeed(1.5F);
                     blade.setVisible(true);
@@ -171,13 +162,14 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
                     blade.setPiercingBlock(true);
                     blade.setDamage((float) (instance.isMastered(entity) ? CONFIG.masterydmgSpaceCutter : CONFIG.dmgSpaceCutter));
                     blade.setSize(5.0F);
+                    blade.setSkill(entity, instance, this, mode);
                     blade.setNoGravity(true);
                     blade.setPosDirection(entity, TensuraFlyingProjectile.PositionDirection.MIDDLE);
                     blade.shootFromRot(entity.getLookAngle());
                     entity.level().addFreshEntity(blade);
+                    instance.addMasteryPoint(entity);
 
                     instance.setCoolDown((int) CONFIG.spaceCutterCooldown, mode);
-
 
                     break;
 
@@ -189,10 +181,7 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
                     if (auraUnlock) {
 
                         Player player = (Player)entity;
-                        Holder<MobEffect> aura = TensuraMobEffects.getReference((RegistrySupplier<MobEffect>) StellarEffects.SPACEAURA);
-
-                        entity.addEffect(new MobEffectInstance(aura, 600, 0, false, false, true));
-                        player.displayClientMessage(Component.translatable("stellarprism.skill.mode.spinel.active2").setStyle(Style.EMPTY.withColor(ChatFormatting.RED)), false);
+                        entity.addEffect(new MobEffectInstance(StellarEffects.SPACEAURA, 300, 0, false, false, false));
 
                         instance.setCoolDown((int) CONFIG.spaceAuraCooldown, mode);
                             entity.level().playSound((Player) null, entity.getX(), entity.getY(), entity.getZ(), TensuraSoundEvents.CAST_SPACE, SoundSource.PLAYERS, 1.0F, 1.0F);
@@ -228,6 +217,8 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
                         if (entity instanceof ServerPlayer player) {
 
                         player.displayClientMessage(Component.translatable("stellarprism.skill.mode.spinel.lock").setStyle(Style.EMPTY.withColor(ChatFormatting.RED)), false);
+
+                        player.displayClientMessage(Component.translatable("stellarprism.join.message.terra").setStyle(Style.EMPTY.withColor(ChatFormatting.WHITE)), false);
 
                         if (CONFIG.needsSpirit == (TensuraStorages.getSpiritFrom(entity).getSpiritLevelId(Element.SPACE) >= 3)){
                             spiritReq = true;

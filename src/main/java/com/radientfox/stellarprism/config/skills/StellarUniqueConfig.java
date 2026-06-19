@@ -6,7 +6,7 @@ import io.github.manasmods.manascore.config.api.ManasSubConfig;
 
 public class StellarUniqueConfig extends ManasConfig {
 
-    public Spinel Spinel = new Spinel();
+    public static Spinel Spinel = new Spinel();
     public StellarUniqueConfig.Jade Jade = new StellarUniqueConfig.Jade();
     public StellarUniqueConfig.AmuletofPower AmuletofPower = new StellarUniqueConfig.AmuletofPower();
     public StellarUniqueConfig.Prism Prism = new StellarUniqueConfig.Prism();
@@ -25,7 +25,7 @@ public class StellarUniqueConfig extends ManasConfig {
         @Comment("Magicule Acquirement Cost.")
         public double mpAcquirement = 60_000.0;
         @Comment("Skill Mastery Points.")
-        public double masteryPoints = 2_500.0;
+        public double masteryPoints = 2_500;
         @Comment("Enable In Slot Severance Immunity.")
         public boolean severanceImmunity = true;
         @Comment("Damage multiplier with Spatial Domination.")
@@ -224,10 +224,14 @@ public class StellarUniqueConfig extends ManasConfig {
         public double mpAcquirement = 150_000.0;
         @Comment("Skill Mastery Points.")
         public double masteryPoints = 1_500.0;
-        @Comment("Void Damage Multiplier for user per subordinate.")
-        public double multiplierSelf = 0.2;
-        @Comment("Void Damage Multiplier for allies per subordinate.")
-        public double multiplierAllies = 0.1;
+        @Comment("Void Damage increase for user per subordinate.")
+        public double increaseSelf = 3.0;
+        @Comment("Void Damage increase for user per subordinate on mastery.")
+        public double increaseSelfMastered = 5.0;
+        @Comment("Void Damage increase for allies per subordinate.")
+        public double increaseAllies = 1.0;
+        @Comment("Void Damage increase for allies per subordinate.")
+        public double increaseAlliesMastered = 3.0;
         @Comment("Charm MP cost.")
         public double charmCost = 30_000.0;
         @Comment("Charm Duration.")

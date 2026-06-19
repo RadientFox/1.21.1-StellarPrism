@@ -1,5 +1,6 @@
 package com.radientfox.stellarprism.effects;
 
+import io.github.manasmods.tensura.ability.magic.aspectual.enhancement.StrengthMagic;
 import io.github.manasmods.tensura.effect.template.TensuraMobEffect;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -18,9 +19,7 @@ public class SpatialAuraEffect extends TensuraMobEffect {
     public SpatialAuraEffect() {
             super(MobEffectCategory.BENEFICIAL, (new Color(255, 181, 0, 255)).getRGB());
         }
-    public SpatialAuraEffect(MobEffectCategory pCategory, int pColor) {
-        super(pCategory, pColor);
-    }
+
 
     public void onEffectRemoved(LivingEntity entity, MobEffectInstance instance) {
             if (entity instanceof Player) {

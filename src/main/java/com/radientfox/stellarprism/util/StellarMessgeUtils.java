@@ -40,17 +40,16 @@ public class StellarMessgeUtils {
             GameProfile playerProfile = mc.getGameProfile();
             UUID playerUUID = playerProfile.getId();
             if (playerUUID.equals(StellarPrism.RADIENTFOX)) {
-                event.getPlayer().sendSystemMessage(Component.translatable("§cRadient Fox§r The Queen of §cBlood§r has joined your §6Stars"));
-            }
-            else if (playerUUID.equals(StellarPrism.TERRACHARM)) {
-                event.getPlayer().sendSystemMessage(Component.translatable("§7Now its your turn to §dsmash§7 the §6stars§ and §cg§6o §eb§2e§9y§5o§dn§4d§7."));
+                event.getPlayer().sendSystemMessage(Component.translatable("stellarprism.join.message.radient", new Object[]{playerProfile.getName()}));
 
             }
-            else if (playerUUID.equals(StellarPrism.GOOBER)) {
-                event.getPlayer().sendSystemMessage(Component.translatable("§cYou know what they say,§9 the house always wins!"));
+            else if (playerUUID.equals(StellarPrism.TERRACHARM)) {
+                event.getPlayer().sendSystemMessage(Component.translatable("stellarprism.join.message.terra", new Object[]{playerProfile.getName()}));
+
             }
             else if (playerUUID.equals(StellarPrism.NITE)) {
-                event.getPlayer().sendSystemMessage(Component.translatable("The §dAncient one's§r beckoned for you to §kjoin"));
+                event.getPlayer().sendSystemMessage(Component.translatable("stellarprism.join.message.nite", new Object[]{playerProfile.getName()}));
+
             } else {
                 event.getPlayer().sendSystemMessage(Component.translatable("stellarprism.join.message", new Object[]{playerProfile.getName()}));
                 event.getPlayer().sendSystemMessage( Component.literal(" [ Discord Link ].").withStyle(Style.EMPTY.withColor(ChatFormatting.DARK_PURPLE).withUnderlined(true).withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://discord.gg/GvnwfEU8v3"))));
@@ -92,17 +91,6 @@ public class StellarMessgeUtils {
                 event.getEntity().displayClientMessage(Component.translatable("§c <3 -Radient"), false);
 
             }
-            if (playerUUID.equals(StellarPrism.GOOBER)) {
-                var5 = server.getPlayerList().getPlayers().iterator();
-
-                while(var5.hasNext()) {
-                    onlinePlayer = (ServerPlayer)var5.next();
-                    onlinePlayer.sendSystemMessage(Component.translatable("§cYou know what they say,§9 the house always wins!"));
-                }
-
-            }
-
-
 
         }
     }

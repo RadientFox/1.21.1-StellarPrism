@@ -3,6 +3,7 @@
   "package": "com.radientfox.stellarprism.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "StellarSkillUtilsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

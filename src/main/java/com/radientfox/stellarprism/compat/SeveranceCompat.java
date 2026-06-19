@@ -1,10 +1,7 @@
 package com.radientfox.stellarprism.compat;
 
-import com.github.hvnbael.trnightmare.compat.tensura.TensuraSkillCompat;
-import com.radientfox.stellarprism.Regestrys.main.skills.StellarUniques;
-import io.github.manasmods.manascore.skill.api.ManasSkill;
+import com.radientfox.stellarprism.Registry.main.skills.StellarUniques;
 import io.github.manasmods.tensura.ability.SkillUtils;
-import io.github.manasmods.tensura.storage.TensuraStorages;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import org.jetbrains.annotations.Nullable;

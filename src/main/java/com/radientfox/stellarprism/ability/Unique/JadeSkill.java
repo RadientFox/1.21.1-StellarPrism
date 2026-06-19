@@ -1,6 +1,6 @@
 package com.radientfox.stellarprism.ability.Unique;
 
-import com.radientfox.stellarprism.Regestrys.main.StellarEffects;
+import com.radientfox.stellarprism.Registry.main.StellarEffects;
 import com.radientfox.stellarprism.config.skills.StellarUniqueConfig;
 import dev.architectury.registry.registries.RegistrySupplier;
 import io.github.manasmods.manascore.config.ConfigRegistry;
@@ -8,10 +8,8 @@ import io.github.manasmods.manascore.skill.api.ManasSkill;
 import io.github.manasmods.manascore.skill.api.ManasSkillInstance;
 import io.github.manasmods.tensura.ability.SkillHelper;
 import io.github.manasmods.tensura.ability.SkillUtils;
-import io.github.manasmods.tensura.ability.TensuraSkill;
 import io.github.manasmods.tensura.ability.magic.Element;
 import io.github.manasmods.tensura.ability.skill.Skill;
-import io.github.manasmods.tensura.entity.projectile.TensuraFlyingProjectile;
 import io.github.manasmods.tensura.entity.projectile.magic.WindTornadoProjectile;
 import io.github.manasmods.tensura.registry.TensuraStats;
 import io.github.manasmods.tensura.registry.attribute.TensuraAttributes;
@@ -26,7 +24,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
