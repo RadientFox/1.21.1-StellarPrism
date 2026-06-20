@@ -145,7 +145,9 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    compileOnly "curse.maven:lodestone-616457:7264731"
     compileOnly fileTree(dir: 'libs', include: '*.jar')
+    localRuntime "curse.maven:lodestone-616457:7264731"
     localRuntime fileTree(dir: 'libs', include: '*.jar')
 
 }

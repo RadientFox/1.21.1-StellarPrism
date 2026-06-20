@@ -314,6 +314,11 @@
 
   "stellarprism.skill.mode.dirge.justlikeyou.current_skill": "Skill type Selected: %s",
 
+  "stellarprism.skill.nimue": "Nimue",
+  "stellarprism.skill.mode.nimue.purifying_water": "Purifying Water",
+  "stellarprism.skill.mode.nimue.lilypad_step": "Lilypad Step",
+  "stellarprism.skill.mode.nimue.lake_fairy": "Lake Fairy",
+
 
   "stellarprism.skill.prism": "§fPrism",
   "stellarprism.skill.prism.description": "You have gained the power to split §fradiance§r, itself... The applications are limitless, so how shall you wield it?",

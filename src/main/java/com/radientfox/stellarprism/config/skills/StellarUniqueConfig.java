@@ -8,6 +8,7 @@ public class StellarUniqueConfig extends ManasConfig {
 
     public static Spinel Spinel = new Spinel();
     public StellarUniqueConfig.Jade Jade = new StellarUniqueConfig.Jade();
+    public StellarUniqueConfig.Nimue Nimue = new StellarUniqueConfig.Nimue();
     public StellarUniqueConfig.AmuletofPower AmuletofPower = new StellarUniqueConfig.AmuletofPower();
     public StellarUniqueConfig.Prism Prism = new StellarUniqueConfig.Prism();
     public StellarUniqueConfig.AddandSubtract AddandSubtract = new StellarUniqueConfig.AddandSubtract();
@@ -111,6 +112,22 @@ public class StellarUniqueConfig extends ManasConfig {
         public int windBattlewills = 5;
         @Comment("Needs Spirit for Wind Aura.")
         public boolean needsSpirit = true;
+    }
+
+
+
+    public static class Nimue extends ManasSubConfig {
+
+        public Nimue() {
+        }
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 100_000.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 2_500;
+        @Comment("Cooldown for Purifying Water in seconds.")
+        public double purifyingWaterCooldown = 10.0;
+        @Comment("Cooldown for Lilypad Step in seconds.")
+        public double lilypadStepCooldown = 15.0;
     }
 
 
