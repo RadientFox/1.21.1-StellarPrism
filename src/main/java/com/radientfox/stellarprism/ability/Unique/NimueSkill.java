@@ -22,6 +22,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
@@ -36,6 +37,7 @@ import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.Nullable;
 import team.lodestar.lodestone.registry.common.particle.LodestoneParticleTypes;
 import team.lodestar.lodestone.systems.easing.Easing;
 import team.lodestar.lodestone.systems.particle.builder.WorldParticleBuilder;
@@ -52,6 +54,10 @@ public class NimueSkill extends Skill {
 
     public NimueSkill() {
         super(SkillType.UNIQUE);
+    }
+
+    public @Nullable ResourceLocation getSkillIcon() {
+        return ResourceLocation.fromNamespaceAndPath("stellarprism", "textures/skill/unique/remember.png");
     }
 
     @Override
@@ -102,8 +108,13 @@ public class NimueSkill extends Skill {
         }
     }
 
-    @Override
     public boolean onBeingDamaged(ManasSkillInstance instance, LivingEntity entity, DamageSource source, float amount) {
+        CompoundTag tag = instance.getOrCreateTag();
+
+        if (tag.getBoolean("Concealing")) {
+            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20, 2, false, false, false));
+        }
+
         if (entity.isInWater()) {
             double dodgeChance = instance.isMastered(entity) ? 0.40 : 0.30;
             if (entity.getRandom().nextDouble() < dodgeChance) {
@@ -123,12 +134,6 @@ public class NimueSkill extends Skill {
 
         if (owner.isInWater()) {
             currentAmount *= 1.5f;
-        }
-
-        CompoundTag tag = instance.getOrCreateTag();
-        int currentMode = tag.getInt("CurrentMode");
-        if (currentMode == 2 && tag.getBoolean("Concealing")) {
-            currentAmount *= 1.15f;
         }
 
         amount.set(currentAmount);

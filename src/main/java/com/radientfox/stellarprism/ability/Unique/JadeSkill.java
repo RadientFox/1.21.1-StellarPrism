@@ -9,14 +9,18 @@ import io.github.manasmods.manascore.skill.api.ManasSkillInstance;
 import io.github.manasmods.tensura.ability.SkillHelper;
 import io.github.manasmods.tensura.ability.SkillUtils;
 import io.github.manasmods.tensura.ability.TensuraSkill;
+import io.github.manasmods.tensura.ability.TensuraSkillInstance;
 import io.github.manasmods.tensura.ability.magic.Element;
 import io.github.manasmods.tensura.ability.skill.Skill;
+import io.github.manasmods.tensura.ability.skill.extra.ThoughtAccelerationSkill;
 import io.github.manasmods.tensura.entity.projectile.TensuraFlyingProjectile;
 import io.github.manasmods.tensura.entity.projectile.magic.WindTornadoProjectile;
 import io.github.manasmods.tensura.registry.TensuraStats;
 import io.github.manasmods.tensura.registry.attribute.TensuraAttributes;
 import io.github.manasmods.tensura.registry.effect.TensuraMobEffects;
 import io.github.manasmods.tensura.registry.skill.ExtraSkills;
+import io.github.manasmods.tensura.registry.skill.IntrinsicSkills;
+import io.github.manasmods.tensura.registry.skill.ResistanceSkills;
 import io.github.manasmods.tensura.registry.sound.TensuraSoundEvents;
 import io.github.manasmods.tensura.storage.TensuraStorages;
 import io.github.manasmods.tensura.util.AttributeHelper;
@@ -37,6 +41,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import org.jetbrains.annotations.Nullable;
 
+import static com.github.hvnbael.trnightmare.main.uniques.InfinitySkill.ACCELERATION;
+
 public class JadeSkill extends Skill {
     private static final StellarUniqueConfig.Jade CONFIG = ConfigRegistry.getConfig(StellarUniqueConfig.class).Jade;
     Boolean auraUnlock = false;
@@ -47,7 +53,7 @@ public class JadeSkill extends Skill {
 
     //Non Crucial Stuff
     public @Nullable ResourceLocation getSkillIcon() {
-        return ResourceLocation.fromNamespaceAndPath("stellarprism", "textures/skill/unique/jade_skill.png");
+        return ResourceLocation.fromNamespaceAndPath("stellarprism", "textures/skill/unique/jade.png");
     }
 
     public double getDefaultAcquiringMagiculeCost() {
@@ -59,28 +65,35 @@ public class JadeSkill extends Skill {
         return true;
     }
 
-    //Manip
     public void onLearnSkill(ManasSkillInstance instance, LivingEntity entity) {
-        super.onLearnSkill(instance, entity);
-        if (CONFIG.windTransform) {
-            if (!(instance.getMastery() < 0.0) && !instance.isTemporarySkill()) {
-                SkillHelper.learnSkill(entity, (ManasSkill) ExtraSkills.MAGIC_WIND_TRANSFORM);
-
-            }
+        if (!(instance.getMastery() < (double) 0.0F) && !instance.isTemporarySkill()) {
+            TensuraSkillInstance eye = new TensuraSkillInstance(ExtraSkills.MAGIC_WIND_TRANSFORM.get());
+            eye.getOrCreateTag().putBoolean("NoMagiculeCost", true);
+            SkillHelper.learnSkill(entity, eye);
         }
     }
 
 
     //The Annoyings
     public void onToggleOn(ManasSkillInstance instance, LivingEntity entity) {
-        if (SkillUtils.hasSkillFully(entity, ExtraSkills.WIND_DOMINATION.get()) && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.WIND_DOMINATION)) {
-            if (SkillUtils.hasSkillFully(entity, ExtraSkills.MOLECULAR_MANIPULATION.get()) && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.MOLECULAR_MANIPULATION)) {
-                AttributeHelper.multiplyElementalBoost(entity, TensuraAttributes.WIND_BOOST, CONFIG.molecManip);
+        AttributeHelper.multiplyChantSpeed(entity, 2);
+        ThoughtAccelerationSkill.onToggle(instance, entity, ACCELERATION, true);
+
+        if (SkillUtils.hasSkillFully(entity, ExtraSkills.WIND_DOMINATION.get())
+                && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.WIND_DOMINATION)) {
+
+            if (SkillUtils.hasSkillFully(entity, ExtraSkills.MOLECULAR_MANIPULATION.get())
+                    && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.MOLECULAR_MANIPULATION)) {
+
+                AttributeHelper.multiplyElementalBoost(entity, TensuraAttributes.WIND_BOOST, CONFIG.moleWind);
+
             } else {
+
+
                 AttributeHelper.multiplyElementalBoost(entity, TensuraAttributes.WIND_BOOST, CONFIG.windDom);
             }
         }
-        // Passive flight
+
         if (entity instanceof Player player) {
             if (!player.getAbilities().mayfly) {
                 player.getAbilities().mayfly = true;
@@ -90,14 +103,23 @@ public class JadeSkill extends Skill {
     }
 
     public void onToggleOff(ManasSkillInstance instance, LivingEntity entity) {
-        if (SkillUtils.hasSkillFully(entity, ExtraSkills.WIND_DOMINATION.get()) && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.WIND_DOMINATION)) {
-            if (SkillUtils.hasSkillFully(entity, ExtraSkills.MOLECULAR_MANIPULATION.get()) && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.MOLECULAR_MANIPULATION)) {
-                AttributeHelper.removeElementalMultiplier(entity, TensuraAttributes.WIND_BOOST, CONFIG.molecManip);
+        AttributeHelper.removeChantSpeed(entity, 2);
+        ThoughtAccelerationSkill.onToggle(instance, entity, ACCELERATION, false);
+
+        if (SkillUtils.hasSkillFully(entity, ExtraSkills.WIND_DOMINATION.get())
+                && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.WIND_DOMINATION)) {
+
+            if (SkillUtils.hasSkillFully(entity, ExtraSkills.MOLECULAR_MANIPULATION.get())
+                    && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.MOLECULAR_MANIPULATION)) {
+
+                AttributeHelper.removeElementalMultiplier(entity, TensuraAttributes.WIND_BOOST, CONFIG.moleWind);
 
             } else {
+
                 AttributeHelper.removeElementalMultiplier(entity, TensuraAttributes.WIND_BOOST, CONFIG.windDom);
             }
         }
+
         if (entity instanceof Player player) {
             if (!player.getAbilities().mayfly) {
                 player.getAbilities().mayfly = true;

@@ -74,10 +74,10 @@ public class StellarUniqueConfig extends ManasConfig {
         public double mpAcquirement = 60_000.0;
         @Comment("Enable Wind Transform obtainment.")
         public boolean windTransform = true;
-        @Comment("Damage multiplier with Wind Domination.")
-        public double windDom = 2;
+        @Comment("The Wind Damage Boost when activated Manipulation.")
+        public double windDom = 2.0F;
         @Comment("Damage multiplier with Molecular Manipulation.")
-        public double molecManip = 3;
+        public double moleWind = 3.0;
         @Comment("Damage multiplier with Primordial Domination.")
         public double primodialDom = 4;
         @Comment("Mp cost for Spiral Winds.")
