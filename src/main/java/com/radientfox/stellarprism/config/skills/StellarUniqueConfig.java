@@ -13,6 +13,7 @@ public class StellarUniqueConfig extends ManasConfig {
     public StellarUniqueConfig.Prism Prism = new StellarUniqueConfig.Prism();
     public StellarUniqueConfig.AddandSubtract AddandSubtract = new StellarUniqueConfig.AddandSubtract();
     public StellarUniqueConfig.VoidPriestess VoidPriestess = new StellarUniqueConfig.VoidPriestess();
+    public StellarUniqueConfig.Dullahan Dullahan = new StellarUniqueConfig.Dullahan();
 
 
     public StellarUniqueConfig() {
@@ -81,9 +82,9 @@ public class StellarUniqueConfig extends ManasConfig {
         @Comment("Damage multiplier with Primordial Domination.")
         public double primodialDom = 4;
         @Comment("Mp cost for Spiral Winds.")
-        public double spiralWindMP = 10_000;
+        public double spiralWindMP = 1_000.0;
         @Comment("Mp cost for Empowering Winds.")
-        public double empoweringWindMP = 50_000;
+        public double empoweringWindMP = 50_000.0;
         @Comment("The magic damage of the wind tornado.")
         public float magicDamage = 50.0F;
         @Comment("The magic damage of the wind tornado when mastered.")
@@ -133,7 +134,30 @@ public class StellarUniqueConfig extends ManasConfig {
 
 
 
-
+    public static class Dullahan extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 100_000.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 2_500;
+        @Comment("MP Cost for Iris Out.")
+        public double irisOutCost = 5_000.0;
+        @Comment("MP Cost for Spine Whip.")
+        public double spineWhipCost = 15_000.0;
+        @Comment("MP Cost for Soundless Coach.")
+        public double soundlessCoachCost = 4_000.0;
+        @Comment("MP Cost for God of Sacrifice.")
+        public double godOfSacrificeCost = 10.0;
+        @Comment("Cooldown for Iris Out.")
+        public int irisOutCooldown = 5;
+        @Comment("Cooldown for Spine Whip.")
+        public int spineWhipCooldown = 1;
+        @Comment("Cooldown for Soundless Coach.")
+        public int soundlessCoachCooldown = 10;
+        @Comment("Cooldown for God of Sacrifice.")
+        public int godOfSacrificeCooldown = 5;
+        public Dullahan() {
+        }
+    }
 
 
 

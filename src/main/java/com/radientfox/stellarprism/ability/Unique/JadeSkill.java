@@ -8,19 +8,15 @@ import io.github.manasmods.manascore.skill.api.ManasSkill;
 import io.github.manasmods.manascore.skill.api.ManasSkillInstance;
 import io.github.manasmods.tensura.ability.SkillHelper;
 import io.github.manasmods.tensura.ability.SkillUtils;
-import io.github.manasmods.tensura.ability.TensuraSkill;
 import io.github.manasmods.tensura.ability.TensuraSkillInstance;
 import io.github.manasmods.tensura.ability.magic.Element;
 import io.github.manasmods.tensura.ability.skill.Skill;
 import io.github.manasmods.tensura.ability.skill.extra.ThoughtAccelerationSkill;
-import io.github.manasmods.tensura.entity.projectile.TensuraFlyingProjectile;
 import io.github.manasmods.tensura.entity.projectile.magic.WindTornadoProjectile;
 import io.github.manasmods.tensura.registry.TensuraStats;
 import io.github.manasmods.tensura.registry.attribute.TensuraAttributes;
 import io.github.manasmods.tensura.registry.effect.TensuraMobEffects;
 import io.github.manasmods.tensura.registry.skill.ExtraSkills;
-import io.github.manasmods.tensura.registry.skill.IntrinsicSkills;
-import io.github.manasmods.tensura.registry.skill.ResistanceSkills;
 import io.github.manasmods.tensura.registry.sound.TensuraSoundEvents;
 import io.github.manasmods.tensura.storage.TensuraStorages;
 import io.github.manasmods.tensura.util.AttributeHelper;
@@ -30,7 +26,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -150,16 +145,16 @@ public class JadeSkill extends Skill {
         return var10000;
     }
 
+    @Override
     public double getMagiculeCost(LivingEntity entity, ManasSkillInstance instance, int mode) {
-        double var10000;
-        switch (mode) {
-            case 0 -> var10000 = CONFIG.spiralWindMP;
-            case 1 -> var10000 = CONFIG.empoweringWindMP;
-            default -> var10000 = 0.0;
-        }
+        return switch (mode) {
+            case 0 -> CONFIG.spiralWindMP;
+            case 1 -> CONFIG.empoweringWindMP;
 
-        return var10000;
+            default -> 0.0D;
+        };
     }
+
 
     @Override
     public void onPressed(ManasSkillInstance instance, LivingEntity entity, int keyNumber, int mode) {
