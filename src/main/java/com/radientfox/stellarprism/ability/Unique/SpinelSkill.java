@@ -8,6 +8,7 @@ import io.github.manasmods.manascore.skill.api.ManasSkill;
 import io.github.manasmods.manascore.skill.api.ManasSkillInstance;
 import io.github.manasmods.tensura.ability.SkillHelper;
 import io.github.manasmods.tensura.ability.SkillUtils;
+import io.github.manasmods.tensura.ability.TensuraSkillInstance;
 import io.github.manasmods.tensura.ability.magic.Element;
 import io.github.manasmods.tensura.ability.skill.Skill;
 import io.github.manasmods.tensura.ability.subclass.ISpatialStorage;
@@ -58,14 +59,13 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
     }
 
     public void onLearnSkill(ManasSkillInstance instance, LivingEntity entity) {
-        super.onLearnSkill(instance, entity);
-        if (CONFIG.spaceTransform) {
-            if (!(instance.getMastery() < 0.0) && !instance.isTemporarySkill()) {
-                    SkillHelper.learnSkill(entity, (ManasSkill) ExtraSkills.MAGIC_SPACE_TRANSFORM);
-
-            }
+        if (!(instance.getMastery() < (double) 0.0F) && !instance.isTemporarySkill()) {
+            TensuraSkillInstance eye = new TensuraSkillInstance(ExtraSkills.MAGIC_SPACE_TRANSFORM.get());
+            eye.getOrCreateTag().putBoolean("NoMagiculeCost", true);
+            SkillHelper.learnSkill(entity, eye);
         }
     }
+
     public @Nullable MutableComponent getColoredName() {
         MutableComponent name = this.getName();
         if (name == null) {
