@@ -1,9 +1,12 @@
 package com.radientfox.stellarprism.Registry.main;
 
+import com.github.hvnbael.trnightmare.main.weapon.Excalibur;
 import com.radientfox.stellarprism.StellarPrism;
+import io.github.manasmods.tensura.item.TensuraToolTiers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class StellarItems {
@@ -56,6 +59,7 @@ public class StellarItems {
 
 
   */
+   public static final DeferredHolder<Item, Excalibur> EXCALIBUR;
     public StellarItems() {
     }
 
@@ -232,6 +236,7 @@ public class StellarItems {
         });
 
          */
+        EXCALIBUR = ITEMS.register("excalibur", () -> new Excalibur(TensuraToolTiers.HIHIIROKANE, 1, 0.2F, new Item.Properties().stacksTo(1).durability(100000)));
 
     }
 }
