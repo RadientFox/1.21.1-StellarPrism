@@ -236,7 +236,7 @@ public class StellarItems {
         });
 
          */
-        EXCALIBUR = ITEMS.register("excalibur", () -> new Excalibur(TensuraToolTiers.HIHIIROKANE, 1, 0.2F, new Item.Properties().stacksTo(1).durability(100000)));
+        EXCALIBUR = ITEMS.register("excalibur", () -> new Excalibur(TensuraToolTiers.ADAMANTITE, 3, 0.2F, new Item.Properties().stacksTo(1).durability(100000)));
 
     }
 }

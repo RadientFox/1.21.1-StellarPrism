@@ -403,6 +403,16 @@
 
   "item.stellarprism.excalibur": "§6Ex-calibur",
 
+  "stellarprism.skill.pendragon": "Pendragon",
+  "stellarprism.skill.mode.pendragon.summon": "Summon Excalibur",
+  "stellarprism.skill.mode.pendragon.holy_order": "Holy Order Haki",
+  "stellarprism.skill.mode.pendragon.holy_ray": "Holy Ray",
+  "stellarprism.skill.mode.pendragon.holy_aura": "Holy Aura",
+
+  "stellarprism.skill.chosen_king": "Chosen King",
+  "stellarprism.skill.mode.chosen_king.aura": "Sword Master",
+  "stellarprism.skill.mode.chosen_king.sslash": "Sword Slash",
+  "stellarprism.skill.mode.chosen_king.aslash": "Aura Slash",
 
 
 
