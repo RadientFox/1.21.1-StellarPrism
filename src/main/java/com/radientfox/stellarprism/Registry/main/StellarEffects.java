@@ -1,5 +1,6 @@
 package com.radientfox.stellarprism.Registry.main;
 
+import com.radientfox.stellarprism.effects.BloodBlockageEffect;
 import com.radientfox.stellarprism.effects.SpatialAuraEffect;
 import com.radientfox.stellarprism.effects.VoidSubordinateEffect;
 import com.radientfox.stellarprism.effects.WindAuraEffect;
@@ -22,6 +23,7 @@ public class StellarEffects {
     public static final DeferredHolder<MobEffect, MobEffect> SPACEAURA;
     public static final DeferredHolder<MobEffect, MobEffect> WINDAURA;
     public static final DeferredHolder<MobEffect, MobEffect> VOID_SUBORDINATE;
+    public static final DeferredHolder<MobEffect, MobEffect> BLOOD_BLOCKAGE;
 
 
 
@@ -41,6 +43,7 @@ public class StellarEffects {
         SPACEAURA = MOB_EFFECTS.register("space_aura", SpatialAuraEffect::new);
         WINDAURA = MOB_EFFECTS.register("wind_aura", WindAuraEffect::new);
         VOID_SUBORDINATE = MOB_EFFECTS.register("void_subordinate", VoidSubordinateEffect::new);
+        BLOOD_BLOCKAGE = MOB_EFFECTS.register("blood_blockage", BloodBlockageEffect::new);
     }
 }
 

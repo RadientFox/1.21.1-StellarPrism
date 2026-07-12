@@ -24,12 +24,9 @@
 
 
 
-
   "stellarprism.skill.spinel_skill": "<neon p=8 r=2 a=0.15>§dSpinel</neon>",
 
   "stellarprism.skill.spinel_skill.animated": "<neon p=8 r=2 a=0.15>§dSpinel</neon>",
-  "stellarprism.skill.spinel_skill.description": "When vastness of <wiggle a=1 f=1><neon p=8 r=2 a=0.15>§dSpace§r seems to large for your heavy heart",
-  "stellarprism.skill.mode.spinel.cutter": "Space Cutter",
   "stellarprism.skill.mode.spinel.storage": "Pocket Storage",
   "stellarprism.skill.mode.spinel.aura": "Spatial Aura",
   "stellarprism.skill.mode.spinel.lock": "You do not have the correct mastery over your skills",

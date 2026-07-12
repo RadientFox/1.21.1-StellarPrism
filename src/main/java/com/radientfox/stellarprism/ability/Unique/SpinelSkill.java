@@ -75,9 +75,7 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
         }
     }
 
-    public double getDefaultAcquiringMagiculeCost() {
-        return CONFIG.mpAcquirement;
-    }
+
 
     public int getModes(ManasSkillInstance instance) {
         return 3;
@@ -218,7 +216,6 @@ public class SpinelSkill extends Skill  implements ISpatialStorage {
 
                         player.displayClientMessage(Component.translatable("stellarprism.skill.mode.spinel.lock").setStyle(Style.EMPTY.withColor(ChatFormatting.RED)), false);
 
-                        player.displayClientMessage(Component.translatable("stellarprism.join.message.terra").setStyle(Style.EMPTY.withColor(ChatFormatting.WHITE)), false);
 
                         if (CONFIG.needsSpirit == (TensuraStorages.getSpiritFrom(entity).getSpiritLevelId(Element.SPACE) >= 3)){
                             spiritReq = true;

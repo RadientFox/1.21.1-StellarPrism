@@ -8,8 +8,12 @@ import io.github.manasmods.manascore.config.ConfigRegistry;
 import io.github.manasmods.manascore.network.api.util.Changeable;
 import io.github.manasmods.manascore.skill.api.ManasSkill;
 import io.github.manasmods.manascore.skill.api.ManasSkillInstance;
+import io.github.manasmods.tensura.ability.SkillHelper;
 import io.github.manasmods.tensura.ability.SkillUtils;
+import io.github.manasmods.tensura.ability.TensuraSkill;
 import io.github.manasmods.tensura.ability.skill.Skill;
+import io.github.manasmods.tensura.ability.skill.extra.MagicAuraSkill;
+import io.github.manasmods.tensura.damage.TensuraDamageTypes;
 import io.github.manasmods.tensura.effect.template.TensuraMobEffect;
 import io.github.manasmods.tensura.entity.template.subclass.ISubordinate;
 import io.github.manasmods.tensura.event.TensuraEntityEvents;
@@ -26,11 +30,13 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -82,27 +88,37 @@ public class VoidPriestess extends Skill {
     public boolean onDamageEntity(ManasSkillInstance instance, LivingEntity attacker, LivingEntity target, DamageSource source, Changeable<Float> amount) {
         if (source.getDirectEntity() != attacker) {
             return true;
-        } else if (!VoidDamageHelper.isVoidDamage(source)) {
-            return true;
-        }else if (instance.isToggled()){
-            return true;
-        }
-        else {
-
-                if (attacker.hasEffect(StellarEffects.VOID_SUBORDINATE)) {
-                    MobEffectInstance current = attacker.getEffect(StellarEffects.VOID_SUBORDINATE);
-                    assert current != null;
-                    int effectLvl = (current.getAmplifier() + 1);
-                    float damage = (float) ((instance.isMastered(attacker) ? CONFIG.increaseSelfMastered : 10) * effectLvl);
-                    target.invulnerableTime = 0;
-                    VoidDamageHelper.dealVoidDamage(target,attacker,damage);
-                }
-                return true;
-
         }
 
+        if (!VoidDamageHelper.isVoidDamage(source)) {
+            return true;
+        }
+
+        if (!instance.isToggled()) {
+            return true;
+        }
+
+        MobEffectInstance eff = attacker.getEffect(StellarEffects.VOID_SUBORDINATE);
+        if (eff == null) {
+            return true;
+        }
+
+        final int lvl = eff.getAmplifier() + 1;
+
+        final float base = instance.isMastered(attacker) ? (float) CONFIG.increaseSelfMastered : 10.0f;
+
+        final float dmg = base * lvl;
+
+        if (TensuraStorages.getAbilityFrom(attacker).isAbilityInActivePreset(instance.getSkill())) {
+            ResourceKey<DamageType> type = TensuraDamageTypes.SPACE_ELEMENTAL;
+            int mode = 2;
+            DamageSource newSource = ((TensuraSkill) instance.getSkill()).createSource(instance, attacker, type, mode);
+            target.hurt(newSource, dmg);
+        }
+        //VoidDamageHelper.dealVoidDamage(target, attacker, dmg);
+
+        return true;
     }
-
 
         public void onTick(ManasSkillInstance instance, LivingEntity entity) {
         Level var6 = entity.level();
@@ -126,9 +142,11 @@ public class VoidPriestess extends Skill {
                         if (subordinate != entity) {
                             subordinate.addEffect(new MobEffectInstance(StellarEffects.VOID_SUBORDINATE, 100, quantity - 1, false, false));
 
-                            if (!SkillUtils.hasSkill(subordinate, (ManasSkill) StellarExtras.VOID_SUBORDINATE_SKILL.get())) {
-                                // SkillHelper.learnSkill(subordinate, (ManasSkill) StellarExtras.VOID_SUBORDINATE_SKILL);
-                            }
+                          //  if (!SkillUtils.hasSkill(subordinate, (ManasSkill) StellarExtras.VOID_SUBORDINATE_SKILL.get())) {
+                                if (subordinate instanceof Player) {
+                         //            SkillHelper.learnSkill(subordinate, (ManasSkill) StellarExtras.VOID_SUBORDINATE_SKILL);
+                                }
+                         //   }
                         }
                         entity.addEffect(new MobEffectInstance(StellarEffects.VOID_SUBORDINATE, 100, quantity - 1, false, true));
 

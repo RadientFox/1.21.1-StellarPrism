@@ -17,7 +17,7 @@ import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
 import java.util.Optional;
 
-
+/*
 @EventBusSubscriber(
         modid = "stellarprism"
 )
@@ -29,6 +29,7 @@ public class VoidDMGConversionHelper {
                 priority = EventPriority.HIGHEST,
                 receiveCanceled = true
         )
+
         public static void onHurt(LivingIncomingDamageEvent event) {
             LivingEntity target = event.getEntity();
             DamageSource src = event.getSource();
@@ -39,7 +40,7 @@ public class VoidDMGConversionHelper {
                     LivingEntity livingAttacker = (LivingEntity)attacker;
                     if (!SkillUtils.hasSkillFully(livingAttacker, (ManasSkill)StellarUniques.VOID_PRIESTESS_SKILL.get())) {
                         return;
-                    }
+                   }
 
                     if (!TensuraDamageHelper.isPhysicalAttack(src) && !TensuraDamageHelper.isSoundDamage(src)) {
                         return;
@@ -60,6 +61,10 @@ public class VoidDMGConversionHelper {
             }
 
         }
+
+
     }
+
+ */
 
 

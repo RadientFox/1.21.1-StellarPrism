@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 
 public class StellarExtras {
 
-    public static final RegistrySupplier<VoidSubordinate> VOID_SUBORDINATE_SKILL = register("void_subordinate_skill", (Supplier<VoidSubordinate>) VoidSubordinate::new);
+  //  public static final RegistrySupplier<VoidSubordinate> VOID_SUBORDINATE_SKILL = register("void_subordinate_skill", (Supplier<VoidSubordinate>) VoidSubordinate::new);
 
 
     private static <E extends ManasSkill> RegistrySupplier<E> register(String name, Supplier<E> supplier) {
