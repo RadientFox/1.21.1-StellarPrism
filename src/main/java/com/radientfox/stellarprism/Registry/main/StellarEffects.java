@@ -1,10 +1,10 @@
 package com.radientfox.stellarprism.Registry.main;
 
-import com.radientfox.stellarprism.effects.BloodBlockageEffect;
 import com.radientfox.stellarprism.effects.SpatialAuraEffect;
 import com.radientfox.stellarprism.effects.VoidSubordinateEffect;
 import com.radientfox.stellarprism.effects.WindAuraEffect;
 import dev.architectury.registry.registries.RegistrySupplier;
+import com.radientfox.stellarprism.effects.PendragonAuraEffect;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
@@ -23,8 +23,7 @@ public class StellarEffects {
     public static final DeferredHolder<MobEffect, MobEffect> SPACEAURA;
     public static final DeferredHolder<MobEffect, MobEffect> WINDAURA;
     public static final DeferredHolder<MobEffect, MobEffect> VOID_SUBORDINATE;
-    public static final DeferredHolder<MobEffect, MobEffect> BLOOD_BLOCKAGE;
-
+    public static final DeferredHolder<MobEffect, MobEffect> PENDRAGON_AURA;
 
 
    // public static final RegistryObject<MobEffect> RED_SPRAY;
@@ -43,7 +42,7 @@ public class StellarEffects {
         SPACEAURA = MOB_EFFECTS.register("space_aura", SpatialAuraEffect::new);
         WINDAURA = MOB_EFFECTS.register("wind_aura", WindAuraEffect::new);
         VOID_SUBORDINATE = MOB_EFFECTS.register("void_subordinate", VoidSubordinateEffect::new);
-        BLOOD_BLOCKAGE = MOB_EFFECTS.register("blood_blockage", BloodBlockageEffect::new);
+        PENDRAGON_AURA = MOB_EFFECTS.register("pendragon_aura", PendragonAuraEffect::new);
     }
 }
 

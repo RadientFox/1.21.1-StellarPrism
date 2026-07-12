@@ -14,6 +14,7 @@ public class StellarUniqueConfig extends ManasConfig {
     public StellarUniqueConfig.AddandSubtract AddandSubtract = new StellarUniqueConfig.AddandSubtract();
     public StellarUniqueConfig.VoidPriestess VoidPriestess = new StellarUniqueConfig.VoidPriestess();
     public StellarUniqueConfig.Dullahan Dullahan = new StellarUniqueConfig.Dullahan();
+    public StellarUniqueConfig.Pendragon Pendragon = new StellarUniqueConfig.Pendragon();
 
 
     public StellarUniqueConfig() {
@@ -258,6 +259,30 @@ public class StellarUniqueConfig extends ManasConfig {
     }
     }
 
+    public static class Pendragon extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 100_000.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 2_500;
+        @Comment("MP Cost for Holy Order.")
+        public double holyOrderCost = 5_000.0;
+        @Comment("MP Cost for Holy Ray.")
+        public double holyRayCost = 15_000.0;
+        @Comment("MP Cost for Holy Aura.")
+        public double holyAuraCost = 4_000.0;
+        @Comment("MP Cost for Summon.")
+        public double summonCost = 10_000.0;
+        @Comment("Cooldown for Holy Order.")
+        public int holyOrderCooldown = 5;
+        @Comment("Cooldown for Holy Ray.")
+        public int holyRayCooldown = 1;
+        @Comment("Cooldown for Holy Aura.")
+        public int holyAuraCooldown = 10;
+        @Comment("Cooldown for Summon.")
+        public int summonCooldown = 5;
+        public Pendragon() {
+        }
+    }
 
 
     public static class VoidPriestess  extends ManasSubConfig {
