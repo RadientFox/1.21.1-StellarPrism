@@ -48,11 +48,6 @@ public class PendragonSkill extends Skill {
     private static final StellarUniqueConfig.Pendragon CONFIG = ConfigRegistry.getConfig(StellarUniqueConfig.class).Pendragon;
     private static final String LIGHT_MODE = "LightMode";
 
-    @Override
-    public MutableComponent getSkillDescription() {
-        return Component.literal("The blessing bestowed upon the one acknowledged by Heaven as the rightful king.");
-    }
-
     public PendragonSkill() {
         super(SkillType.UNIQUE);
     }
@@ -62,6 +57,11 @@ public class PendragonSkill extends Skill {
         double souls = existence.getSoulPoints();
         float multiplier = 1.0F + (float) (souls / 100.0D);
         return HakiSkill.summonHaki(instance, entity, mode, heldTicks, skill, HakiField.HakiVariant.SACRED, multiplier);
+    }
+
+    @Override
+    public MutableComponent getSkillDescription() {
+        return Component.literal("The blessing bestowed upon the one acknowledged by Heaven as the rightful king.");
     }
 
     @Override
@@ -114,7 +114,7 @@ public class PendragonSkill extends Skill {
         ItemStack offHand = player.getOffhandItem();
 
         if (mainHand.getItem() instanceof SwordItem) {
-            entity.addEffect(new MobEffectInstance(TensuraMobEffects.INSPIRATION, 120, 0, false, false, false));
+            entity.addEffect(new MobEffectInstance(TensuraMobEffects.INSPIRATION, 500, 0, false, false, false));
 //            entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 120, 1, false, false, false));
 //            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 0, false, false, false));
         }
@@ -168,6 +168,7 @@ public class PendragonSkill extends Skill {
         if (!(entity instanceof Player player)) return;
 
         if (mode == 0) {
+            if (EnergyHelper.isOutOfEnergy(entity, instance, 0)) return;
             for (ItemStack stack : player.getInventory().items) {
                 if (!stack.isEmpty() && stack.is(StellarItems.EXCALIBUR.get())) {
                     player.displayClientMessage(Component.literal("You may only possess one Excalibur."), true);

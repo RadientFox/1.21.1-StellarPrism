@@ -2,6 +2,7 @@ package com.radientfox.stellarprism.Registry.main;
 
 import com.github.hvnbael.trnightmare.main.weapon.Excalibur;
 import com.radientfox.stellarprism.StellarPrism;
+import com.radientfox.stellarprism.item.HolyGrail;
 import io.github.manasmods.tensura.item.TensuraToolTiers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
@@ -11,8 +12,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class StellarItems {
 
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, StellarPrism.MODID);
-   // public static final DeferredItem<SimpleFoodItem> PRISM_SHARD;
+    public static final DeferredHolder<Item, Excalibur> EXCALIBUR;
+    public static final DeferredHolder<Item, HolyGrail> HOLY_GRAIL;
+    // public static final DeferredItem<SimpleFoodItem> PRISM_SHARD;
  /*   public static final RegistryObject<Item> CORRUPTION_SHARD;
     public static final RegistryObject<Item> VILLAINOUS_SPIRIT;
     public static final RegistryObject<Item> HEROES_SPIRIT;
@@ -59,15 +61,7 @@ public class StellarItems {
 
 
   */
-   public static final DeferredHolder<Item, Excalibur> EXCALIBUR;
-    public StellarItems() {
-    }
-
-
-    public static void register(IEventBus modEventBus) {
-        ITEMS.register(modEventBus);
-    }
-
+    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, StellarPrism.MODID);
 
     static {
 /*
@@ -237,6 +231,14 @@ public class StellarItems {
 
          */
         EXCALIBUR = ITEMS.register("excalibur", () -> new Excalibur(TensuraToolTiers.ADAMANTITE, 3, 0.2F, new Item.Properties().stacksTo(1).durability(100000)));
+        HOLY_GRAIL = ITEMS.register("holy_grail", () -> new HolyGrail(new Item.Properties().stacksTo(1).durability(100000)));
+    }
 
+
+    public StellarItems() {
+    }
+
+    public static void register(IEventBus modEventBus) {
+        ITEMS.register(modEventBus);
     }
 }

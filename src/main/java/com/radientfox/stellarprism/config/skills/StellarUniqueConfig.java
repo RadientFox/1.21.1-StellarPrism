@@ -15,6 +15,7 @@ public class StellarUniqueConfig extends ManasConfig {
     public StellarUniqueConfig.VoidPriestess VoidPriestess = new StellarUniqueConfig.VoidPriestess();
     public StellarUniqueConfig.Dullahan Dullahan = new StellarUniqueConfig.Dullahan();
     public StellarUniqueConfig.Pendragon Pendragon = new StellarUniqueConfig.Pendragon();
+    public StellarUniqueConfig.SpiralHeart SpiralHeart = new StellarUniqueConfig.SpiralHeart();
 
 
     public StellarUniqueConfig() {
@@ -224,6 +225,25 @@ public class StellarUniqueConfig extends ManasConfig {
     }
 
 
+    public static class SpiralHeart extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 100_000.0;
+        @Comment("MP Cost for Spiral Throw.")
+        public double spiralThrowCost = 300.0;
+        @Comment("MP Cost for Giga Break.")
+        public double gigaBreakCost = 1_000.0;
+        @Comment("MP Cost for Tengen Toppa.")
+        public double tengenToppaCost = 10_000.0;
+        @Comment("Cooldown for Spiral Throw.")
+        public int spiralThrowCooldown = 1;
+        @Comment("Cooldown for Giga Break.")
+        public int gigaBreakCooldown = 3;
+        @Comment("Cooldown for Tengen Toppa.")
+        public int tengenToppaCooldown = 600;
+
+        public SpiralHeart() {
+        }
+    }
     public static class AddandSubtract extends ManasSubConfig {
         @Comment("Magicule Acquirement Cost.")
         public double mpAcquirement = 150_000.0;
@@ -271,7 +291,7 @@ public class StellarUniqueConfig extends ManasConfig {
         @Comment("MP Cost for Holy Aura.")
         public double holyAuraCost = 4_000.0;
         @Comment("MP Cost for Summon.")
-        public double summonCost = 10_000.0;
+        public double summonCost = 500000D;
         @Comment("Cooldown for Holy Order.")
         public int holyOrderCooldown = 5;
         @Comment("Cooldown for Holy Ray.")

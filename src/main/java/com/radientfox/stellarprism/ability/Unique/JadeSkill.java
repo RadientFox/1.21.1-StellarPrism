@@ -238,4 +238,3 @@ public class JadeSkill extends Skill {
         }
     }
 }
-//Thank the gods for autoformatting shortcuts

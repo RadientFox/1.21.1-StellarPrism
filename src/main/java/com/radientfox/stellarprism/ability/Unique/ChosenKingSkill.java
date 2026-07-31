@@ -181,17 +181,21 @@ public class ChosenKingSkill extends Skill {
         ItemStack mainHand = player.getMainHandItem();
 
         if (mode == 0) {
-            for (ItemStack stack : player.getInventory().items) {
-                if (mainHand.getItem() instanceof SwordItem) {
-                    if (!stack.isEmpty() && stack.is(StellarItems.EXCALIBUR.get())) {
-                        entity.addEffect(new MobEffectInstance(TensuraMobEffects.AURA_SWORD, 120, 1, false, false, false));
+            MobEffectInstance aura = player.getEffect(TensuraMobEffects.AURA_SWORD);
 
+            if (aura != null) {
+                player.removeEffect(TensuraMobEffects.AURA_SWORD);
+            } else {
+                int amplifier = player.getMainHandItem().is(StellarItems.EXCALIBUR.get()) ? 1 : 0;
 
-                    }
-                } else {
-                    entity.addEffect(new MobEffectInstance(TensuraMobEffects.AURA_SWORD, 120, 0, false, false, false));
-
-                }
+                player.addEffect(new MobEffectInstance(
+                        TensuraMobEffects.AURA_SWORD,
+                        Integer.MAX_VALUE,
+                        amplifier,
+                        false,
+                        false,
+                        false
+                ));
             }
         }
         if (mode == 1) {

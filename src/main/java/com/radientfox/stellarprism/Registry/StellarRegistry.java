@@ -1,10 +1,8 @@
 package com.radientfox.stellarprism.Registry;
 
-import com.radientfox.stellarprism.Registry.main.StellarEffects;
-import com.radientfox.stellarprism.Registry.main.StellarEnchantments;
-import com.radientfox.stellarprism.Registry.main.StellarItems;
-import com.radientfox.stellarprism.Registry.main.StellarRaces;
+import com.radientfox.stellarprism.Registry.main.*;
 import com.radientfox.stellarprism.Registry.main.skills.*;
+import com.radientfox.stellarprism.Registry.main.StellarEntityRenderers;
 
 public class StellarRegistry {
 
@@ -18,6 +16,8 @@ public class StellarRegistry {
         StellarEffects.register(modEventBus);
         StellarItems.register(modEventBus);
         StellarRaces.init();
+        StellarEntityTypes.ENTITY_TYPES.register(modEventBus);
+        modEventBus.addListener(StellarEntityRenderers::register);
       //  StellarToolsandWepons.register(modEventBus);
      //   StellarEntities.register(modEventBus);
         StellarEnchantments.init(modEventBus);
