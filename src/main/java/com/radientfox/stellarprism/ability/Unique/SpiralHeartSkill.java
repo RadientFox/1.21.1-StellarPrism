@@ -1,8 +1,6 @@
 package com.radientfox.stellarprism.ability.Unique;
 
-import com.mojang.datafixers.util.Pair;
 import com.radientfox.stellarprism.Registry.main.StellarEffects;
-import com.radientfox.stellarprism.Registry.main.StellarEntityTypes;
 import com.radientfox.stellarprism.ability.entity.beam.SpiralElectroBlastBeam;
 import com.radientfox.stellarprism.ability.entity.projectile.SpiralHeartProjectile;
 import com.radientfox.stellarprism.config.skills.StellarUniqueConfig;
@@ -11,7 +9,6 @@ import io.github.manasmods.manascore.skill.api.ManasSkillInstance;
 import io.github.manasmods.tensura.ability.skill.Skill;
 import io.github.manasmods.tensura.ability.skill.unique.ThrowerSkill;
 import io.github.manasmods.tensura.effect.template.ITransformation;
-import io.github.manasmods.tensura.entity.magic.beam.BeamProjectile;
 import io.github.manasmods.tensura.particle.TensuraParticleHelper;
 import io.github.manasmods.tensura.particle.TensuraParticleUtils;
 import io.github.manasmods.tensura.registry.attribute.TensuraAttributes;
@@ -22,6 +19,7 @@ import io.github.manasmods.tensura.storage.TensuraStorages;
 import io.github.manasmods.tensura.storage.ep.IExistence;
 import io.github.manasmods.tensura.util.AttributeHelper;
 import io.github.manasmods.tensura.util.EnergyHelper;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -46,7 +44,7 @@ public class SpiralHeartSkill extends Skill implements ITransformation {
 
     private static final ResourceLocation SPIRAL_HEART = ResourceLocation.fromNamespaceAndPath("stellarprism", "spiral_heart");
 
-    private static final double COST_REDUCTION = -0.30D;
+    private static final double COST_REDUCTION = -0.50D;
     private static final double DAMAGE_MULT = 3.0D;
     private static final double MASTER_DAMAGE_MULT = 5.0D;
 
@@ -105,6 +103,8 @@ public class SpiralHeartSkill extends Skill implements ITransformation {
 
     @Override
     public void onToggleOn(ManasSkillInstance instance, LivingEntity entity) {
+        AttributeHelper.addPermanentAttribute(entity, TensuraAttributes.RESISTANCE_DEGRADATION, SPIRAL_HEART, 1.0D, Operation.ADD_VALUE);
+        AttributeHelper.addPermanentAttribute(entity, TensuraAttributes.DODGE_NEGATE_CHANCE, SPIRAL_HEART, 100.0F, Operation.ADD_VALUE);
         AttributeHelper.addPermanentAttribute(entity, TensuraAttributes.MAGIC_COST_MULTIPLIER, SPIRAL_HEART, COST_REDUCTION, Operation.ADD_VALUE);
         double damageBonus = instance.isMastered(entity) ? MASTER_DAMAGE_MULT : DAMAGE_MULT;
         AttributeHelper.addPermanentAttribute(entity, TensuraAttributes.PHYSICAL_RESIST_DEGRADATION, SPIRAL_HEART, damageBonus, Operation.ADD_MULTIPLIED_BASE);
@@ -113,6 +113,8 @@ public class SpiralHeartSkill extends Skill implements ITransformation {
 
     @Override
     public void onToggleOff(ManasSkillInstance instance, LivingEntity entity) {
+        AttributeHelper.removeAttribute(entity, TensuraAttributes.RESISTANCE_DEGRADATION, SPIRAL_HEART);
+        AttributeHelper.removeAttribute(entity, TensuraAttributes.DODGE_NEGATE_CHANCE, SPIRAL_HEART);
         AttributeHelper.removeAttribute(entity, TensuraAttributes.MAGIC_COST_MULTIPLIER, SPIRAL_HEART);
         AttributeHelper.removeAttribute(entity, TensuraAttributes.PHYSICAL_RESIST_DEGRADATION, SPIRAL_HEART);
         AttributeHelper.removeAttribute(entity, Attributes.ATTACK_DAMAGE, SPIRAL_HEART);
@@ -175,13 +177,7 @@ public class SpiralHeartSkill extends Skill implements ITransformation {
         if (mainHandStack.isEmpty()) {
             projectile = ThrowerSkill.getProjectile(level, entity, mainHandStack.copy(), instance);
         } else {
-            SpiralHeartProjectile spiralProjectile = new SpiralHeartProjectile(
-                    level,
-                    entity,
-                    mainHandStack.copy(),
-                    true,
-                    instance.isMastered(entity) ? 5.0F : 3.0F
-            );
+            SpiralHeartProjectile spiralProjectile = new SpiralHeartProjectile(level, entity, mainHandStack.copy(), true, instance.isMastered(entity) ? 5.0F : 3.0F);
 
             spiralProjectile.getSourceItem().setCount(1);
             spiralProjectile.setSkill(instance);
@@ -231,6 +227,12 @@ public class SpiralHeartSkill extends Skill implements ITransformation {
     }
 
     private void tengenToppa(ManasSkillInstance instance, LivingEntity entity) {
+        if (!(entity instanceof Player player)) return;
+        if (!instance.isMastered(player)) {
+
+            player.displayClientMessage(Component.literal("You do not have enough spiral energy yet").withStyle(ChatFormatting.LIGHT_PURPLE), true);
+            return;
+        }
 
         if (!entity.hasEffect((StellarEffects.TENGEN_TOPPA))) {
 

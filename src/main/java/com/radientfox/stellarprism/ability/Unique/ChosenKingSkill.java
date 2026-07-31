@@ -73,7 +73,7 @@ public class ChosenKingSkill extends Skill {
     }
 
     public void onToggleOn(ManasSkillInstance instance, LivingEntity entity) {
-        entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 120, 0, false, false, false));
+        entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 120, 0, false, false, true));
         AttributeInstance melee = entity.getAttribute(TensuraAttributes.AUTO_MELEE_DODGE_CHANCE);
         if (melee != null) {
             melee.addOrReplacePermanentModifier(new AttributeModifier(CHOSEN_KING, 30.0D, AttributeModifier.Operation.ADD_VALUE));
@@ -137,17 +137,17 @@ public class ChosenKingSkill extends Skill {
         ItemStack offHand = player.getOffhandItem();
 
         if (mainHand.getItem() instanceof SwordItem) {
-            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 120, 1, false, false, false));
-            entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 120, 0, false, false, false));
+            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 120, 1, false, false, true));
+            entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 120, 0, false, false, true));
 
             if (offHand.getItem() instanceof ShieldItem) {
-                entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 0, false, false, false));
+                entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 0, false, false, true));
             }
             if (mainHand.getItem() instanceof ShieldItem) {
-                entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 1, false, false, false));
+                entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 1, false, false, true));
             }
             if (mainHand.getItem() instanceof PickaxeItem) {
-                entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 120, 1, false, false, false));
+                entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 120, 1, false, false, true));
             }
         }
     }
