@@ -9,6 +9,7 @@ public class StellarRegistry {
 
     public static void register(net.neoforged.bus.api.IEventBus modEventBus) {
 
+        StellarDimensions.DIMENSION_TYPES.register(modEventBus);
         StellarIntrinsics.init();
         StellarExtras.init();
         StellarUniques.init();
@@ -18,15 +19,15 @@ public class StellarRegistry {
         StellarRaces.init();
         StellarEntityTypes.ENTITY_TYPES.register(modEventBus);
         modEventBus.addListener(StellarEntityRenderers::register);
-      //  StellarToolsandWepons.register(modEventBus);
-     //   StellarEntities.register(modEventBus);
+        //  StellarToolsandWepons.register(modEventBus);
+        //   StellarEntities.register(modEventBus);
         StellarEnchantments.init(modEventBus);
-     //   StellarSounds.register(modEventBus);
-      //  StellarBlocks.init(modEventBus);
+        //   StellarSounds.register(modEventBus);
+        //  StellarBlocks.init(modEventBus);
 
         //StellarFeatures.init(modEventBus);
         //StellarPlacedFeatures.init(modEventBus);
-       // StellarParticles.register(modEventBus);
+        // StellarParticles.register(modEventBus);
         StellarResistances.register(modEventBus);
 
 

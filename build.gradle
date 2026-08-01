@@ -26,6 +26,13 @@ sourceSets.main.resources {
     exclude("src/generated/**/.cache") // datagen cache files
 }
 
+// Package datapack into the built resources
+processResources {
+    from('src/main/data') {
+        into('data')
+    }
+}
+
 repositories {
     maven {
         url "https://cursemaven.com"
