@@ -73,7 +73,7 @@ public class ChosenKingSkill extends Skill {
     }
 
     public void onToggleOn(ManasSkillInstance instance, LivingEntity entity) {
-        entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 120, 0, false, false, false));
+        entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 120, 0, false, false, true));
         AttributeInstance melee = entity.getAttribute(TensuraAttributes.AUTO_MELEE_DODGE_CHANCE);
         if (melee != null) {
             melee.addOrReplacePermanentModifier(new AttributeModifier(CHOSEN_KING, 30.0D, AttributeModifier.Operation.ADD_VALUE));
@@ -137,17 +137,17 @@ public class ChosenKingSkill extends Skill {
         ItemStack offHand = player.getOffhandItem();
 
         if (mainHand.getItem() instanceof SwordItem) {
-            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 120, 1, false, false, false));
-            entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 120, 0, false, false, false));
+            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 120, 1, false, false, true));
+            entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 120, 0, false, false, true));
 
             if (offHand.getItem() instanceof ShieldItem) {
-                entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 0, false, false, false));
+                entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 0, false, false, true));
             }
             if (mainHand.getItem() instanceof ShieldItem) {
-                entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 1, false, false, false));
+                entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 1, false, false, true));
             }
             if (mainHand.getItem() instanceof PickaxeItem) {
-                entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 120, 1, false, false, false));
+                entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 120, 1, false, false, true));
             }
         }
     }
@@ -181,17 +181,21 @@ public class ChosenKingSkill extends Skill {
         ItemStack mainHand = player.getMainHandItem();
 
         if (mode == 0) {
-            for (ItemStack stack : player.getInventory().items) {
-                if (mainHand.getItem() instanceof SwordItem) {
-                    if (!stack.isEmpty() && stack.is(StellarItems.EXCALIBUR.get())) {
-                        entity.addEffect(new MobEffectInstance(TensuraMobEffects.AURA_SWORD, 120, 1, false, false, false));
+            MobEffectInstance aura = player.getEffect(TensuraMobEffects.AURA_SWORD);
 
+            if (aura != null) {
+                player.removeEffect(TensuraMobEffects.AURA_SWORD);
+            } else {
+                int amplifier = player.getMainHandItem().is(StellarItems.EXCALIBUR.get()) ? 1 : 0;
 
-                    }
-                } else {
-                    entity.addEffect(new MobEffectInstance(TensuraMobEffects.AURA_SWORD, 120, 0, false, false, false));
-
-                }
+                player.addEffect(new MobEffectInstance(
+                        TensuraMobEffects.AURA_SWORD,
+                        Integer.MAX_VALUE,
+                        amplifier,
+                        false,
+                        false,
+                        false
+                ));
             }
         }
         if (mode == 1) {

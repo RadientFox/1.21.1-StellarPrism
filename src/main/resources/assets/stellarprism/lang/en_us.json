@@ -7,7 +7,10 @@
   "stellarprism.join.message.nite":"The <glitch f=3 j=0.02 b=0.01 s=0.1>§dAncient one's§r beckoned for you to §kjoin",
 
 
-
+  "stellarprism.skill.spiral_heart": "§aSpiral §cHeart",
+   "stellarprism.skill.mode.spiral_heart.boomerang": "§aBoomerang",
+  "stellarprism.skill.mode.spiral_heart.giga_break": "§aDrill Break",
+  "stellarprism.skill.mode.spiral_heart.tengen_toppa": "<neon p=8 r=2 a=0.15><rainb f=1 w=0.5><wave a=1 f=1.0 w=0.5>Tengen Toppa Gurren Lagann",
 
 
   "stellarprism.skill.mode.heartstone.deactive": "Your Damage is no longer being converted",
@@ -399,6 +402,8 @@
   "itemGroup.stellar_tab": "Stellar Prism",
 
   "item.stellarprism.excalibur": "§6Ex-calibur",
+
+  "item.stellarprism.holy_grail": "§6The Holy Grail",
 
   "stellarprism.skill.pendragon": "Pendragon",
   "stellarprism.skill.mode.pendragon.summon": "Summon Excalibur",

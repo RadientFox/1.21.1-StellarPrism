@@ -366,13 +366,13 @@ public class DullahanSkill extends Skill {
             entity.removeEffect(TensuraMobEffects.getReference(TensuraMobEffects.PRESENCE_CONCEALMENT));
             level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), TensuraSoundEvents.GENERIC_UNCAST.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
 
-            player.displayClientMessage(Component.literal("Soundless Coach deactivated.").withStyle(ChatFormatting.GRAY), true);
+            player.displayClientMessage(Component.literal("The winds calm...").withStyle(ChatFormatting.GRAY), true);
         } else {
             tag.putBoolean("SoundlessCoach", true);
             entity.addEffect(new MobEffectInstance(TensuraMobEffects.getReference(TensuraMobEffects.PRESENCE_CONCEALMENT), Integer.MAX_VALUE, 2, false, false, false));
             level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), TensuraSoundEvents.PRESENCE_CONCEALMENT.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
 
-            player.displayClientMessage(Component.literal("Soundless Coach activated.").withStyle(ChatFormatting.DARK_GRAY), true);
+            player.displayClientMessage(Component.literal("The winds howls...").withStyle(ChatFormatting.DARK_GRAY), true);
         }
 
         instance.addMasteryPoint(entity);

@@ -2,12 +2,14 @@ package com.radientfox.stellarprism.Registry;
 
 import com.radientfox.stellarprism.Registry.main.*;
 import com.radientfox.stellarprism.Registry.main.skills.*;
+import com.radientfox.stellarprism.Registry.main.StellarEntityRenderers;
 
 public class StellarRegistry {
 
 
     public static void register(net.neoforged.bus.api.IEventBus modEventBus) {
 
+        StellarDimensions.DIMENSION_TYPES.register(modEventBus);
         StellarIntrinsics.init();
         StellarExtras.init();
         StellarUniques.init();
@@ -15,15 +17,17 @@ public class StellarRegistry {
         StellarEffects.register(modEventBus);
         StellarItems.register(modEventBus);
         StellarRaces.init();
-      //  StellarToolsandWepons.register(modEventBus);
-        StellarEntities.register(modEventBus);
+        StellarEntityTypes.ENTITY_TYPES.register(modEventBus);
+        modEventBus.addListener(StellarEntityRenderers::register);
+        //  StellarToolsandWepons.register(modEventBus);
+        //   StellarEntities.register(modEventBus);
         StellarEnchantments.init(modEventBus);
-     //   StellarSounds.register(modEventBus);
-      //  StellarBlocks.init(modEventBus);
+        //   StellarSounds.register(modEventBus);
+        //  StellarBlocks.init(modEventBus);
 
         //StellarFeatures.init(modEventBus);
         //StellarPlacedFeatures.init(modEventBus);
-       // StellarParticles.register(modEventBus);
+        // StellarParticles.register(modEventBus);
         StellarResistances.register(modEventBus);
 
 

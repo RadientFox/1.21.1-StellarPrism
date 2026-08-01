@@ -18,6 +18,7 @@ public class StellarUniques {
     public static final RegistrySupplier<ManasSkill> DULLAHAN = register("dullahan", DullahanSkill::new);
     public static final RegistrySupplier<ManasSkill> PENDRAGON = register("pendragon", PendragonSkill::new);
     public static final RegistrySupplier<ManasSkill> CHOSEN_KING = register("chosen_king", ChosenKingSkill::new);
+    public static final RegistrySupplier<ManasSkill> SPIRAL_HEART = register("spiral_heart", SpiralHeartSkill::new);
 
 
     private static <E extends ManasSkill> RegistrySupplier<E> register(String name, Supplier<E> supplier) {
