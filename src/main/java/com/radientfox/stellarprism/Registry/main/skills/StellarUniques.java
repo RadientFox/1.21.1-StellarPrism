@@ -1,6 +1,7 @@
 package com.radientfox.stellarprism.Registry.main.skills;
 
 import com.radientfox.stellarprism.ability.Unique.*;
+import com.radientfox.stellarprism.ability.Unique.Digimon.Agumon.AgumonSkill;
 import dev.architectury.registry.registries.RegistrySupplier;
 import io.github.manasmods.manascore.skill.api.ManasSkill;
 import io.github.manasmods.manascore.skill.impl.SkillRegistry;
@@ -19,6 +20,7 @@ public class StellarUniques {
     public static final RegistrySupplier<ManasSkill> PENDRAGON = register("pendragon", PendragonSkill::new);
     public static final RegistrySupplier<ManasSkill> CHOSEN_KING = register("chosen_king", ChosenKingSkill::new);
     public static final RegistrySupplier<ManasSkill> SPIRAL_HEART = register("spiral_heart", SpiralHeartSkill::new);
+    public static final RegistrySupplier<ManasSkill> AGUMON_SKILL = register("agumon_skill", AgumonSkill::new);
 
 
     private static <E extends ManasSkill> RegistrySupplier<E> register(String name, Supplier<E> supplier) {

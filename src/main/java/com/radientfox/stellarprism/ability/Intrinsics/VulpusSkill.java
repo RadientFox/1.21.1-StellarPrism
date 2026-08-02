@@ -71,24 +71,23 @@ public class VulpusSkill extends Skill{
     }
 
 
-    public boolean onDamageEntity(ManasSkillInstance instance, LivingEntity attacker, LivingEntity target, DamageSource source, Changeable<Float> amount) {
-        if (!instance.isToggled()){
-            return true;
-        } else if (source.getDirectEntity() != attacker) {
+    public boolean onDamageEntity(ManasSkillInstance instance, LivingEntity entity, LivingEntity target, DamageSource source, Changeable<Float> amount) {
+        if (source.getDirectEntity() != entity) {
             return true;
         } else if (!TensuraDamageHelper.isPhysicalAttack(source)) {
             return true;
-        }
-        else {
-            ItemStack mainHand = attacker.getMainHandItem();
-            if (!mainHand.isEmpty()) {
-                return true;
-            } else {
-                float damage = 15;
-                amount.set((Float) amount.get() + damage);
-                instance.addMasteryPoint(attacker);
-                return true;
+        } else if (entity.getMainHandItem().isEmpty() && entity.getOffhandItem().isEmpty()) {
+            if (instance.isToggled()) {
+               // float damage = ;
+               // amount.set((Float) amount.get() + damage);
+                if (!instance.onCoolDown(0)) {
+                    instance.addMasteryPoint(entity);
+                }
             }
+            return true;
+
+        } else {
+            return true;
         }
     }
 

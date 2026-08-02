@@ -11,7 +11,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
-
+/*
 @EventBusSubscriber(modid = StellarPrism.MODID)
 public final class BloodBlockageHandler {
 
@@ -68,4 +68,9 @@ public final class BloodBlockageHandler {
         data.putDouble(BloodBlockageEffect.PREV_EP_TAG, current);
     }
 
+
+
 }
+
+
+ */

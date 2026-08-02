@@ -1,6 +1,7 @@
 package com.radientfox.stellarprism.ability.Unique;
 
 import com.radientfox.stellarprism.entities.bosses.HerobrianeSentientBoss;
+import io.github.hvnbael.legacytensura.event.UpdateEPEvent;
 import io.github.manasmods.manascore.skill.api.ManasSkillInstance;
 import io.github.manasmods.tensura.ability.skill.Skill;
 import io.github.manasmods.tensura.entity.projectile.magic.SpaceCutProjectile;

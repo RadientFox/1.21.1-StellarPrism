@@ -16,6 +16,7 @@ public class StellarUniqueConfig extends ManasConfig {
     public StellarUniqueConfig.Dullahan Dullahan = new StellarUniqueConfig.Dullahan();
     public StellarUniqueConfig.Pendragon Pendragon = new StellarUniqueConfig.Pendragon();
     public StellarUniqueConfig.SpiralHeart SpiralHeart = new StellarUniqueConfig.SpiralHeart();
+    public StellarUniqueConfig.AgumonSkill AgumonSkill = new StellarUniqueConfig.AgumonSkill();
 
 
     public StellarUniqueConfig() {
@@ -331,6 +332,35 @@ public class StellarUniqueConfig extends ManasConfig {
 
 
 
+    public static class AgumonSkill  extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 101_011.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 1_000.0;
+        @Comment("Health threshold for Courage to activate. 100% = 1.0")
+        public double courageHealth = 0.25;
+        @Comment("Percent increase for Courage Damage Buff")
+        public double flameBuff = 0.25;
+        @Comment("Sharp Claws unarmed damage increase")
+        public double clawDamage = 25.0;
+        @Comment("Sharp Claws unarmed damage increase on mastery")
+        public double clawDamageMastered = 50.0;
+        @Comment("Baby Flame Damage")
+        public double flameDamage = 40.0;
+        @Comment("Baby Flame Damage mastered")
+        public double flameDamageMastered = 50.0;
+        @Comment("Baby Flame Cooldown ")
+        public double flameCooldwon = 5.0;
+        @Comment("Baby Flame Cooldown mastered")
+        public double flameCooldwonMastered = 3.0;
+        @Comment("Allow Digivolution to Greymon")
+        public boolean augumonEvolution = true;
+        @Comment("EP required for Greymon")
+        public double GreymonEP = 800_000.0;
+
+        public AgumonSkill() {
+        }
+    }
 
 
 
