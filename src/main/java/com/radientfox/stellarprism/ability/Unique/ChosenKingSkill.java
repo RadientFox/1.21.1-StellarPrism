@@ -102,7 +102,7 @@ public class ChosenKingSkill extends Skill {
         if (stack.is(ItemTags.SWORDS)) {
             return true;
         } else {
-            return stack.is(ItemTags.SWORD_ENCHANTABLE) ? true : stack.is(ItemTags.AXES);
+            return stack.is(ItemTags.SWORD_ENCHANTABLE) || stack.is(ItemTags.AXES);
         }
     }
 
@@ -123,7 +123,7 @@ public class ChosenKingSkill extends Skill {
         float bonusMultiplier = 1.5F + (masteredBattlewills * 0.01F);
 
         if (TensuraDamageHelper.isPhysicalOrBattlewill(source, owner)) {
-            amount.set((Float) amount.get() * bonusMultiplier);
+            amount.set(amount.get() * bonusMultiplier);
         }
 
         return true;
@@ -188,14 +188,7 @@ public class ChosenKingSkill extends Skill {
             } else {
                 int amplifier = player.getMainHandItem().is(StellarItems.EXCALIBUR.get()) ? 1 : 0;
 
-                player.addEffect(new MobEffectInstance(
-                        TensuraMobEffects.AURA_SWORD,
-                        Integer.MAX_VALUE,
-                        amplifier,
-                        false,
-                        false,
-                        false
-                ));
+                player.addEffect(new MobEffectInstance(TensuraMobEffects.AURA_SWORD, Integer.MAX_VALUE, amplifier, false, false, false));
             }
         }
         if (mode == 1) {
@@ -212,19 +205,19 @@ public class ChosenKingSkill extends Skill {
                     }
 
                     if (level.getBlockState(resultPos).is(TensuraBlockTags.SKILL_NOT_TELEPORTABLE)) {
-                        level.playSound((Player) null, entity.getX(), entity.getY(), entity.getZ(), (SoundEvent) TensuraSoundEvents.GENERIC_CAST_FAIL.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
+                        level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), TensuraSoundEvents.GENERIC_CAST_FAIL.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
                     } else if (!entity.level().getWorldBorder().isWithinBounds(ObjectSelectionHelper.getBlockPos(vec3))) {
                         entity.sendSystemMessage(Component.translatable("tensura.skill.teleport.out_border").withStyle(ChatFormatting.RED));
                     } else {
-                        Vec3 source = entity.position().add((double) 0.0F, (double) (entity.getBbHeight() / 2.0F), (double) 0.0F);
+                        Vec3 source = entity.position().add(0.0F, entity.getBbHeight() / 2.0F, 0.0F);
                         Vec3 offSetToTarget = vec3.subtract(source);
 
                         for (int particleIndex = 1; particleIndex < Mth.floor(offSetToTarget.length()); ++particleIndex) {
-                            Vec3 particlePos = source.add(offSetToTarget.normalize().scale((double) particleIndex));
-                            level.sendParticles(ParticleTypes.CLOUD, particlePos.x, particlePos.y, particlePos.z, 1, (double) 0.0F, (double) 0.0F, (double) 0.0F, (double) 0.0F);
-                            TensuraParticleHelper.addServerParticlesAroundPos(entity.getRandom(), level, particlePos, ParticleTypes.SWEEP_ATTACK, (double) 3.0F);
-                            TensuraParticleHelper.addServerParticlesAroundPos(entity.getRandom(), level, particlePos, ParticleTypes.SWEEP_ATTACK, (double) 2.0F);
-                            AABB aabb = (new AABB(ObjectSelectionHelper.getBlockPos(particlePos))).inflate(Math.max(entity.getAttributeValue(Attributes.ENTITY_INTERACTION_RANGE), (double) 2.0F));
+                            Vec3 particlePos = source.add(offSetToTarget.normalize().scale(particleIndex));
+                            level.sendParticles(ParticleTypes.CLOUD, particlePos.x, particlePos.y, particlePos.z, 1, 0.0F, 0.0F, 0.0F, 0.0F);
+                            TensuraParticleHelper.addServerParticlesAroundPos(entity.getRandom(), level, particlePos, ParticleTypes.SWEEP_ATTACK, 3.0F);
+                            TensuraParticleHelper.addServerParticlesAroundPos(entity.getRandom(), level, particlePos, ParticleTypes.SWEEP_ATTACK, 2.0F);
+                            AABB aabb = (new AABB(ObjectSelectionHelper.getBlockPos(particlePos))).inflate(Math.max(entity.getAttributeValue(Attributes.ENTITY_INTERACTION_RANGE), 2.0F));
                             List<LivingEntity> list = level.getEntitiesOfClass(LivingEntity.class, aabb, (targetx) -> !targetx.is(entity) && !targetx.isAlliedTo(entity));
                             if (!list.isEmpty()) {
                                 float bonus = instance.isMastered(entity) ? 75.0F : 15.0F;
@@ -238,7 +231,7 @@ public class ChosenKingSkill extends Skill {
                                             stack.getItem().hurtEnemy(stack, target, entity);
                                             EnchantmentHelper.doPostAttackEffectsWithItemSource(level, target, damageSource, stack);
                                             TensuraEnchantmentHelper.doAdditionalAfterDamage(level, target, entity, damageSource, stack, amount + bonus);
-                                            entity.level().playSound((Player) null, target.getX(), target.getY(), target.getZ(), SoundEvents.PLAYER_ATTACK_CRIT, entity.getSoundSource(), 1.0F, 1.0F);
+                                            entity.level().playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.PLAYER_ATTACK_CRIT, entity.getSoundSource(), 1.0F, 1.0F);
                                             if (level instanceof ServerLevel) {
                                                 level.getChunkSource().broadcastAndSend(entity, new ClientboundAnimatePacket(entity, 4));
                                             }
@@ -255,7 +248,7 @@ public class ChosenKingSkill extends Skill {
                         entity.unRide();
                         entity.teleportTo(vec3.x(), vec3.y(), vec3.z());
                         entity.swing(InteractionHand.MAIN_HAND, true);
-                        level.playSound((Player) null, entity.getX(), entity.getY(), entity.getZ(), (SoundEvent) TensuraSoundEvents.INSTANT_MOVE.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
+                        level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), TensuraSoundEvents.INSTANT_MOVE.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
                     }
                 }
             }
@@ -272,7 +265,7 @@ public class ChosenKingSkill extends Skill {
                     if (target.hurt(source, (float) (attack * 1.5F))) {
                         SkillHelper.knockBack(entity, target, 2.0F);
                         instance.addMasteryPoint(entity);
-                        level.playSound((Player) null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.NEUTRAL, 1.0F, 1.0F);
+                        level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.NEUTRAL, 1.0F, 1.0F);
                     }
                 } else {
                     instance.addMasteryPoint(entity);
@@ -283,27 +276,27 @@ public class ChosenKingSkill extends Skill {
     }
 
     private void slash(LivingEntity entity, Level level, float distance, ManasSkillInstance instance, int mode) {
-        Vec3 target = entity.position().add(entity.getLookAngle().scale((double) distance));
-        Vec3 source = entity.position().add((double) 0.0F, (double) entity.getEyeHeight(), (double) 0.0F);
+        Vec3 target = entity.position().add(entity.getLookAngle().scale(distance));
+        Vec3 source = entity.position().add(0.0F, entity.getEyeHeight(), 0.0F);
         Vec3 sourceToTarget = target.subtract(source);
         Vec3 normalizes = sourceToTarget.normalize();
-        level.playSound((Player) null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.WARDEN_ATTACK_IMPACT, SoundSource.PLAYERS, 1.0F, 1.0F);
+        level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.WARDEN_ATTACK_IMPACT, SoundSource.PLAYERS, 1.0F, 1.0F);
 
         for (int particleIndex = 1; particleIndex < Mth.floor(sourceToTarget.length()); ++particleIndex) {
-            Vec3 particlePos = source.add(normalizes.scale((double) particleIndex));
+            Vec3 particlePos = source.add(normalizes.scale(particleIndex));
             TensuraParticleHelper.spawnServerParticles(level, TensuraParticleUtils.getColorlessWave(0.9F, 2.0F), particlePos.x, particlePos.y, particlePos.z);
             if (TensuraGameRules.canSkillGrief(level)) {
-                SkillHelper.launchBlock(entity, particlePos, 2, 1, 0.3F, 0.2F, (blockState) -> entity.getRandom().nextInt(2) != 1 ? false : blockState.is(TensuraBlockTags.EARTH_SKILL_BREAKABLE), (pos) -> !pos.equals(entity.getOnPos()) && !pos.equals(entity.getOnPos().below()), instance);
+                SkillHelper.launchBlock(entity, particlePos, 2, 1, 0.3F, 0.2F, (blockState) -> entity.getRandom().nextInt(2) == 1 && blockState.is(TensuraBlockTags.EARTH_SKILL_BREAKABLE), (pos) -> !pos.equals(entity.getOnPos()) && !pos.equals(entity.getOnPos().below()), instance);
             }
 
-            AABB aabb = (new AABB(ObjectSelectionHelper.getBlockPos(particlePos))).inflate((double) 2.0F);
+            AABB aabb = (new AABB(ObjectSelectionHelper.getBlockPos(particlePos))).inflate(2.0F);
             List<LivingEntity> list = level.getEntitiesOfClass(LivingEntity.class, aabb, (entityData) -> !entityData.is(entity));
             if (!list.isEmpty()) {
                 for (LivingEntity living : list) {
                     DamageSource damageSource = this.createSource(instance, entity, DamageTypes.PLAYER_ATTACK, mode);
                     if (living.hurt(damageSource, (float) (entity.getAttributeValue(Attributes.ATTACK_DAMAGE) * 0.5))) {
                         TensuraParticleHelper.spawnServerGroundSlamParticle(living, 10, 2.0F);
-                        living.getDeltaMovement().add((double) 0.0F, 0.3, (double) 0.0F);
+                        living.getDeltaMovement().add(0.0F, 0.3, 0.0F);
                     }
                 }
             }

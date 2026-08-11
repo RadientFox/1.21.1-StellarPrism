@@ -1,8 +1,12 @@
 package com.radientfox.stellarprism.config.skills;
 
+import io.github.manasmods.manascore.config.ConfigRegistry;
 import io.github.manasmods.manascore.config.api.Comment;
 import io.github.manasmods.manascore.config.api.ManasConfig;
 import io.github.manasmods.manascore.config.api.ManasSubConfig;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StellarUniqueConfig extends ManasConfig {
 
@@ -16,7 +20,7 @@ public class StellarUniqueConfig extends ManasConfig {
     public StellarUniqueConfig.Dullahan Dullahan = new StellarUniqueConfig.Dullahan();
     public StellarUniqueConfig.Pendragon Pendragon = new StellarUniqueConfig.Pendragon();
     public StellarUniqueConfig.SpiralHeart SpiralHeart = new StellarUniqueConfig.SpiralHeart();
-    public StellarUniqueConfig.AgumonSkill AgumonSkill = new StellarUniqueConfig.AgumonSkill();
+    public StellarUniqueConfig.Faker Faker = new StellarUniqueConfig.Faker();
 
 
     public StellarUniqueConfig() {
@@ -134,7 +138,26 @@ public class StellarUniqueConfig extends ManasConfig {
         public double lilypadStepCooldown = 15.0;
     }
 
+    public static class Faker extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 100_000.0;
 
+        @Comment("Restricted items.")
+        public List<String> restrictedItems = new ArrayList<>(List.of(
+                "minecraft:golden_sword",
+                "minecraft:golden_axe",
+                "minecraft:golden_pickaxe",
+                "minecraft:golden_shovel",
+                "minecraft:golden_hoe"
+        ));
+
+        public Faker() {
+        }
+    }
+
+    public static List<String> FakerRestrictedItems() {
+        return ConfigRegistry.getConfig(StellarUniqueConfig.class).Faker.restrictedItems;
+    }
 
 
     public static class Dullahan extends ManasSubConfig {
@@ -145,7 +168,7 @@ public class StellarUniqueConfig extends ManasConfig {
         @Comment("MP Cost for Iris Out.")
         public double irisOutCost = 5_000.0;
         @Comment("MP Cost for Spine Whip.")
-        public double spineWhipCost = 15_000.0;
+        public double spineWhipCost = 8_000.0;
         @Comment("MP Cost for Soundless Coach.")
         public double soundlessCoachCost = 4_000.0;
         @Comment("MP Cost for God of Sacrifice.")
@@ -332,35 +355,6 @@ public class StellarUniqueConfig extends ManasConfig {
 
 
 
-    public static class AgumonSkill  extends ManasSubConfig {
-        @Comment("Magicule Acquirement Cost.")
-        public double mpAcquirement = 101_011.0;
-        @Comment("Skill Mastery Points.")
-        public double masteryPoints = 1_000.0;
-        @Comment("Health threshold for Courage to activate. 100% = 1.0")
-        public double courageHealth = 0.25;
-        @Comment("Percent increase for Courage Damage Buff")
-        public double flameBuff = 0.25;
-        @Comment("Sharp Claws unarmed damage increase")
-        public double clawDamage = 25.0;
-        @Comment("Sharp Claws unarmed damage increase on mastery")
-        public double clawDamageMastered = 50.0;
-        @Comment("Baby Flame Damage")
-        public double flameDamage = 40.0;
-        @Comment("Baby Flame Damage mastered")
-        public double flameDamageMastered = 50.0;
-        @Comment("Baby Flame Cooldown ")
-        public double flameCooldwon = 5.0;
-        @Comment("Baby Flame Cooldown mastered")
-        public double flameCooldwonMastered = 3.0;
-        @Comment("Allow Digivolution to Greymon")
-        public boolean augumonEvolution = true;
-        @Comment("EP required for Greymon")
-        public double GreymonEP = 800_000.0;
-
-        public AgumonSkill() {
-        }
-    }
 
 
 

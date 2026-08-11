@@ -13,6 +13,18 @@
   "stellarprism.skill.mode.spiral_heart.tengen_toppa": "<neon p=8 r=2 a=0.15><rainb f=1 w=0.5><wave a=1 f=1.0 w=0.5>Tengen Toppa Gurren Lagann",
 
 
+  "stellarprism.skill.tenacious": "Tenacious",
+  "stellarprism.skill.mode.tenacious.revive": "§aNot Yet",
+
+  "stellarprism.skill.interloper": "§3Interloper",
+  "stellarprism.skill.mode.interloper.visitor": "§1Visitor",
+  "stellarprism.skill.mode.interloper.enter_the_void": "<shadow r=1 a=0.6>§0Enter The Void",
+
+  "stellarprism.skill.faker": "§cFaker",
+  "stellarprism.skill.mode.faker.analytical_appraisal" : "§4Trace",
+  "stellarprism.skill.mode.faker.reinforcement" : "§4Reinforcement",
+  "stellarprism.skill.mode.faker.projection" : "§4Projection",
+
   "stellarprism.skill.mode.heartstone.deactive": "Your Damage is no longer being converted",
 
 
@@ -27,9 +39,12 @@
 
 
 
+
   "stellarprism.skill.spinel_skill": "<neon p=8 r=2 a=0.15>§dSpinel</neon>",
 
   "stellarprism.skill.spinel_skill.animated": "<neon p=8 r=2 a=0.15>§dSpinel</neon>",
+  "stellarprism.skill.spinel_skill.description": "When vastness of <wiggle a=1 f=1><neon p=8 r=2 a=0.15>§dSpace§r seems to large for your heavy heart",
+  "stellarprism.skill.mode.spinel.cutter": "Space Cutter",
   "stellarprism.skill.mode.spinel.storage": "Pocket Storage",
   "stellarprism.skill.mode.spinel.aura": "Spatial Aura",
   "stellarprism.skill.mode.spinel.lock": "You do not have the correct mastery over your skills",
@@ -239,20 +254,6 @@
   "stellarprism.skill.eldritch_nullification.description": "Completely ignore Eldritch damage.",
   "stellarprism.skill.primordial_nullification": "Primordial Nullification",
   "stellarprism.skill.primordial_nullification.description": "Completely ignore Primordial damage.",
-
-
-
-
-
-  "stellarprism.skill.agumon_skill": "Agumon",
-
-  "stellarprism.skill.mode.agumon.flame": "Baby Flame",
-
-
-
-
-
-
 
 
 

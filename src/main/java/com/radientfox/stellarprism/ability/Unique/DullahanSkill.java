@@ -180,51 +180,17 @@ public class DullahanSkill extends Skill {
 
                 ItemStack soulLantern = new ItemStack(Items.SOUL_LANTERN);
 
-                soulLantern.set(
-                        DataComponents.CUSTOM_NAME,
-                        Component.literal("Trapped Soul Lantern")
-                                .withStyle(ChatFormatting.AQUA)
-                );
+                soulLantern.set(DataComponents.CUSTOM_NAME, Component.literal("Trapped Soul Lantern").withStyle(ChatFormatting.AQUA));
 
-                soulLantern.set(
-                        DataComponents.MAX_STACK_SIZE,
-                        64
-                );
+                soulLantern.set(DataComponents.MAX_STACK_SIZE, 64);
 
                 livingTarget.spawnAtLocation(soulLantern);
 
-                serverLevel.sendParticles(
-                        ParticleTypes.SOUL_FIRE_FLAME,
-                        livingTarget.getX(),
-                        livingTarget.getY() + 1.0D,
-                        livingTarget.getZ(),
-                        50,
-                        0.5D,
-                        0.8D,
-                        0.5D,
-                        0.02D
-                );
+                serverLevel.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, livingTarget.getX(), livingTarget.getY() + 1.0D, livingTarget.getZ(), 50, 0.5D, 0.8D, 0.5D, 0.02D);
 
-                serverLevel.sendParticles(
-                        ParticleTypes.SMOKE,
-                        livingTarget.getX(),
-                        livingTarget.getY() + 1.0D,
-                        livingTarget.getZ(),
-                        20,
-                        0.4D,
-                        0.6D,
-                        0.4D,
-                        0.01D
-                );
+                serverLevel.sendParticles(ParticleTypes.SMOKE, livingTarget.getX(), livingTarget.getY() + 1.0D, livingTarget.getZ(), 20, 0.4D, 0.6D, 0.4D, 0.01D);
 
-                serverLevel.playSound(
-                        null,
-                        livingTarget.blockPosition(),
-                        SoundEvents.SOUL_ESCAPE.value(),
-                        SoundSource.PLAYERS,
-                        1.0F,
-                        0.7F
-                );
+                serverLevel.playSound(null, livingTarget.blockPosition(), SoundEvents.SOUL_ESCAPE.value(), SoundSource.PLAYERS, 1.0F, 0.7F);
 
                 livingTarget.discard();
 
@@ -234,83 +200,31 @@ public class DullahanSkill extends Skill {
                 return;
             }
 
-            livingTarget.hurt(
-                    serverLevel.damageSources().playerAttack(player),
-                    (float) damage
-            );
+            livingTarget.hurt(serverLevel.damageSources().playerAttack(player), (float) damage);
 
-            livingTarget.addEffect(
-                    new MobEffectInstance(
-                            TensuraMobEffects.getReference(TensuraMobEffects.FEAR),
-                            200,
-                            7,
-                            false,
-                            true,
-                            false
-                    )
-            );
+            livingTarget.addEffect(new MobEffectInstance(TensuraMobEffects.getReference(TensuraMobEffects.FEAR), 200, 7, false, true, false));
 
-            livingTarget.addEffect(
-                    new MobEffectInstance(
-                            TensuraMobEffects.getReference(TensuraMobEffects.TRUE_BLINDNESS),
-                            200,
-                            7,
-                            false,
-                            true,
-                            false
-                    )
-            );
+            livingTarget.addEffect(new MobEffectInstance(TensuraMobEffects.getReference(TensuraMobEffects.TRUE_BLINDNESS), 200, 7, false, true, false));
 
-            serverLevel.sendParticles(
-                    ParticleTypes.SOUL_FIRE_FLAME,
-                    livingTarget.getX(),
-                    livingTarget.getY() + 1.0D,
-                    livingTarget.getZ(),
-                    40,
-                    0.5D,
-                    0.8D,
-                    0.5D,
-                    0.02D
-            );
+            serverLevel.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, livingTarget.getX(), livingTarget.getY() + 1.0D, livingTarget.getZ(), 40, 0.5D, 0.8D, 0.5D, 0.02D);
 
             if (!livingTarget.isAlive()) {
 
                 ItemStack soulLantern = new ItemStack(Items.SOUL_LANTERN);
 
-                soulLantern.set(
-                        DataComponents.CUSTOM_NAME,
-                        Component.literal("Trapped Soul Lantern")
-                                .withStyle(ChatFormatting.AQUA)
-                );
+                soulLantern.set(DataComponents.CUSTOM_NAME, Component.literal("Trapped Soul Lantern").withStyle(ChatFormatting.AQUA));
 
-                soulLantern.set(
-                        DataComponents.MAX_STACK_SIZE,
-                        64
-                );
+                soulLantern.set(DataComponents.MAX_STACK_SIZE, 64);
 
                 livingTarget.spawnAtLocation(soulLantern);
 
-                serverLevel.playSound(
-                        null,
-                        livingTarget.blockPosition(),
-                        SoundEvents.SOUL_ESCAPE.value(),
-                        SoundSource.PLAYERS,
-                        1.0F,
-                        0.7F
-                );
+                serverLevel.playSound(null, livingTarget.blockPosition(), SoundEvents.SOUL_ESCAPE.value(), SoundSource.PLAYERS, 1.0F, 0.7F);
 
                 instance.addMasteryPoint(player);
             }
         }
 
-        serverLevel.playSound(
-                null,
-                player.blockPosition(),
-                SoundEvents.PLAYER_ATTACK_SWEEP,
-                SoundSource.PLAYERS,
-                1.0F,
-                0.8F
-        );
+        serverLevel.playSound(null, player.blockPosition(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.PLAYERS, 1.0F, 0.8F);
 
         player.swing(InteractionHand.MAIN_HAND, true);
         instance.addMasteryPoint(entity);

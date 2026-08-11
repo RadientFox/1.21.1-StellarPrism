@@ -74,11 +74,9 @@ public class JadeSkill extends Skill {
         AttributeHelper.multiplyChantSpeed(entity, 2);
         ThoughtAccelerationSkill.onToggle(instance, entity, ACCELERATION, true);
 
-        if (SkillUtils.hasSkillFully(entity, ExtraSkills.WIND_DOMINATION.get())
-                && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.WIND_DOMINATION)) {
+        if (SkillUtils.hasSkillFully(entity, ExtraSkills.WIND_DOMINATION.get()) && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.WIND_DOMINATION)) {
 
-            if (SkillUtils.hasSkillFully(entity, ExtraSkills.MOLECULAR_MANIPULATION.get())
-                    && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.MOLECULAR_MANIPULATION)) {
+            if (SkillUtils.hasSkillFully(entity, ExtraSkills.MOLECULAR_MANIPULATION.get()) && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.MOLECULAR_MANIPULATION)) {
 
                 AttributeHelper.multiplyElementalBoost(entity, TensuraAttributes.WIND_BOOST, CONFIG.moleWind);
 
@@ -101,11 +99,9 @@ public class JadeSkill extends Skill {
         AttributeHelper.removeChantSpeed(entity, 2);
         ThoughtAccelerationSkill.onToggle(instance, entity, ACCELERATION, false);
 
-        if (SkillUtils.hasSkillFully(entity, ExtraSkills.WIND_DOMINATION.get())
-                && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.WIND_DOMINATION)) {
+        if (SkillUtils.hasSkillFully(entity, ExtraSkills.WIND_DOMINATION.get()) && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.WIND_DOMINATION)) {
 
-            if (SkillUtils.hasSkillFully(entity, ExtraSkills.MOLECULAR_MANIPULATION.get())
-                    && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.MOLECULAR_MANIPULATION)) {
+            if (SkillUtils.hasSkillFully(entity, ExtraSkills.MOLECULAR_MANIPULATION.get()) && SkillUtils.isSkillMastered(entity, (ManasSkill) ExtraSkills.MOLECULAR_MANIPULATION)) {
 
                 AttributeHelper.removeElementalMultiplier(entity, TensuraAttributes.WIND_BOOST, CONFIG.moleWind);
 

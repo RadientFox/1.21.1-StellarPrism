@@ -25,6 +25,7 @@ public class StellarEffects {
     public static final DeferredHolder<MobEffect, MobEffect> TENGEN_TOPPA;
 
 
+
    // public static final RegistryObject<MobEffect> RED_SPRAY;
 
     public StellarEffects() {

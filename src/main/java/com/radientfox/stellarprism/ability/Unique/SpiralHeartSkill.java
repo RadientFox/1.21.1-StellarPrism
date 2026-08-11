@@ -238,15 +238,15 @@ public class SpiralHeartSkill extends Skill implements ITransformation {
 
             if (EnergyHelper.isOutOfEnergy(entity, instance, 2)) return;
             entity.setHealth(entity.getMaxHealth());
-            entity.level().playSound((Player) null, entity.getX(), entity.getY(), entity.getZ(), (SoundEvent) TensuraSoundEvents.TRANSFORM_BEAST.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
+            entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), TensuraSoundEvents.TRANSFORM_BEAST.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
             entity.addEffect(new MobEffectInstance((StellarEffects.TENGEN_TOPPA), instance.isMastered(entity) ? 8000 : 6000, 0, false, false, false));
             IExistence existence = TensuraStorages.getExistenceFrom(entity);
             existence.setAura(Math.max(existence.getAura(), EnergyHelper.getMaxAura(entity)));
             existence.setMagicule(Math.max(existence.getMagicule(), EnergyHelper.getMaxMagicule(entity)));
             existence.markDirty();
             TensuraParticleHelper.addServerParticlesAroundSelf(entity, ParticleTypes.EXPLOSION_EMITTER);
-            TensuraParticleHelper.spawnServerParticles(entity.level(), (ParticleOptions) TensuraParticleTypes.BLACK_LIGHTNING_SPARK.get(), entity.getX(), entity.getY(), entity.getZ(), 55, 0.08, 0.08, 0.08, (double) 0.5F, true);
-            TensuraParticleHelper.spawnServerParticles(entity.level(), (ParticleOptions) TensuraParticleTypes.YELLOW_LIGHTNING_SPARK.get(), entity.getX(), entity.getY(), entity.getZ(), 55, 0.08, 0.08, 0.08, (double) 0.5F, true);
+            TensuraParticleHelper.spawnServerParticles(entity.level(), TensuraParticleTypes.BLACK_LIGHTNING_SPARK.get(), entity.getX(), entity.getY(), entity.getZ(), 55, 0.08, 0.08, 0.08, 0.5F, true);
+            TensuraParticleHelper.spawnServerParticles(entity.level(), TensuraParticleTypes.YELLOW_LIGHTNING_SPARK.get(), entity.getX(), entity.getY(), entity.getZ(), 55, 0.08, 0.08, 0.08, 0.5F, true);
             TensuraParticleHelper.spawnServerParticles(entity.level(), TensuraParticleUtils.getGoldWave(1.0F, entity.getBbWidth() * 7.0F, -0.5F, false), entity.getX(), entity.getY() + (double) (entity.getBbHeight() / 2.0F), entity.getZ());
 
 

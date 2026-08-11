@@ -239,21 +239,14 @@ public class PendragonSkill extends Skill {
         }
 
         if (mode != 2) return false;
-
         if (instance.onCoolDown(mode) && !instance.canIgnoreCoolDown(entity, mode)) return false;
-
         int castTime = 20;
-
         Vec3 offset = new Vec3(0.0, entity.getBbHeight() * 0.75F - entity.getEyeHeight(), 0.0);
-
         MagicCircle.castMagicCircle(1.5F, 25, MagicCircleVariant.LIGHT, entity, instance.getOrCreateTag(), 0.5F, offset, instance, mode, Pair.of(0.0D, getMagiculeCost(entity, instance, mode)));
 
         if (heldTicks >= castTime) {
-
             Pair<Double, Double> cost = Pair.of(0.0D, getMagiculeCost(entity, instance, mode));
-
             BeamProjectile.spawnLastingBeam(MiscEntityTypes.SOLAR_BEAM.get(), 40.0F, 1.0F, 64.0F, entity, instance, mode, cost, cost, heldTicks);
-
             entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), TensuraSoundEvents.CAST_LIGHT.get(), SoundSource.PLAYERS, 0.8F, 0.5F);
         }
 
