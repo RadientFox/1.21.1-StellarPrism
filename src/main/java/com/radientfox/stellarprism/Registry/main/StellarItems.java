@@ -2,6 +2,7 @@ package com.radientfox.stellarprism.Registry.main;
 
 import com.github.hvnbael.trnightmare.main.weapon.Excalibur;
 import com.radientfox.stellarprism.StellarPrism;
+import com.radientfox.stellarprism.item.BubbleWand;
 import com.radientfox.stellarprism.item.HolyGrail;
 import io.github.manasmods.tensura.item.TensuraToolTiers;
 import net.minecraft.core.registries.Registries;
@@ -13,6 +14,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class StellarItems {
 
     public static final DeferredHolder<Item, Excalibur> EXCALIBUR;
+    public static final DeferredHolder<Item, BubbleWand> BUBBLE_WAND;
     public static final DeferredHolder<Item, HolyGrail> HOLY_GRAIL;
     // public static final DeferredItem<SimpleFoodItem> PRISM_SHARD;
  /*   public static final RegistryObject<Item> CORRUPTION_SHARD;
@@ -231,6 +233,7 @@ public class StellarItems {
 
          */
         EXCALIBUR = ITEMS.register("excalibur", () -> new Excalibur(TensuraToolTiers.ADAMANTITE, 3, 0.2F, new Item.Properties().stacksTo(1).durability(100000)));
+        BUBBLE_WAND = ITEMS.register("bubble_wand", () -> new BubbleWand(TensuraToolTiers.MITHRIL, 3, 0.2F, new Item.Properties().stacksTo(1).durability(100000)));
         HOLY_GRAIL = ITEMS.register("holy_grail", () -> new HolyGrail(new Item.Properties().stacksTo(1).durability(100000)));
     }
 

@@ -24,6 +24,9 @@ public class StellarUniques {
     public static final RegistrySupplier<ManasSkill> TENACIOUS = register("tenacious", TenaciousSkill::new);
     public static final RegistrySupplier<ManasSkill> FAKER = register("faker", FakerSkill::new);
     public static final RegistrySupplier<ManasSkill> AGUMON_SKILL = register("agumon_skill", AgumonSkill::new);
+    public static final RegistrySupplier<ManasSkill> BUBBLE_MAGE = register("bubble_mage", BubbleMageSkill::new);
+    public static final RegistrySupplier<ManasSkill> DIANLANHUA = register("dianlanhua", DianlanhuaSkill::new);
+
 
 
 

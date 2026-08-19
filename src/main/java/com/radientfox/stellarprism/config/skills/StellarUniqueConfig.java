@@ -20,7 +20,10 @@ public class StellarUniqueConfig extends ManasConfig {
     public StellarUniqueConfig.Dullahan Dullahan = new StellarUniqueConfig.Dullahan();
     public StellarUniqueConfig.Pendragon Pendragon = new StellarUniqueConfig.Pendragon();
     public StellarUniqueConfig.SpiralHeart SpiralHeart = new StellarUniqueConfig.SpiralHeart();
+    public StellarUniqueConfig.AgumonSkill AgumonSkill = new StellarUniqueConfig.AgumonSkill();
+    public StellarUniqueConfig.Dianlanhua Dianlanhua = new StellarUniqueConfig.Dianlanhua();
     public StellarUniqueConfig.Faker Faker = new StellarUniqueConfig.Faker();
+    public StellarUniqueConfig.Compatibility Compatibility = new StellarUniqueConfig.Compatibility();
 
 
     public StellarUniqueConfig() {
@@ -186,7 +189,30 @@ public class StellarUniqueConfig extends ManasConfig {
     }
 
 
-
+    public static class Dianlanhua extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 100_000.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 2_500;
+        @Comment("MP Cost for Toxic Selection.")
+        public double toxicSelectionCost = 5_000.0;
+        @Comment("MP Cost for Shade Step.")
+        public double shadeStepCost = 8_000.0;
+        @Comment("MP Cost for Gale Motion.")
+        public double galeMotionCost = 4_000.0;
+        @Comment("MP Cost for Toxin Queen.")
+        public double toxinQueenCost = 10.0;
+        @Comment("Cooldown for Toxic Selection.")
+        public int toxicSelectionCooldown = 5;
+        @Comment("Cooldown for Shade Step.")
+        public int shadeStepCooldown = 1;
+        @Comment("Cooldown for Gale Motion.")
+        public int galeMotionCooldown = 10;
+        @Comment("Cooldown for Toxin Queen.")
+        public int toxinQueenCooldown = 5;
+        public Dianlanhua() {
+        }
+    }
 
 
 
@@ -353,8 +379,80 @@ public class StellarUniqueConfig extends ManasConfig {
     }
     }
 
+    public static class AgumonSkill  extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 101_011.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 1_000.0;
+        @Comment("Health threshold for Courage to activate. 100% = 1.0")
+        public double courageHealth = 0.25;
+        @Comment("Percent increase for Courage Damage Buff")
+        public double flameBuff = 0.25;
+        @Comment("Sharp Claws unarmed damage increase")
+        public double clawDamage = 25.0;
+        @Comment("Sharp Claws unarmed damage increase on mastery")
+        public double clawDamageMastered = 50.0;
+        @Comment("Baby Flame Damage")
+        public double flameDamage = 40.0;
+        @Comment("Baby Flame Damage mastered")
+        public double flameDamageMastered = 50.0;
+        @Comment("Baby Flame Cooldown ")
+        public double flameCooldwon = 5.0;
+        @Comment("Baby Flame Cooldown mastered")
+        public double flameCooldwonMastered = 3.0;
+        @Comment("Allow Digivolution to Greymon")
+        public boolean augumonEvolution = true;
+        @Comment("EP required for Greymon")
+        public double GreymonEP = 800_000.0;
 
+        public AgumonSkill() {
+        }
+    }
 
+    public static class Compatibility extends ManasSubConfig {
+
+        @Comment("Enable StellarPrism skill compatibility obtainment.")
+        public boolean enabled = true;
+
+        @Comment("Chance for Chosen King to obtain Pendragon.")
+        public double chosenKingToPendragonChance = 0.1;
+
+        @Comment("Chance for Pendragon to obtain Chosen King.")
+        public double pendragonToChosenKingChance = 0.1;
+
+        @Comment("Chance for Starved to obtain Predator from Supermassive Slime.")
+        public double starvedToPredatorChance = 0.05;
+
+        @Comment("Chance for Commander to obtain Spearhead from Warden.")
+        public double commanderToSpearheadChance = 0.05;
+
+        @Comment("Chance for Spearhead to obtain Commander from Sissie.")
+        public double spearheadToCommanderChance = 0.05;
+
+        @Comment("Chance for Observer or Seer to obtain Seeker or Analyst from War Gnome.")
+        public double observerToSeekerAnalystChance = 0.03;
+
+        @Comment("Chance for Chef to obtain Cook from Charybdis.")
+        public double chefToCookChance = 0.05;
+
+        @Comment("Chance for Cook to obtain Chef from Winged Cat.")
+        public double cookToChefChance = 0.05;
+
+        @Comment("Chance for Faker or Falsifier to obtain Imitator from Metal Slime.")
+        public double fakerToImitatorChance = 0.05;
+
+        @Comment("Chance for Imitator to obtain Faker or Falsifier from Arch Daemon.")
+        public double imitatorToFakerChance = 0.01;
+
+        @Comment("Chance for Fighter to obtain Martial Master from Shin Ryusei.")
+        public double fighterToMartialMasterChance = 0.05;
+
+        @Comment("Chance for Martial Master to obtain Fighter from Shogo.")
+        public double martialMasterToFighterChance = 0.05;
+
+        public Compatibility() {
+        }
+    }
 
 
 

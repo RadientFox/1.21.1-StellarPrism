@@ -23,8 +23,7 @@ public class StellarEffects {
     public static final DeferredHolder<MobEffect, MobEffect> PENDRAGON_AURA;
     public static final DeferredHolder<MobEffect, MobEffect> SPIRALING;
     public static final DeferredHolder<MobEffect, MobEffect> TENGEN_TOPPA;
-
-
+    public static final DeferredHolder<MobEffect, MobEffect> INTERLIMINALITY;
 
    // public static final RegistryObject<MobEffect> RED_SPRAY;
 
@@ -45,6 +44,7 @@ public class StellarEffects {
         PENDRAGON_AURA = MOB_EFFECTS.register("pendragon_aura", PendragonAuraEffect::new);
         SPIRALING = MOB_EFFECTS.register("spiraling", SpiralingEffect::new);
         TENGEN_TOPPA = MOB_EFFECTS.register("tengen_toppa", TengenToppaEffect::new);
+        INTERLIMINALITY = MOB_EFFECTS.register("interliminality", InterliminalityEffect::new);
     }
 }
 
