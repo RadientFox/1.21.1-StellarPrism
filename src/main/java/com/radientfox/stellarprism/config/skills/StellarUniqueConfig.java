@@ -424,7 +424,7 @@ public class StellarUniqueConfig extends ManasConfig {
         public double starvedToPredatorChance = 0.05;
 
         @Comment("Chance for Commander to obtain Spearhead from Warden.")
-        public double commanderToSpearheadChance = 0.05;
+        public double commanderToSpearheadChance = 0.1;
 
         @Comment("Chance for Spearhead to obtain Commander from Sissie.")
         public double spearheadToCommanderChance = 0.05;
@@ -439,16 +439,16 @@ public class StellarUniqueConfig extends ManasConfig {
         public double cookToChefChance = 0.05;
 
         @Comment("Chance for Faker or Falsifier to obtain Imitator from Metal Slime.")
-        public double fakerToImitatorChance = 0.05;
+        public double fakerToImitatorChance = 0.1;
 
         @Comment("Chance for Imitator to obtain Faker or Falsifier from Arch Daemon.")
-        public double imitatorToFakerChance = 0.01;
+        public double imitatorToFakerChance = 0.8;
 
         @Comment("Chance for Fighter to obtain Martial Master from Shin Ryusei.")
-        public double fighterToMartialMasterChance = 0.05;
+        public double fighterToMartialMasterChance = 0.1;
 
         @Comment("Chance for Martial Master to obtain Fighter from Shogo.")
-        public double martialMasterToFighterChance = 0.05;
+        public double martialMasterToFighterChance = 0.1;
 
         public Compatibility() {
         }
