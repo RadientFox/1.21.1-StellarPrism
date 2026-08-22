@@ -27,7 +27,10 @@
 
   "stellarprism.skill.mode.heartstone.deactive": "Your Damage is no longer being converted",
 
-
+  "stellarprism.skill.eltnam": "§5Eltnam",
+  "stellarprism.skill.mode.eltnam.scry_proficiency: analysis": "§5Analysis",
+  "stellarprism.skill.mode.eltnam.scry_proficiency: divination": "§5Divination",
+  "stellarprism.skill.mode.eltnam.synthetic_blood_formula": "§5Synthetic Blood",
 
   "stellarprism.skill.mode.ruby.burst": "Scarlet Burst",
   "stellarprism.skill.ruby": "§cRuby",

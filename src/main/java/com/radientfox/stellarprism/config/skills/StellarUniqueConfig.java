@@ -24,9 +24,14 @@ public class StellarUniqueConfig extends ManasConfig {
     public StellarUniqueConfig.Dianlanhua Dianlanhua = new StellarUniqueConfig.Dianlanhua();
     public StellarUniqueConfig.Faker Faker = new StellarUniqueConfig.Faker();
     public StellarUniqueConfig.Compatibility Compatibility = new StellarUniqueConfig.Compatibility();
+    public StellarUniqueConfig.Eltnam Eltnam = new StellarUniqueConfig.Eltnam();
 
 
     public StellarUniqueConfig() {
+    }
+
+    public static List<String> FakerRestrictedItems() {
+        return ConfigRegistry.getConfig(StellarUniqueConfig.class).Faker.restrictedItems;
     }
 
     public String getFileName() {
@@ -75,12 +80,8 @@ public class StellarUniqueConfig extends ManasConfig {
         }
     }
 
-
-
     public static class Jade extends ManasSubConfig {
 
-        public Jade() {
-        }
         @Comment("Magicule Acquirement Cost.")
         public double mpAcquirement = 60_000.0;
         @Comment("Enable Wind Transform obtainment.")
@@ -123,14 +124,12 @@ public class StellarUniqueConfig extends ManasConfig {
         public int windBattlewills = 5;
         @Comment("Needs Spirit for Wind Aura.")
         public boolean needsSpirit = true;
+        public Jade() {
+        }
     }
-
-
 
     public static class Nimue extends ManasSubConfig {
 
-        public Nimue() {
-        }
         @Comment("Magicule Acquirement Cost.")
         public double mpAcquirement = 100_000.0;
         @Comment("Skill Mastery Points.")
@@ -139,6 +138,8 @@ public class StellarUniqueConfig extends ManasConfig {
         public double purifyingWaterCooldown = 10.0;
         @Comment("Cooldown for Lilypad Step in seconds.")
         public double lilypadStepCooldown = 15.0;
+        public Nimue() {
+        }
     }
 
     public static class Faker extends ManasSubConfig {
@@ -146,22 +147,11 @@ public class StellarUniqueConfig extends ManasConfig {
         public double mpAcquirement = 100_000.0;
 
         @Comment("Restricted items.")
-        public List<String> restrictedItems = new ArrayList<>(List.of(
-                "minecraft:golden_sword",
-                "minecraft:golden_axe",
-                "minecraft:golden_pickaxe",
-                "minecraft:golden_shovel",
-                "minecraft:golden_hoe"
-        ));
+        public List<String> restrictedItems = new ArrayList<>(List.of("minecraft:golden_sword", "minecraft:golden_axe", "minecraft:golden_pickaxe", "minecraft:golden_shovel", "minecraft:golden_hoe"));
 
         public Faker() {
         }
     }
-
-    public static List<String> FakerRestrictedItems() {
-        return ConfigRegistry.getConfig(StellarUniqueConfig.class).Faker.restrictedItems;
-    }
-
 
     public static class Dullahan extends ManasSubConfig {
         @Comment("Magicule Acquirement Cost.")
@@ -184,6 +174,7 @@ public class StellarUniqueConfig extends ManasConfig {
         public int soundlessCoachCooldown = 10;
         @Comment("Cooldown for God of Sacrifice.")
         public int godOfSacrificeCooldown = 5;
+
         public Dullahan() {
         }
     }
@@ -210,17 +201,10 @@ public class StellarUniqueConfig extends ManasConfig {
         public int galeMotionCooldown = 10;
         @Comment("Cooldown for Toxin Queen.")
         public int toxinQueenCooldown = 5;
+
         public Dianlanhua() {
         }
     }
-
-
-
-
-
-
-
-
 
 
     public static class AmuletofPower extends ManasSubConfig {
@@ -263,15 +247,14 @@ public class StellarUniqueConfig extends ManasConfig {
     }
 
 
-
     public static class Prism extends ManasSubConfig {
         @Comment("Magicule Acquirement Cost.")
         public double mpAcquirement = 77_777.0;
         @Comment("Skill Mastery Points.")
         public double masteryPoints = 7_777;
 
-    public Prism() {
-    }
+        public Prism() {
+        }
     }
 
 
@@ -294,6 +277,25 @@ public class StellarUniqueConfig extends ManasConfig {
         public SpiralHeart() {
         }
     }
+
+    public static class Eltnam extends ManasSubConfig {
+        @Comment("Magicule Acquirement Cost.")
+        public double mpAcquirement = 130_000.0;
+        @Comment("Skill Mastery Points.")
+        public double masteryPoints = 2_500;
+        @Comment("MP Cost for Scry Proficiency.")
+        public double scryProficiencyCost = 300.0;
+        @Comment("MP Cost for Divination.")
+        public double divinationCost = 1_000.0;
+        @Comment("MP Cost for Synthetic Blood Formula.")
+        public double syntheticBloodFormulaCost = 10_000.0;
+
+        public Eltnam() {
+        }
+
+    }
+
+
     public static class AddandSubtract extends ManasSubConfig {
         @Comment("Magicule Acquirement Cost.")
         public double mpAcquirement = 150_000.0;
@@ -325,8 +327,8 @@ public class StellarUniqueConfig extends ManasConfig {
         public double negativeAddition = 400.0;
 
 
-    public AddandSubtract() {
-    }
+        public AddandSubtract() {
+        }
     }
 
     public static class Pendragon extends ManasSubConfig {
@@ -350,12 +352,13 @@ public class StellarUniqueConfig extends ManasConfig {
         public int holyAuraCooldown = 10;
         @Comment("Cooldown for Summon.")
         public int summonCooldown = 5;
+
         public Pendragon() {
         }
     }
 
 
-    public static class VoidPriestess  extends ManasSubConfig {
+    public static class VoidPriestess extends ManasSubConfig {
         @Comment("Magicule Acquirement Cost.")
         public double mpAcquirement = 150_000.0;
         @Comment("Skill Mastery Points.")
@@ -375,11 +378,11 @@ public class StellarUniqueConfig extends ManasConfig {
         @Comment("Charm Cooldown.")
         public double charmCooldown = 12_000.0;
 
-    public VoidPriestess() {
-    }
+        public VoidPriestess() {
+        }
     }
 
-    public static class AgumonSkill  extends ManasSubConfig {
+    public static class AgumonSkill extends ManasSubConfig {
         @Comment("Magicule Acquirement Cost.")
         public double mpAcquirement = 101_011.0;
         @Comment("Skill Mastery Points.")
@@ -453,7 +456,6 @@ public class StellarUniqueConfig extends ManasConfig {
         public Compatibility() {
         }
     }
-
 
 
 }
