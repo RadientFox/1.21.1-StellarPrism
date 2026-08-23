@@ -3,10 +3,17 @@ package com.radientfox.stellarprism.Registry.main;
 import com.github.hvnbael.trnightmare.main.weapon.Excalibur;
 import com.radientfox.stellarprism.StellarPrism;
 import com.radientfox.stellarprism.item.BubbleWand;
+import com.radientfox.stellarprism.item.ExtraCoreItem;
 import com.radientfox.stellarprism.item.HolyGrail;
+import com.radientfox.stellarprism.item.StellarFoodProperties;
+import com.radientfox.stellarprism.races.Fox.Elemental.KitsuneElement;
+import dev.architectury.registry.registries.RegistrySupplier;
 import io.github.manasmods.tensura.item.TensuraToolTiers;
+import io.github.manasmods.tensura.item.consumable.SimpleFoodItem;
+import io.github.manasmods.tensura.registry.item.misc.TensuraCreativeTabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -16,12 +23,19 @@ public class StellarItems {
     public static final DeferredHolder<Item, Excalibur> EXCALIBUR;
     public static final DeferredHolder<Item, BubbleWand> BUBBLE_WAND;
     public static final DeferredHolder<Item, HolyGrail> HOLY_GRAIL;
-    // public static final DeferredItem<SimpleFoodItem> PRISM_SHARD;
- /*   public static final RegistryObject<Item> CORRUPTION_SHARD;
-    public static final RegistryObject<Item> VILLAINOUS_SPIRIT;
-    public static final RegistryObject<Item> HEROES_SPIRIT;
-    public static final RegistryObject<Item> HERO_SHARD;
-    public static final RegistryObject<Item> RANDOM_AMULET;
+    public static final DeferredHolder<Item, ExtraCoreItem> ELEMENT_CORE_TIME;
+    public static final DeferredHolder<Item, Item> TIME_ELEMENTAL_SHARD;
+    public static final DeferredHolder<Item, Item> EMPTY_ELEMENTAL_SHARD;
+    public static final DeferredHolder<Item, SimpleFoodItem> TIME_ESSENCE;
+    public static final DeferredHolder<Item,SimpleFoodItem> PRISM_SHARD;
+
+    public static final DeferredHolder<Item,SimpleFoodItem> CORRUPTION_SHARD;
+    public static final DeferredHolder<Item,SimpleFoodItem> VILLAINOUS_SPIRIT;
+    public static final DeferredHolder<Item,SimpleFoodItem> HEROES_SPIRIT;
+    public static final DeferredHolder<Item,SimpleFoodItem> HERO_SHARD;
+
+
+   /* public static final RegistryObject<Item> RANDOM_AMULET;
     public static final RegistryObject<Item> RANDOM_HEARTSTONE;;
     public static final RegistryObject<Item> CHOCO;
     public static final RegistryObject<Item> MONKEY_SPIN;
@@ -66,23 +80,37 @@ public class StellarItems {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, StellarPrism.MODID);
 
     static {
-/*
-        PRISM_SHARD = (DeferredItem<SimpleFoodItem>) ITEMS.register("prism_shard", () -> {
-            return new SimpleFoodItem(StellarFoodProperties.PRISM_SHARD);
+        TIME_ELEMENTAL_SHARD = (DeferredHolder<Item, Item>) ITEMS.register("time_elemental_shard", () -> {
+            return new Item((new Item.Properties()).stacksTo(64).rarity(Rarity.UNCOMMON).fireResistant());
         });
-
+        EMPTY_ELEMENTAL_SHARD = (DeferredHolder<Item, Item>) ITEMS.register("empty_elemental_shard", () -> {
+            return new Item((new Item.Properties()).stacksTo(64).rarity(Rarity.UNCOMMON).fireResistant());
+        });
+        ELEMENT_CORE_TIME = ITEMS.register("element_core_time", () -> {
+            return new ExtraCoreItem(KitsuneElement.TIME);
+        });
+        TIME_ESSENCE = ITEMS.register("time_essence", () -> {
+            return new SimpleFoodItem(TensuraCreativeTabs.MOB_DROPS, StellarFoodProperties.TIME_ESSENCE);
+        });
+        PRISM_SHARD = ITEMS.register("prism_shard", () -> {
+            return new SimpleFoodItem(TensuraCreativeTabs.MOB_DROPS, StellarFoodProperties.PRISM_SHARD);
+        });
         CORRUPTION_SHARD = ITEMS.register("corruption_shard", () -> {
-            return new SimpleFoodItem(ItemTab.STELLARTAB, (new FoodProperties.Builder()).alwaysEat().nutrition(0).saturationMod(0.0F).effect(new MobEffectInstance(()    TensuraMobEffects.CURSE, 100, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WITHER , 100, 0), 1.0F).build());
+            return new SimpleFoodItem(TensuraCreativeTabs.MOB_DROPS, StellarFoodProperties.CORRUPTION_SHARD);
         });
         VILLAINOUS_SPIRIT = ITEMS.register("villainous_spirit", () -> {
-            return new SimpleFoodItem(ItemTab.STELLARTAB, (new FoodProperties.Builder()).alwaysEat().nutrition(0).saturationMod(0.0F).effect(new MobEffectInstance((MobEffect)TensuraMobEffects.CURSE.get(), 100, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WITHER , 100, 0), 1.0F).build());
+            return new SimpleFoodItem(TensuraCreativeTabs.MOB_DROPS, StellarFoodProperties.VILLAINOUS_SPIRIT);
         });
         HEROES_SPIRIT = ITEMS.register("heroes_spirit", () -> {
-            return new SimpleFoodItem(ItemTab.STELLARTAB, (new FoodProperties.Builder()).alwaysEat().nutrition(0).saturationMod(0.0F).effect(new MobEffectInstance(MobEffects.LUCK, 100, 0), 1.0F).effect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE , 100, 0), 1.0F).build());
+            return new SimpleFoodItem(TensuraCreativeTabs.MOB_DROPS, StellarFoodProperties.HEROES_SPIRIT);
         });
         HERO_SHARD = ITEMS.register("hero_shard", () -> {
-            return new SimpleFoodItem(ItemTab.STELLARTAB, (new FoodProperties.Builder()).alwaysEat().nutrition(0).saturationMod(0.0F).effect(new MobEffectInstance(MobEffects.LUCK, 100, 0), 1.0F).effect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE , 100, 0), 1.0F).build());
+            return new SimpleFoodItem(TensuraCreativeTabs.MOB_DROPS, StellarFoodProperties.HERO_SHARD);
         });
+
+
+/*
+
        // RANDOM_AMULET = ITEMS.register("random_amulet", AmuletBook::new);
       //  RANDOM_HEARTSTONE = ITEMS.register("random_heartstone", HeartstoneBook::new);
 

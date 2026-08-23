@@ -3,6 +3,7 @@ package com.radientfox.stellarprism.Registry;
 import com.radientfox.stellarprism.Registry.main.*;
 import com.radientfox.stellarprism.Registry.main.skills.*;
 import com.radientfox.stellarprism.Registry.main.StellarEntityRenderers;
+import com.radientfox.stellarprism.storages.KitsuneElementStorage;
 
 public class StellarRegistry {
 
@@ -19,6 +20,7 @@ public class StellarRegistry {
         StellarRaces.init();
         StellarEntityTypes.ENTITY_TYPES.register(modEventBus);
         modEventBus.addListener(StellarEntityRenderers::register);
+        KitsuneElementStorage.init();
         //  StellarToolsandWepons.register(modEventBus);
         //   StellarEntities.register(modEventBus);
         StellarEnchantments.init(modEventBus);

@@ -16,12 +16,12 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ElementalKitRace extends DefaultRace {
-        public ElementalKitRace(Difficulty difficulty) {
+public class RandomElementalKitRace extends DefaultRace {
+        public RandomElementalKitRace(Difficulty difficulty) {
             super(difficulty);
         }
 
-        public ElementalKitRace() {
+        public RandomElementalKitRace() {
             this(Difficulty.EASY);
             this.applyDefaultAttributeModifiers();
         }
@@ -50,6 +50,9 @@ public class ElementalKitRace extends DefaultRace {
             List<ManasSkill> list = new ArrayList();
             list.add((ManasSkill) IntrinsicSkills.BEAST_TRANSFORMATION.get());
             list.add((ManasSkill) CommonSkills.SELF_REGENERATION.get());
+            if ( KitsuneElement.getElement(entity) == KitsuneElement.FLAME){
+                list.add(IntrinsicSkills.FLAME_TRANSFORM.get());
+            }
             return list;
         }
 }

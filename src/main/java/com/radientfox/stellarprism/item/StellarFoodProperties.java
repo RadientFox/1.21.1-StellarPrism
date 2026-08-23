@@ -8,15 +8,21 @@ import net.minecraft.world.food.FoodProperties;
 public class StellarFoodProperties {
 
 
+    public static final FoodProperties PRISM_SHARD = createEssenceProperties();
+    public static final FoodProperties CORRUPTION_SHARD = createEssenceProperties();
+    public static final FoodProperties VILLAINOUS_SPIRIT = createEssenceProperties();
+    public static final FoodProperties HEROES_SPIRIT = createEssenceProperties();
+    public static final FoodProperties HERO_SHARD = createEssenceProperties();
+    public static final FoodProperties TIME_ESSENCE = createEssenceProperties();
 
-    public static final FoodProperties PRISM_SHARD;
 
     public StellarFoodProperties() {
     }
 
-    static {
-        PRISM_SHARD = (new FoodProperties.Builder()).nutrition(0).saturationModifier(0.0F).effect(new MobEffectInstance(MobEffects.WITHER, 100, 1), 1.0F).effect(new MobEffectInstance(MobEffects.POISON, 100, 1), 1.0F).alwaysEdible().build();
 
+
+    private static FoodProperties createEssenceProperties() {
+        return (new FoodProperties.Builder()).alwaysEdible().nutrition(4).saturationModifier(0.3F).build();
     }
 
     }

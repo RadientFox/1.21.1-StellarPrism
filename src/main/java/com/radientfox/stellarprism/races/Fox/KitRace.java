@@ -1,5 +1,6 @@
 package com.radientfox.stellarprism.races.Fox;
 
+import com.radientfox.stellarprism.Registry.main.StellarRaces;
 import com.radientfox.stellarprism.config.races.fox.FoxRaceConfig;
 import io.github.manasmods.manascore.config.ConfigRegistry;
 import io.github.manasmods.manascore.race.api.ManasRace;
@@ -28,7 +29,7 @@ public class KitRace extends DefaultRace {
         public KitRace() {
             this(Difficulty.EASY);
             this.applyDefaultAttributeModifiers();
-            SlimeConfig.Slime config = ((SlimeConfig)ConfigRegistry.getConfig(SlimeConfig.class)).Slime;
+            FoxRaceConfig.Kit config = ((FoxRaceConfig)ConfigRegistry.getConfig(FoxRaceConfig.class)).Kit;
             this.addAttributeModifier(Attributes.JUMP_STRENGTH, DEFAULT_RACE_ID, config.jumpStrength, AttributeModifier.Operation.ADD_VALUE);
             this.addAttributeModifier(Attributes.SAFE_FALL_DISTANCE, DEFAULT_RACE_ID, 2.0 * config.jumpStrength, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
         }
@@ -38,19 +39,19 @@ public class KitRace extends DefaultRace {
         }
 
         public @Nullable ManasRace getDefaultEvolution(ManasRaceInstance instance, LivingEntity entity) {
-            return (ManasRace) TensuraRaces.BEAST_LORD.get();
+            return (ManasRace) StellarRaces.ELEMENTAL_KIT.get();
         }
 
         public @Nullable ManasRace getAwakeningEvolution(ManasRaceInstance instance, LivingEntity entity) {
-            return (ManasRace)TensuraRaces.SPIRIT_BEAST.get();
+            return (ManasRace)StellarRaces.ELEMENTAL_KIT.get();
         }
 
         public @Nullable ManasRace getHarvestFestivalEvolution(ManasRaceInstance instance, LivingEntity entity) {
-            return (ManasRace)TensuraRaces.BEAST_LORD.get();
+            return (ManasRace)StellarRaces.ELEMENTAL_KIT.get();
         }
 
         public List<ManasRace> getNextEvolutions(ManasRaceInstance instance, LivingEntity entity) {
-            return List.of((ManasRace)TensuraRaces.BEAST_LORD.get());
+            return List.of((ManasRace)StellarRaces.ELEMENTAL_KIT.get());
         }
 
         public List<ManasSkill> getIntrinsicSkills(ManasRaceInstance instance, LivingEntity entity) {

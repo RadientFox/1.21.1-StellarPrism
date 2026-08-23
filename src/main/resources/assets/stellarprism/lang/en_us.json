@@ -32,6 +32,15 @@
   "stellarprism.skill.mode.eltnam.scry_proficiency: divination": "§5Divination",
   "stellarprism.skill.mode.eltnam.synthetic_blood_formula": "§5Synthetic Blood",
 
+
+
+  "stellarprism.skill.agumon_skill": "Augumon",
+  "stellarprism.skill.agumon_skill.description": "A Rookie Digimon with an appearance resembling a small dinosaur. Its strength is weak as it is still in the process of growing, but it has a fearless and rather ferocious personality. Hard, sharp claws grow from both its hands and feet, and their power is displayed in battle. It also foreshadows an evolution into a great and powerful Digimon. Its Special Move is spitting a fiery breath from its mouth to attack the opponent: Baby Flame.",
+  "stellarprism.skill.mode.agumon.flame": "Baby Flame",
+
+
+
+
   "stellarprism.skill.mode.ruby.burst": "Scarlet Burst",
   "stellarprism.skill.ruby": "§cRuby",
   "stellarprism.skill.mode.ruby.aura": "Burning Aura",
@@ -257,6 +266,14 @@
   "stellarprism.skill.eldritch_nullification.description": "Completely ignore Eldritch damage.",
   "stellarprism.skill.primordial_nullification": "Primordial Nullification",
   "stellarprism.skill.primordial_nullification.description": "Completely ignore Primordial damage.",
+
+
+
+
+
+
+
+
 
 
 
@@ -557,5 +574,9 @@
   "death.attack.stellarprism.corruption": "%1$s was consumed by %2$s's §5corruption",
   "death.attack.stellarprism.corruption_attack": "%1$s was consumed by %2$s's §5corruption",
   "death.attack.stellarprism.primordial": "%1$s was atomically riped apart by %2$s's ",
-  "death.attack.stellarprism.eldritch": "%1$s was engulfed by %2$s's eldritch corruption"
+  "death.attack.stellarprism.eldritch": "%1$s was engulfed by %2$s's eldritch corruption",
+
+
+
+  "stellarprism.kitsune_element.check": "Fox Element: "
 }

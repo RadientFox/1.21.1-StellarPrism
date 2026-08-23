@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "stellarprism:item/wof_schematic"
+    "layer0": "stellarprism:item/element_core_time"
   }
 }

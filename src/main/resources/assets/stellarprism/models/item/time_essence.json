@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "stellarprism:item/monster_potion"
+    "layer0": "stellarprism:item/time_essence"
   }
 }
