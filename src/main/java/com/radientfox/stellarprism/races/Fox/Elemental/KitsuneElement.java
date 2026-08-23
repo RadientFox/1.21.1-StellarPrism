@@ -21,12 +21,7 @@ import java.util.List;
 import static com.radientfox.stellarprism.storages.KitsuneElementStorage.getKey;
 
 public enum KitsuneElement implements StringRepresentable {
-    FLAME(0, "flame", 7605294, TensuraDamageTypes.FIRE_ELEMENTAL),
-    EARTH(1, "earth", 15247701, TensuraDamageTypes.EARTH_ELEMENTAL),
-    SPACE(2, "space", 16267520, TensuraDamageTypes.SPACE_ELEMENTAL),
-    WIND(3, "wind", 7456228, TensuraDamageTypes.WIND_ELEMENTAL),
-    TIME(4, "time", 7332069, TensuraDamageTypes.ENERGY_DRAIN),
-    WATER(5, "water", 15712004, TensuraDamageTypes.WATER_ELEMENTAL),
+    FLAME(0, "flame", 7605294, TensuraDamageTypes.FIRE_ELEMENTAL), EARTH(1, "earth", 15247701, TensuraDamageTypes.EARTH_ELEMENTAL), SPACE(2, "space", 16267520, TensuraDamageTypes.SPACE_ELEMENTAL), WIND(3, "wind", 7456228, TensuraDamageTypes.WIND_ELEMENTAL), TIME(4, "time", 7332069, TensuraDamageTypes.ENERGY_DRAIN), WATER(5, "water", 15712004, TensuraDamageTypes.WATER_ELEMENTAL),
 /*
     GRAVITY(5, "star", 15712004, (RegistrySupplier)null, TensuraDamageTypes.HOLY_DAMAGE, DragonElement.AwakeningType.TRUE_HERO),
     LIGHT(5, "star", 15712004, (RegistrySupplier)null, TensuraDamageTypes.HOLY_DAMAGE, DragonElement.AwakeningType.TRUE_HERO),
@@ -43,35 +38,75 @@ public enum KitsuneElement implements StringRepresentable {
 
 
 
-    UNIDENTIFIED(6, "unidentified", 16777215, (ResourceKey)null);
+    UNIDENTIFIED(6, "unidentified", 16777215, null);
 
     public static final Codec<KitsuneElement> CODEC = StringRepresentable.fromEnum(KitsuneElement::values);
-    private static final KitsuneElement[] BY_ID = (KitsuneElement[]) Arrays.stream(values()).sorted(Comparator.comparingInt(KitsuneElement::getId)).toArray((x$0) -> {
+    private static final KitsuneElement[] BY_ID = Arrays.stream(values()).sorted(Comparator.comparingInt(KitsuneElement::getId)).toArray((x$0) -> {
         return new KitsuneElement[x$0];
     });
     private final int id;
     private final String namespace;
     private final int color;
     private final @Nullable ResourceKey<DamageType> defaultDamage;
-  //  private final @Nullable DeferredHolder<Item, ? extends Item> strengthenItem;
 
 
-
-    private KitsuneElement(int id, String namespace, int color, ResourceKey defaultDamage/*, DeferredHolder strengthenItem*/) {
+    KitsuneElement(int id, String namespace, int color, ResourceKey defaultDamage/*, DeferredHolder strengthenItem*/) {
         this.id = id;
         this.namespace = namespace;
         this.color = color;
         this.defaultDamage = defaultDamage;
-     //   this.strengthenItem = strengthenItem;
 
-    }
-
-    public @NotNull String getSerializedName() {
-        return this.namespace;
     }
 
     public static KitsuneElement byId(int id) {
         return BY_ID[id % BY_ID.length];
+    }
+
+    public static List<KitsuneElement> getCommandSuggestColor() {
+        return List.of(FLAME, EARTH, SPACE, WATER, WIND, TIME);
+    }
+
+    public static boolean byName(String name) {
+        for (KitsuneElement element : values()) {
+            if (element.namespace.equalsIgnoreCase(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static KitsuneElement getElement(LivingEntity player) {
+        if (player instanceof StorageHolder holder) {
+            StorageKey<KitsuneElementStorage> currentKey = getKey();
+
+            KitsuneElementStorage storage = holder.manasCore$getStorage(currentKey);
+
+            if (storage != null && storage.getElement() != null) {
+                return storage.getElement();
+            }
+        }
+
+        return KitsuneElement.UNIDENTIFIED;
+    }
+
+    public static KitsuneElement SetElement(LivingEntity player, KitsuneElement element) {
+        if (player instanceof StorageHolder holder) {
+
+            StorageKey<KitsuneElementStorage> currentKey = getKey();
+
+            KitsuneElementStorage storage = holder.manasCore$getStorage(currentKey);
+
+            if (storage != null) {
+                storage.setElement(element);
+                return element;
+            }
+        }
+
+        return KitsuneElement.UNIDENTIFIED;
+    }
+
+    public @NotNull String getSerializedName() {
+        return this.namespace;
     }
 
     public MutableComponent getName() {
@@ -84,51 +119,9 @@ public enum KitsuneElement implements StringRepresentable {
         });
     }
 
-    public static List<KitsuneElement> getCommandSuggestColor() {
-        return List.of(FLAME, EARTH, SPACE, WATER, WIND, TIME);
-    }
-
     public int getId() {
         return this.id;
     }
-
-    public static boolean byName(String name) {
-        for (KitsuneElement element : values()) {
-            if (element.namespace.equalsIgnoreCase(name)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static KitsuneElement getElement(LivingEntity player){
-        if (player instanceof StorageHolder holder){
-            StorageKey<KitsuneElementStorage> currentKey = getKey();
-
-            KitsuneElementStorage storage = holder.manasCore$getStorage(currentKey);
-
-            if (storage != null && storage.getElement() != null) {
-                return storage.getElement();
-            }
-        }
-
-        return KitsuneElement.UNIDENTIFIED;
-    }
-
-    public static KitsuneElement SetElement(LivingEntity player, KitsuneElement element){
-        if (player instanceof StorageHolder holder){
-            StorageKey<KitsuneElementStorage> currentKey = getKey();
-
-            KitsuneElementStorage storage = holder.manasCore$getStorage(currentKey);
-
-            if (storage != null && storage.getElement() != null) {
-                return storage.getElement();
-            }
-        }
-
-        return KitsuneElement.UNIDENTIFIED;
-    }
-
 
     public String getNamespace() {
         return this.namespace;
@@ -137,8 +130,6 @@ public enum KitsuneElement implements StringRepresentable {
     public int getColor() {
         return this.color;
     }
-
-
 
     public @Nullable ResourceKey<DamageType> getDefaultDamage() {
         return this.defaultDamage;
