@@ -1,0 +1,17 @@
+{
+  "type": "tensura:smithing_bench",
+  "input1": {
+    "item": "stellarprism:empty_elemental_shard"
+  },
+  "input2": {
+    "item": "stellarprism:time_essence"
+  },
+  "inputAmount2": 4,
+  "output": {
+    "count": 1,
+    "id": "stellarprism:time_elemental_shard"
+  },
+  "schematics": [
+    "tensura:low_magisteel_gear_schematic"
+  ]
+}

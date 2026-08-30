@@ -1,6 +1,7 @@
 package com.radientfox.stellarprism.races.Fox;
 
 import com.radientfox.stellarprism.Registry.main.StellarRaces;
+import com.radientfox.stellarprism.Registry.main.skills.StellarIntrinsics;
 import com.radientfox.stellarprism.config.races.fox.FoxRaceConfig;
 import io.github.manasmods.manascore.config.ConfigRegistry;
 import io.github.manasmods.manascore.race.api.ManasRace;
@@ -27,7 +28,7 @@ public class KitRace extends DefaultRace {
         }
 
         public KitRace() {
-            this(Difficulty.EASY);
+            this(Difficulty.EXTREME);
             this.applyDefaultAttributeModifiers();
             FoxRaceConfig.Kit config = ((FoxRaceConfig)ConfigRegistry.getConfig(FoxRaceConfig.class)).Kit;
             this.addAttributeModifier(Attributes.JUMP_STRENGTH, DEFAULT_RACE_ID, config.jumpStrength, AttributeModifier.Operation.ADD_VALUE);
@@ -58,6 +59,7 @@ public class KitRace extends DefaultRace {
             List<ManasSkill> list = new ArrayList();
             list.add((ManasSkill) IntrinsicSkills.BEAST_TRANSFORMATION.get());
             list.add((ManasSkill) CommonSkills.SELF_REGENERATION.get());
+            list.add((ManasSkill) StellarIntrinsics.KitsuneIllusion.get());
             return list;
         }
 }

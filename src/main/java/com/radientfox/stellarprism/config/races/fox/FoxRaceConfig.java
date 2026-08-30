@@ -50,7 +50,7 @@ public class FoxRaceConfig extends ManasConfig {
         @Comment("Bonus Swimming Speed Multiplier.")
         public double swimSpeed = 0.5;
         @Comment("Bonus Jump Strength.")
-        public double jumpStrength = 0.5;
+        public double jumpStrength = 0.33;
         public Kit() {
         }
 
@@ -133,6 +133,11 @@ public class FoxRaceConfig extends ManasConfig {
         public double swimSpeed = 0.5;
         @Comment("Bonus Jump Strength.")
         public double jumpStrength = 2.0;
+        @Comment("Elemental Essence Requirement.")
+        public double elementalEssence = 5.0;
+        @Comment("EP Requirement.")
+        public double epRequirement = 15_000.0;
+
 
         public ElementalKit() {
         }
@@ -216,6 +221,10 @@ public class FoxRaceConfig extends ManasConfig {
         public double swimSpeed = 0.5;
         @Comment("Bonus Jump Strength.")
         public double jumpStrength = 2.5;
+        @Comment("Elemental Essence Requirement.")
+        public double elementalEssence = 20.0;
+        @Comment("EP Requirement.")
+        public double epRequirement = 175_000.0;
 
         public ElementalFox() {
         }
@@ -299,6 +308,10 @@ public class FoxRaceConfig extends ManasConfig {
         public double swimSpeed = 0.7;
         @Comment("Bonus Jump Strength.")
         public double jumpStrength = 3.0;
+        @Comment("Elemental Essence Requirement.")
+        public double elementalEssence = 50.0;
+        @Comment("EP Requirement.")
+        public double epRequirement = 9_400_000.0;
 
         public ElementalKitsune() {
         }

@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 public class StellarIntrinsics {
 
 
-    public static final RegistrySupplier<VulpusSkill> Kitsune_Illusion = register("kitsune_illusion", (Supplier<VulpusSkill>) VulpusSkill::new);
+    public static final RegistrySupplier<VulpusSkill> KitsuneIllusion = register("kitsune_illusion", (Supplier<VulpusSkill>) VulpusSkill::new);
 
 
     private static <E extends ManasSkill> RegistrySupplier<E> register(String name, Supplier<E> supplier) {

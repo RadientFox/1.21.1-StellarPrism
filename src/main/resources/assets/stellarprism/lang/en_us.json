@@ -392,6 +392,18 @@
 
 
 
+
+  "stellarprism.skill.kitsune_illusion": "Kitsune's Illusion",
+  "stellarprism.skill.kitsune_illusion.description": "",
+  "stellarprism.skill.mode.kitsune_illusion.illusion": "Fox's Trickery",
+  "stellarprism.skill.mode.kitsune_illusion.element": "Elemental Enhance",
+
+
+
+
+
+
+
   "stellarprism.skill.corruption_drive": "§5Corruption Drive",
   "stellarprism.skill.corruption_drive.description": "§5The hidden gem within your corrupted heart grows with your desires granting you a tougher form",
   "stellarprism.skill.corruption_drive.boost": "§5The drive within your heart trembles with your desires",
@@ -568,7 +580,7 @@
   "stellarprism.race.kit": "Kit",
   "stellarprism.race.fox_race.notes":  "Timid Creatures of the Forest and beyond, However these foxes have become one with the elements through special conditions" ,
 
-  "stellarprism.race.elemental_fox": "Random Elemental Fox",
+  "stellarprism.race.elemental_kit": "Elemental Kit",
 
 
   "death.attack.stellarprism.corruption": "%1$s was consumed by %2$s's §5corruption",

@@ -1,9 +1,7 @@
 package com.radientfox.stellarprism.races.Fox.Elemental;
 
 import com.radientfox.stellarprism.Registry.main.StellarItems;
-import com.radientfox.stellarprism.Registry.main.StellarRaces;
 import com.radientfox.stellarprism.config.races.fox.FoxRaceConfig;
-import com.radientfox.stellarprism.item.ExtraCoreItem;
 import io.github.manasmods.manascore.config.ConfigRegistry;
 import io.github.manasmods.manascore.race.api.ManasRace;
 import io.github.manasmods.manascore.race.api.ManasRaceInstance;
@@ -18,21 +16,20 @@ import io.github.manasmods.tensura.registry.skill.ExtraSkills;
 import io.github.manasmods.tensura.registry.skill.ResistanceSkills;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ElementalFoxRace extends DefaultRace {
-    protected static final FoxRaceConfig.ElementalFox CONFIG;
+public class ElementalKitsuneRace extends DefaultRace {
+    protected static final FoxRaceConfig.ElementalKitsune CONFIG;
 
-    public ElementalFoxRace(Difficulty difficulty) {
+    public ElementalKitsuneRace(Difficulty difficulty) {
         super(difficulty);
     }
 
-    public ElementalFoxRace() {
+    public ElementalKitsuneRace() {
         this(Difficulty.EASY);
         this.applyDefaultAttributeModifiers();
     }
@@ -43,19 +40,19 @@ public class ElementalFoxRace extends DefaultRace {
 
 
     public @Nullable ManasRace getDefaultEvolution(ManasRaceInstance instance, LivingEntity entity) {
-        return (ManasRace) StellarRaces.ELEMENTAL_KITSUNE.get();
+        return (ManasRace) TensuraRaces.BEAST_LORD.get();
     }
 
     public @Nullable ManasRace getAwakeningEvolution(ManasRaceInstance instance, LivingEntity entity) {
-        return (ManasRace)StellarRaces.ELEMENTAL_KITSUNE.get();
+        return (ManasRace)TensuraRaces.SPIRIT_BEAST.get();
     }
 
     public @Nullable ManasRace getHarvestFestivalEvolution(ManasRaceInstance instance, LivingEntity entity) {
-        return (ManasRace)StellarRaces.ELEMENTAL_KITSUNE.get();
+        return (ManasRace)TensuraRaces.BEAST_LORD.get();
     }
 
     public List<ManasRace> getNextEvolutions(ManasRaceInstance instance, LivingEntity entity) {
-        return List.of((ManasRace)StellarRaces.ELEMENTAL_KITSUNE.get());
+        return List.of((ManasRace)TensuraRaces.BEAST_LORD.get());
     }
 
     public List<ManasSkill> getIntrinsicSkills(ManasRaceInstance instance, LivingEntity entity) {
@@ -124,6 +121,6 @@ public class ElementalFoxRace extends DefaultRace {
 
 
     static {
-        CONFIG = ((FoxRaceConfig) ConfigRegistry.getConfig(FoxRaceConfig.class)).ElementalFox;
+        CONFIG = ((FoxRaceConfig) ConfigRegistry.getConfig(FoxRaceConfig.class)).ElementalKitsune;
     }
 }

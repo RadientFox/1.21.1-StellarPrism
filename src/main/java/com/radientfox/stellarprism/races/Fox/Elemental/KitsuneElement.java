@@ -21,9 +21,15 @@ import java.util.List;
 import static com.radientfox.stellarprism.storages.KitsuneElementStorage.getKey;
 
 public enum KitsuneElement implements StringRepresentable {
-    FLAME(0, "flame", 7605294, TensuraDamageTypes.FIRE_ELEMENTAL), EARTH(1, "earth", 15247701, TensuraDamageTypes.EARTH_ELEMENTAL), SPACE(2, "space", 16267520, TensuraDamageTypes.SPACE_ELEMENTAL), WIND(3, "wind", 7456228, TensuraDamageTypes.WIND_ELEMENTAL), TIME(4, "time", 7332069, TensuraDamageTypes.ENERGY_DRAIN), WATER(5, "water", 15712004, TensuraDamageTypes.WATER_ELEMENTAL),
+    FLAME(0, "flame", 7605294, TensuraDamageTypes.FIRE_ELEMENTAL),
+    EARTH(1, "earth", 15247701, TensuraDamageTypes.EARTH_ELEMENTAL),
+    SPACE(2, "space", 16267520, TensuraDamageTypes.SPACE_ELEMENTAL),
+    WIND(3, "wind", 7456228, TensuraDamageTypes.WIND_ELEMENTAL),
+    TIME(4, "time", 7332069, TensuraDamageTypes.ENERGY_DRAIN),
+    SPACETIME(4, "spacetime", 7332069, TensuraDamageTypes.MIND_CRUSH),
+    WATER(5, "water", 15712004, TensuraDamageTypes.WATER_ELEMENTAL),
+    GRAVITY(5, "gravity", 15712004, TensuraDamageTypes.GRAVITY_ELEMENTAL),
 /*
-    GRAVITY(5, "star", 15712004, (RegistrySupplier)null, TensuraDamageTypes.HOLY_DAMAGE, DragonElement.AwakeningType.TRUE_HERO),
     LIGHT(5, "star", 15712004, (RegistrySupplier)null, TensuraDamageTypes.HOLY_DAMAGE, DragonElement.AwakeningType.TRUE_HERO),
     DARK(5, "star", 15712004, (RegistrySupplier)null, TensuraDamageTypes.HOLY_DAMAGE, DragonElement.AwakeningType.TRUE_HERO),
     SOUND(5, "star", 15712004, (RegistrySupplier)null, TensuraDamageTypes.HOLY_DAMAGE, DragonElement.AwakeningType.TRUE_HERO),
@@ -63,7 +69,7 @@ public enum KitsuneElement implements StringRepresentable {
     }
 
     public static List<KitsuneElement> getCommandSuggestColor() {
-        return List.of(FLAME, EARTH, SPACE, WATER, WIND, TIME);
+        return List.of(FLAME, EARTH, SPACE, WATER, WIND, TIME, SPACETIME,GRAVITY);
     }
 
     public static boolean byName(String name) {
