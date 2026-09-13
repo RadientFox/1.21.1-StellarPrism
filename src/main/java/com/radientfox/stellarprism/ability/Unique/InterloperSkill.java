@@ -56,7 +56,7 @@ public class InterloperSkill extends Skill {
     private static final ResourceLocation INTERLOPER = ResourceLocation.fromNamespaceAndPath("stellarprism", "interloper");
     private static final ResourceLocation COOK = ResourceLocation.fromNamespaceAndPath("tensura", "cook");
     private static final ResourceLocation TIME_TRAVELER = ResourceLocation.fromNamespaceAndPath("trnightmare", "time_traveler");
-    private static final Set<ResourceLocation> INCOMPATIBLE_SKILLS = Set.of(ResourceLocation.fromNamespaceAndPath("trnightmare", "stasis"), ResourceLocation.fromNamespaceAndPath("trnightmare", "inversion"), ResourceLocation.fromNamespaceAndPath("tensura", "infinity_prison"), ResourceLocation.fromNamespaceAndPath("tensura", "oppressor"), ResourceLocation.fromNamespaceAndPath("tensura", "suppressor"), ResourceLocation.fromNamespaceAndPath("tensura", "creator"));
+    private static final Set<ResourceLocation> INCOMPATIBLE_SKILLS = Set.of(ResourceLocation.fromNamespaceAndPath("trnightmare", "stasis"), ResourceLocation.fromNamespaceAndPath("trnightmare", "inversion"), ResourceLocation.fromNamespaceAndPath("tensura", "oppressor"), ResourceLocation.fromNamespaceAndPath("tensura", "suppressor"), ResourceLocation.fromNamespaceAndPath("tensura", "creator"));
     private static final int RECALL_TIME = 90;
     private static final int PHASE_DURATION_TICKS = 200;
     private static final int MASTERED_PHASE_DURATION_TICKS = 600;
