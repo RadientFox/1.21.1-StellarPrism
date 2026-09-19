@@ -56,7 +56,6 @@ public class SpiralElectroBlastBeam extends BeamProjectile {
 
             if (target instanceof LivingEntity living) {
 
-                // Apply Cook here
                 applyCook(living);
             }
 
@@ -76,7 +75,7 @@ public class SpiralElectroBlastBeam extends BeamProjectile {
 
         ResourceLocation COOK = ResourceLocation.fromNamespaceAndPath("tensura", "cook");
 
-        double reduction = target.getMaxHealth() * -0.1D; // 10% max HP reduction
+        double reduction = target.getMaxHealth() * -0.1D;
 
         AttributeModifier modifier = new AttributeModifier(COOK, reduction, AttributeModifier.Operation.ADD_VALUE);
 
