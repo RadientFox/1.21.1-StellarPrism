@@ -15,20 +15,20 @@ public class StellarUniques {
     public static final RegistrySupplier<JadeSkill> JADE_SKILL = register("jade_skill", (Supplier<JadeSkill>) JadeSkill::new);
     public static final RegistrySupplier<TestingSkill> TEST_SKILL = register("test_skill", (Supplier<TestingSkill>) TestingSkill::new);
     public static final RegistrySupplier<VoidPriestess> VOID_PRIESTESS_SKILL = register("void_priestess_skill", (Supplier<VoidPriestess>) VoidPriestess::new);
-    public static final RegistrySupplier<ManasSkill> NIMUE = register("nimue", NimueSkill::new);
-    public static final RegistrySupplier<ManasSkill> DULLAHAN = register("dullahan", DullahanSkill::new);
-    public static final RegistrySupplier<ManasSkill> PENDRAGON = register("pendragon", PendragonSkill::new);
-    public static final RegistrySupplier<ManasSkill> CHOSEN_KING = register("chosen_king", ChosenKingSkill::new);
+//    public static final RegistrySupplier<ManasSkill> NIMUE = register("nimue", NimueSkill::new);
+//    public static final RegistrySupplier<ManasSkill> DULLAHAN = register("dullahan", DullahanSkill::new);
+//    public static final RegistrySupplier<ManasSkill> PENDRAGON = register("pendragon", PendragonSkill::new);
+//    public static final RegistrySupplier<ManasSkill> CHOSEN_KING = register("chosen_king", ChosenKingSkill::new);
     public static final RegistrySupplier<ManasSkill> SPIRAL_HEART = register("spiral_heart", SpiralHeartSkill::new);
-    public static final RegistrySupplier<ManasSkill> INTERLOPER = register("interloper", InterloperSkill::new);
-    public static final RegistrySupplier<ManasSkill> TENACIOUS = register("tenacious", TenaciousSkill::new);
-    public static final RegistrySupplier<ManasSkill> FAKER = register("faker", FakerSkill::new);
+//    public static final RegistrySupplier<ManasSkill> INTERLOPER = register("interloper", InterloperSkill::new);
+//    public static final RegistrySupplier<ManasSkill> TENACIOUS = register("tenacious", TenaciousSkill::new);
+//    public static final RegistrySupplier<ManasSkill> FAKER = register("faker", FakerSkill::new);
     public static final RegistrySupplier<ManasSkill> AGUMON_SKILL = register("agumon_skill", AgumonSkill::new);
-    public static final RegistrySupplier<ManasSkill> BUBBLE_MAGE = register("bubble_mage", BubbleMageSkill::new);
-    public static final RegistrySupplier<ManasSkill> DIANLANHUA = register("dianlanhua", DianlanhuaSkill::new);
-    public static final RegistrySupplier<ManasSkill> ELTNAM = register("eltnam", EltnamSkill::new);
-    public static final RegistrySupplier<ManasSkill> DIALATOR = register("dialator", DialatorSkill::new);
-    public static final RegistrySupplier<ManasSkill> BOXER = register("boxer", BoxerSkill::new);
+//    public static final RegistrySupplier<ManasSkill> BUBBLE_MAGE = register("bubble_mage", BubbleMageSkill::new);
+//    public static final RegistrySupplier<ManasSkill> DIANLANHUA = register("dianlanhua", DianlanhuaSkill::new);
+//    public static final RegistrySupplier<ManasSkill> ELTNAM = register("eltnam", EltnamSkill::new);
+//    public static final RegistrySupplier<ManasSkill> DIALATOR = register("dialator", DialatorSkill::new);
+//    public static final RegistrySupplier<ManasSkill> BOXER = register("boxer", BoxerSkill::new);
 //    public static final RegistrySupplier<ManasSkill> BIBLIOMANIA = register("bibliomania", BibliomaniaSkill::new);
 
 

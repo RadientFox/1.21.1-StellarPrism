@@ -14,6 +14,7 @@ public class StellarRegistry {
         StellarIntrinsics.init();
         StellarExtras.init();
         StellarUniques.init();
+        StellarUniques.init();
         StellarUltimates.register(modEventBus);
         StellarEffects.register(modEventBus);
         StellarItems.register(modEventBus);
